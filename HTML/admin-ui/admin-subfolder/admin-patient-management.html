@@ -1,0 +1,309 @@
+<div id="patient-profiles" class="patient-profiles-container">
+    <hr class="hr" style="color: #9E5B08;">
+
+    <div class="patient-profile">
+        <h3><i class="fas fa-user-friends"></i>Patient Profiles</h3>
+    </div>
+    <div class="row mt-5 justify-content-end search-wrapper-patient-container row-cols-md-2 row-cols-sm-1 row-cols-1">
+        <div class="col d-flex flex-row align-items-center">
+            <!-- Added d-flex and align-items-center for better alignment -->
+            <div class="search-wrapper-patient">
+                <div class="staff-search-wrapper">
+                    <input type="text" name="staff-patient-profiles-searchbar" class="patient-searchbar form-control"
+                        placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="filter-search-container-wrapper ml-2"> <!-- Added ml-2 for margin-left spacing -->
+                <span id="filter-patient"><i class="bx bx-menu-select"></i></span>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="toggle-container">
+                <div class="toggle-wrapper d-flex flex-row justify-content-end">
+                    <div class="toggle-button-menu">
+                        <button class="toggle-button active-tab" data-target="staff-patient-profile-id">Menu
+                            View</button>
+                    </div>
+                    <div class="toggle-button-menu">
+                        <button class="toggle-button" data-target="staff-list-view-id">List View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="patient-profile-box-main-container p-4" id="staff-patient-profile-id">
+        <div class="row patient-profile-box-container row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 mt-2 g-4">
+
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                <div class="patient-profile-box" tabindex="0" data-target="patientprofile-info">
+                    <div class="patient-picture">
+                        <img id="patient-profile-staff" src="profile.jpg" alt="Patient Profile Picture">
+                    </div>
+                    <div class="patient-info-container ">
+                        <p><span id="patient-name-for-admin">Dracy Malibu</span></p>
+                        <p><span id="admin-patientcpnum">090502503</span></p>
+                        <p><span id="admin-patient-id-number">P123456789</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----List View Toggle------>
+    <div class="patient-profile-box-main-container hidden list-view-staff mt-5" id="staff-list-view-id">
+        <table class="table staff-list-view" id="list-view-table-id">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Patient Number</th>
+                    <th>Phone Number</th>
+                    <th>Total Appointments</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="list-view-body-id">
+                <tr>
+                    <td>Dracy Malibu</td>
+                    <td>M-12356</td>
+                    <td>09521457896</td>
+                    <td>15</td>
+                    <td><button type="button" data-target="patientprofile-info">View</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!----------------Admin Patient Profile Section Part 2----------------------->
+<section id="patientprofile-info" class="patientprofiles-info-container hidden">
+    <div class="patientprofiles-info">
+
+        <div class="patientprofile-info-wrapper d-flex flex-row">
+            <div class="back-to-patient">
+                <button class="back-to-patient-btn"><i class="fas fa-arrow-left" title="back to patient"></i></button>
+            </div>
+            <div class="patient-profile-info-title">
+                <h3>Patient Profiles</h3>
+            </div>
+            <div class="export-button ms-auto">
+                <button class="export-btn">Export</button>
+            </div>
+        </div>
+
+        <div class="patient-info-wrapper mt-5 ">
+            <div class="row patient-info row-cols-lg-2 row-cols-xl-2 row-cols-md-2 row-cols-sm-1 g-4 pt-0 pb-4">
+                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 ">
+                    <div class="patient-general-info-container">
+                        <div class="patient-general-info ms-auto">
+                            <div class="patient-general-info-title">
+                                <h3>General Information</h3>
+                            </div>
+
+                            <div class="patient-information-view-more">
+                                <div class="row row-cols-lg-2 row-cols-xl-2 row-cols-md-2 row-cols-sm-1">
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Name: <span id="patient-name">Dracula
+                                                    Malibuadadawdssssssssssssssssssss</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Age: <span id="patient-age-text">24 years old</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Gender: <span id="patient-gender-text">Female</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Address: <span id="patient-address-text">Palawan</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Phone: <span id="patient-phonenum-text">053641</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>HMO Card: <span id="patient-HMO-card">Active</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="patient-view-more">
+                                    <button class="view-more" data-target="patient-full-info">View more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                    <div class="patient-medical-record-container">
+                        <div class="patient-medical-record">
+                            <div class="patient-medical-record-title">
+                                <h3>Medical Record</h3>
+                            </div>
+
+                            <div class="patient-information-view-more">
+                                <div class="row row row-cols-lg-2 row-cols-xl-2 row-cols-md-2 row-cols-sm-1">
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Allergy: <span id="patient-allergy-text">Shrimp</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Chronic Disease: <span id="patient-cdisease-text">None</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="patient-information" tabindex="0">
+                                            <p>Other: <span id="patient-other-text">None</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div">
+        <div class="row search-wrapper-patient-info row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="patient-dental-history-title">
+                    <h3>Patient Dental History</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="search-bar">
+                    <input type="text" name="admin-patient-info-searchbar"
+                        class="adminpatient-info-searchbar form-control" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="m-0 mb-0">
+
+    <div class="patient-history-logs-container mt-2">
+        <div class="table-wrapper">
+            <table class="table patient-history-logs" id="patient-historyLogs-table">
+                <thead>
+                    <tr>
+                        <th>Date<span><i class="fa-solid fa-caret-down"></i></span></th>
+                        <th>Services<span><i class="fa-solid fa-caret-down"></i></span></th>
+                        <th>Price<span><i class="fa-solid fa-caret-down"></i></span></th>
+                        <th>Dentist</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-historyLogs-body" data-target="patient-detailed-history">
+                    <tr>
+                        <td>06/15/25</td>
+                        <td>Orthodonticsddddddddddddddddddddddddddddddddd</td>
+                        <td>P1500.00</td>
+                        <td>Dr. Maguan</td>
+                        <td>Completed</td>
+                        <td>Braces 1st Session</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<!---------------Patient Modal Full Info---------------------------->
+<div id="patient-full-info" class="patient-full-info-container">
+    <div class="patient-full-info">
+        <div class="modal-header">
+            <h3>General Information</h3>
+            <button class="close-modal-full-info">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <h4><i class="fas fa-user"></i>Personal Details</h4>
+            <div class="adminside-patientFullInfo">
+                <p>Name: <span id="patient-name-admin"></span></p>
+                <p>Age: <span id="patient-age-admin"></span></p>
+                <p>Birthday: <span id="patient-birthday-admin"></span></p>
+                <p>Gender: <span id="patient-gender-admin"></span></p>
+                <p>Nationality: <span id="patient-nationality-admin"></span></p>
+            </div>
+
+            <h4><i class="fa solid fa-circle-info"></i> Information</h4>
+            <div class="adminside-patientFullInfo">
+                <p>Email: <span id="patient-email-admin"></span></p>
+                <p>Phone: <span id="patient-phone-admin"></span></p>
+                <p>Address: <span id="patient-address-admin"></span></p>
+            </div>
+
+            <h4><i class="fa-solid fa-notes-medical"></i>Medical</h4>
+            <div class="adminside-patientFullInfo">
+                <p>Allergy: <span id="patient-allergy-admin"></span></p>
+                <p>Medical Condition: <span id="patient-med-condition-admin"></span></p>
+                <p>Current Medications: <span id="patient-medications-admin"></span></p>
+                <p>Past Surgeries: <span id="patient-pastSurgeries-admin"></span></p>
+            </div>
+
+            <h4><i class="fa-solid fa-id-card"></i>HMO Card</h4>
+            <div class="adminside-patientFullInfo">
+                <p>HMO Provider: <span id="patient-hmoProvider"></span></p>
+                <p>HMO ID: <span id="patient-hmoID"></span></p>
+                <p>Valid Until: <span id="patient-hmoValid"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---------------------------Modal for Patient History----------------------------------------->
+<div id="patient-detailed-history" class="admin-patient-detail-history-container">
+    <div class="admin-patient-detailed-history">
+        <div class="admin-patient-detailed-history-title">
+            <h3>Patient History</h3>
+            <button class="patient-detailed-history-close-btn">&times;</button>
+        </div>
+
+        <div class="patient-history-remarks-modal">
+            <h3>Remarks</h3>
+            <div class="patient-history-remarks-wrapper">
+                <div class="patient-history-remarks">
+                    <p><span id="remarks-of-patient">The patietnt jaisdiasidi
+                        ksjdakdhahkdwhshdakwdhThe patietnt jaisdiasidi
+                        ksjdakdhahkdwhshdakwdh
+                        lsajdlajsdlajsldjsljdThe patietnt jaisdiasidi
+                        ksjdakdhahkdwhshdakwdh
+                        lsajdlajsdlajsldjsljd
+                        lsajdlajsdlajsldjsljd
+                    </span></p>
+                </div>
+            </div>
+            <h3>Notes</h3>
+            <div class="patient-history-notes-wrapper">
+                <div class="patient-history-notes">
+                    <p><span id="notes-of-patient">The patietnt jaisdiasidi
+                        ksjdakdhahkdwhshdakwdh
+                        lsajdlajsdlajsldjsljd</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

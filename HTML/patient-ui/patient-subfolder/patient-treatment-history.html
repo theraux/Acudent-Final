@@ -1,0 +1,202 @@
+<div class="treatment-history-container" id="treatment-history-container-id">
+    <div class="treatment-history-wrapper">
+        <div class="treatment-history-title">
+            <div class="treatment-history-title-wrap">
+                <h3>Treatment History</h3>
+                <p>Complete History</p>
+            </div>
+            <div class="button-appointment-treatment">
+                <button class="treatment-appointment-btn" id="treatment-appointment-button">Book an Appointment</button>
+            </div>
+        </div>
+
+
+        <!----------PatientProfile----------------->
+        <div class="progress-profile-wrapper">
+            <div class="patient-profile-wrapper">
+                <div class="img-profile-wrapper">
+                    <img src="user.png" alt="">
+                </div>
+                <div class="patient-profile-name d-flex">
+                    <div class="patient-profile-name-wrapper">
+                        <p><span id="patient-name">Dracy Malibu</span></p>
+                        <p><span id="patient-id">M-12356</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!----------Progress----------------->
+            <div class="progress-profile-container">
+                <div class="progress" style="background-color: rgba(48, 128, 48, 0.623);">
+                    <h4>Completed</h4>
+                    <p><span id="progress-completed-num">24</span></p>
+                </div>
+                <div class="progress" style="background-color: rgba(98, 198, 238, 0.623);">
+                    <h4>In progress</h4>
+                    <p><span id="progress-inprogress-num">1</span></p>
+                </div>
+                <div class="progress" style="background-color: rgba(236, 236, 120, 0.726);">
+                    <h4>Scheduled</h4>
+                    <p><span id="progress-scheduled-num">1</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----Search bar----->
+    <hr>
+    <div class="history-treatment-caret-wrapper">
+        <div class="history-treatment-searchbar-wrapper">
+            <input type="search" id="history-treatment-search" name="history-treatment-search" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="history-caret-container">
+            <div class="history-all-carets">
+                <div class="history-carets-wrapper">
+                    <p>All Treatments<span id="all-treatments-id"><i class="fa-solid fa-caret-down"></i></span></p>
+                </div>
+            </div>
+            <div class="history-all-carets">
+                <div class="history-carets-wrapper">
+                    <p>All Status<span id="all-status-id"><i class="fa-solid fa-caret-down"></i></span></p>
+                </div>
+            </div>
+            <div class="history-all-carets">
+                <div class="history-carets-wrapper">
+                    <p>Last 12 Months <span id="all-last-months-id"><i class="fa-solid fa-caret-down"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----Treatment timeline Toggle-->
+    <div class="treatment-timeline-container">
+        <div class="treatment-timeline-title">
+            <h4>Treatment Timeline</h4>
+        </div>
+        <div class="toggle-timeline-wrapper">
+            <div class="toggle-timeline-wrap">
+                <div class="toggle-timeline">
+                    <button class="timeline-toggle-btn active-tab"
+                        data-target="treatment-history-timeline-overview">Timeline View</button>
+                </div>
+            </div>
+            <div class="toggle-timeline-wrap">
+                <div class="toggle-timeline">
+                    <button class="timeline-toggle-btn" data-target="treatment-history-listview-id">List View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="treatment-history-timeline-wrapper">
+        <div id="treatment-history-timeline-overview"
+            class="treatment-history-timeline-overview-container rounded-4 p-3">
+            <div class="treatment-history-wrap">
+                <div class="treatment-title-wrap">
+                    <i class="fa-solid fa-tooth"></i>
+                    <h3 class="m-0 ps-2">BRACES<span id></span></h3>
+                </div>
+                <div class="div d-flex flex-row justify-content-between">
+                    <div class="treatment-history-overview-timeline">
+                        <p>Date: <span id="treatment-date">01-16-25</span></p>
+                        <p>Doctor: <span id="treatment-doctor">Smith</span></p>
+                        <p>Duration: <span id="treatment-duration">45mins</span></p>
+                    </div>
+
+
+                    <div class="treatment-history-overview-timeline">
+                        <p>Cost: <span id="treatment-cost">P1500</span></p>
+                        <p>Insurance: <span id="treatment-insurance">Partial</span></p>
+                        <p>Tooth: <span id="treatment-tooth">Full mouth</span></p>
+                    </div>
+
+                    <div class="treatment-history-overview-timeline">
+                        <span id="treatment-progress">Completed</span>
+                    </div>
+                </div>
+                <div class="treatment-view-details-btn">
+                    <button type="button" tabindex="0" data-target="treatment-history-view-details-id">View
+                        Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!------List View Toggle-->
+        <div class="treatment-history-timeline-overview-container hidden treatment-list-view"
+            id="treatment-history-listview-id">
+            <table class="table treatment-history-table" id="table-treatment-history-id">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Doctor</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Cost</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="treatment-history-body-id">
+                    <tr>
+                        <td>January 5, 2025</td>
+                        <td>Cleaning</td>
+                        <td>Dr.Smith</td>
+                        <td>Completed</td>
+                        <td>P800</td>
+                        <td><button type="button" data-target="treatment-history-view-details-id">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!----Modal for view details------>
+    <div class="treatment-history-view-details-container" id="treatment-history-view-details-id">
+        <div class="treatment-history-view-details-modal">
+            <button class="close-view-details btn">&times;</button>
+            <div class="view-detail-title">
+                <h3>Dental Cleaning - December 15, 2025<span id="view-details-service"></span></h3>
+            </div>
+            <div class="row treatment-details-title-wrapper row-cols-2 g-4 row-cols-md-2 row-cols-sm-1">
+                <div class="col">
+                    <h3><span id="treatment-full-details-title-id">Treatment Information</span></h3>
+                    <div class="treatment-history-information-title ">
+                        <p>Procedure: <span id="procedure-full-details-id">Cleaning</span></p>
+                        <p>Duration: <span id="duration-full-details-id">45 mins</span></p>
+                        <p>Anesthesia: <span id="anesthesia-full-details-id">None-required</span></p>
+                        <p>Complications: <span id="complications-full-details-id">None</span></p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3>Instruction</h3>
+                    <div class="treatment-history-information-title">
+                        <ul class="list">
+                            <li id="treatment-id">Don't eat food for 2 hours</li>
+                            <li>Brush your teeth regularly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3>Billing Information<span id="treatment-billing-id"></span></h3>
+                    <div class="treatment-history-information-title">
+                        <p>Total Cost: <span id="treatment-totalcost-id">P600</span></p>
+                        <p>Insurance Coverage: <span id="treatment-insurance-coverage-id">50%</span></p>
+                        <p>Patient Responsibility: <span id="treatment-patient-responsibility-id">P300</span></p>
+                        <p>Payment Status: <span id="treatment-status-id">Paid</span></p>
+                    </div>
+                </div>
+
+                <div class="col">
+                   <h3>Clinical Findings</h3>
+                    <div class="treatment-history-information-title">
+                       <p>noneadadsdasdad dadadsadasdadafdasfsfsefesfsefsdfsdfsfsadawdsadawdadadsdwadsdwadasdwasd<span
+                            id="treatment-findings-id"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

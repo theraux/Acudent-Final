@@ -1,0 +1,239 @@
+
+
+
+/* ===== Top bar ===== */
+/* Top bar (already fine) */
+.top-nav {       
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: var(--color-primary);
+  align-items: center;
+  justify-content: flex-end;
+  font-size: clamp(.70rem, 2vw, 1rem);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1031;
+  padding-top: 10px;
+  transition: transform 0.3s ease; /* slides up/down */
+}
+.open-time{
+  color: var(--color-text);
+}
+
+
+@media (max-width: 365px) {
+  .top-nav {
+  font-size: .66rem!important;}
+}
+
+@media (max-width: 344px) {
+  .top-nav {
+  font-size: .62rem!important;}
+}
+/* TopNav nar */
+
+/* Bottom Nav Bar */
+/* Bottom Nav Bar */
+/* Bottom nav */
+.bottom-nav-container {
+  position: fixed;
+  top: 2.5rem; /* sits below top nav by default */
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  z-index: 1032;
+  transform: translateY(0); /* base state */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On scroll: slide up by its own height */
+.bottom-nav-container.scrolled {
+  transform: translateY(-2.5rem); /* match top-nav height */
+  background-color: var(--color-secondary);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+/* On load (non-homepage): keep background but no slide yet */
+.bottom-nav-container.page-loaded {
+  transform: translateY(0);
+  background-color: var(--color-secondary);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.bottom-nav-wrapper {
+  margin: 0 auto;    /* center it */
+   padding: 0.75rem 0;
+   justify-content: space-between;
+  
+}
+.bottom-nav-container .navbar {
+  height: 5rem !important;        /* target height of bar */
+  min-height: 4rem !important;
+  padding-top: 0 !important;      /* remove bootstrap top/bottom padding */
+  padding-bottom: 0 !important;
+  display: flex;
+  align-items: center;  
+  border-bottom-left-radius: 2rem;          /* vertical center */
+}
+
+@media (max-width: 991px) {
+  .navbar-brand,
+  .navbar-toggler,
+  .signin {
+    transform: translateY(-17px); /* move up 4px */
+  }
+  .navbar-brand {
+    margin-left: 2rem;
+  }
+  .navbar-toggler {
+    margin-right: 2rem;
+    margin-left: .5rem;
+  }
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(158, 91, 8, 0.4); /* soft brown glow */
+  border: 1px solid var(--color-tertiary);    /* use your accent brown */
+  border-radius: 6px; /* rounded corners */
+}
+
+/* Logo */
+.logo-img {
+  max-width: 5rem;           
+  display: block;
+}
+
+.logo-text h3, h5 {
+  color: var(--color-tertiary);
+  margin: 0;
+}
+
+.logo-text h3 {
+    font-size: clamp(1.2rem, 1.35vw, 1.8rem);
+    
+}
+.logo-text h5{
+    font-size: clamp(0.60rem, .70vw, 0.9rem);
+    white-space: nowrap;
+}
+/* Logo */
+
+/* Menu */
+.menu-container{
+  display: flex;
+}
+
+/* make sure the nav area doesn't clip the underline */
+.bottom-nav-container,
+.bottom-nav-container .navbar,
+.navbar-nav {
+  overflow: visible;
+}
+
+/* base link */
+.navbar-nav .nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text);
+  padding-bottom: .35rem; /* gives space for the underline */
+  margin-left: clamp(1rem, 2.5vw, 2rem);
+}
+
+@media (min-width: 990px) {
+
+/* underline pseudo-element */
+.navbar-nav .nav-link:not(.signin)::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;                /* adjust to place it under text */
+  transform: translateX(-50%);
+  width: 0;
+  height: 1.5px;
+  background: var(--color-tertiary);
+  transition: width 0.25s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+/* show underline on hover OR when .active exists (active page) */
+.navbar-nav .nav-link:not(.signin):not(.dropdown-toggle):hover::before,
+.navbar-nav .nav-link:not(.signin).active::before {
+  width: 85%; /* change to 100% if you prefer full width */
+  color: var(--color-text);
+}
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-tertiary); /* or whatever color you want */
+}
+.navbar-nav .nav-link:hover {
+  color: var(--color-tertiary); /* or whatever color you want */
+}
+/* keep signin clean */
+.navbar-nav .nav-link.signin::before { content: none !important; }
+
+.signin {
+  padding: 0.3rem 0.75rem;        /* button size */
+  font-size: 0.9rem;              /* text size */
+  background-color: var(--color-tertiary);
+  color: #fff;
+  border-radius: 2rem!important;
+  width: auto !important;   
+  margin-left: 2rem;      /* override Bootstrap block width */
+}
+
+@media (max-width: 405px) {
+  .logo-img {
+  max-width: 3rem;           
+  display: block;
+}
+
+.logo-text h3 {
+    font-size: 1rem;
+    
+}
+.logo-text h5{
+    font-size: .5rem;
+    white-space: nowrap;
+}
+.signin{
+  padding: 0.2rem 0.6rem;        /* button size */
+  font-size: 0.6rem;  
+  margin-left: 0!important;
+}
+  .navbar-brand,
+  .navbar-toggler,
+  .signin {
+    transform: translateY(-2px); /* move up 4px */
+  }
+
+}
+
+.signin:hover {
+  background-color: #7a4506;      /* darker on hover */
+}
+
+
+/* Ensure offcanvas stays on top */
+.offcanvas {
+  z-index: 1555 !important;
+}
+
+.offcanvas-title{
+  margin-left: .75rem;
+  font-size: 1.8rem;
+}
+
+.offcanvas-title p{
+  white-space: nowrap;
+  font-size: .90rem;
+}
+.btn-close {
+  transform: translateY(-13px); /* move up 4px */
+}
+
+

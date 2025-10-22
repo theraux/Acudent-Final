@@ -1,0 +1,350 @@
+:root {
+  --color-primary: #F5E3CD;
+  --color-secondary: #FEF3E7;
+  --color-secondary2: #fcf7f2;
+  --color-tertiary: #9E5B08;
+  --color-text: #703803;
+  --color-text2: #502803;
+}
+
+.inventory-container {
+  padding: 20px 5px 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.inventory-section {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.inventory-section i {
+  font-size: 2rem;
+}
+
+.overview-container {
+  margin-top: 1rem;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+  border-radius: 12x;
+  padding: 1rem;
+}
+
+.overview-section-title {
+  color: var(--color-text);
+}
+
+.overview-section-title h3 {
+  font-size: 1.2rem;
+}
+
+.overview-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 1.2rem;
+  width: 100%;
+  height: 120px;
+  border: 1px solid #5028032c;
+  border-radius: 5px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.overview-wrapper:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.01);
+}
+
+.overview-wrapper i {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.overview-wrapper-p h3,
+.overview-wrapper-p span,
+.overview-wrapper-p p{
+  font-size: 1.25rem
+}
+
+
+/* Search Wrapper */
+.monthly-wrapper-inventory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: clamp(2rem, 10vw, 3rem);
+  width: 100%;
+}
+
+.monthly-wrapper-title {
+  width: 30%;
+}
+
+.monthly-wrapper-inventory span {
+  cursor: pointer;
+}
+
+.monthly-wrapper-inventory p {
+  border: 1px solid var(--color-text);
+  font-size: clamp(0.8rem, 1vw, 1.6rem);
+  padding: .6rem;
+  background-color: #FEF3E7;
+  color: var(--color-text);
+  text-align: center;
+  width: 30%;
+}
+
+.monthly-wrapper-inventory i {
+  padding: .3rem;
+}
+
+.search-wrapper-inventory {
+  position: relative;
+}
+
+.search-wrapper-inventory input {
+  border: 1px solid var(--color-text);
+  border-radius: 20px;
+  padding: 8px 35px 8px 12px;
+  flex: 1;
+}
+
+.search-wrapper-inventory i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text);
+  pointer-events: none;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary) !important;
+}
+
+/* Remove header borders */
+.inventory-table-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.inventory-table-container {
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 1rem;
+}
+
+.admin-inventory-table thead th {
+  border: 1px solid var(--color-text);
+  text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Style only the data cells */
+.admin-inventory-table tbody td {
+  border: 1px solid var(--color-text);
+  padding: 1.2rem;
+  margin: 0;
+  gap: 0;
+  text-align: center;
+  cursor: pointer;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.admin-inventory-table tbody {
+  border-radius: 2rem;
+}
+
+.admin-inventory-table {
+  table-layout: fixed;
+  margin-top: 1.5rem;
+  border-spacing: 0 10px;
+  word-wrap: break-word;
+  word-break: break-word;
+  width: 100%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+  overflow: auto;
+  border-collapse: collapse;
+}
+
+.admin-inventory-table thead th i {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.inventory-report {
+  background-color: var(--color-primary);
+  margin-left: auto;
+  color: var(--color-text);
+  padding: clamp(0.75rem, 1vw, 1rem);
+  border: 1px solid var(--color-text);
+  border-radius: 15px;
+  width: 10%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.inventory-report:hover {
+  background-color: var(--color-secondary);
+}
+
+
+
+/* MODAL BACKDROP */
+.admin-inventory-detail-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+}
+
+/* When modal is active */
+.admin-inventory-detail-container.active {
+  display: flex;
+}
+
+/* MODAL BOX */
+.admin-inventory-detail {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 70%;
+  max-width: 900px;
+  padding: 1.5rem 2rem;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease;
+}
+
+/* animation */
+@keyframes modalPop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Detailed Table */
+.modal-inventory-detail-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.admin-inventory-detail h3 {
+  text-align: center;
+  color: #502C00;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.close-modal-detail {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #502C00;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close-modal-detail:hover {
+  transform: scale(1.2);
+  color: #8B5E34;
+}
+
+
+
+/* TABLE DESIGN (reuse your theme) */
+.hidden {
+  display: none;
+}
+
+.inventory-table-detail-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.inventory-table-detail-container {
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.admin-inventory-detail-table {
+  table-layout: fixed;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: auto;
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+}
+
+.admin-inventory-detail-table thead th {
+  border: 1px solid var(--color-text);
+  text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.admin-inventory-detail-table tbody td {
+  border: 1px solid var(--color-text);
+  padding: 1.2rem;
+  margin: 0;
+  gap: 0;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

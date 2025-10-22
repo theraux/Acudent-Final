@@ -1,0 +1,180 @@
+<!--------------Inventory Report--------------------->
+<section id="admin-inventory-report" class="admin-inventory-report-container">
+    <div class="admin-inventory-report">
+        <div class="inventory-report-icon">
+            <i class="fa-solid fa-chart-simple"></i>
+            <div class="inventory-report-title">
+                <h3>Report</h3>
+            </div>
+        </div>
+
+        <div class="inventory-report-cards">
+            <div class="report-overview">
+                <h3>Overview</h3>
+            </div>
+            <div class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-1 row-cols-sm-1 row-cols-1 d-flex">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
+                    <div class="report-box-container d-flex flex-row align-items-center"
+                        data-target="../../HTML/admin-ui/admin-subfolder/admin-appointment-reports.html" data-id="appointment-box-id">
+                        <div class="box-container-i">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div class="box-container-title">
+                            <h3>Appointment report</h3>
+                            <div class="report-number">
+                                <span id="appointment-number-id">56</span>
+                            </div>
+                        </div>
+                        <div class="report-overview ms-auto">
+                            <canvas id="appointment-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="report-box-container d-flex flex-row align-items-center" data-target="">
+                        <div class="box-container-i">
+                            <i class="fa-solid fa-box"></i>
+                        </div>
+                        <div class="box-container-title">
+                            <h3>Inventory Report</h3>
+                            <div class="report-number">
+                                <span id="inventory-number-id">56</span>
+                            </div>
+                        </div>
+                        <div class="report-overview ms-auto">
+                            <canvas id="inventory-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div class="report-box-container d-flex flex-row align-items-center">
+                        <div class="box-container-i">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                        <div class="box-container-title">
+                            <h3>Revenue Report</h3>
+                            <div class="report-number">
+                                <span id="revenue-number-id">56</span>
+                            </div>
+                        </div>
+                        <div class="report-overview ms-auto">
+                            <canvas id="revenue-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weekly-report-container">
+        <div class="inventory-report-section ">
+            <h3>Weekly<span><i class="fas fa-caret-down"></i></span></h3>
+        </div>
+         </div>
+        <div class="most-used-item-wrapper">
+            <p>Most Used Item</p>
+        </div>
+       
+
+        <div class="row row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1 d-flex flex-row ">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="inventory-report-wrapper">
+                    <div class="inventory-report-container">
+                        <table class="table admin-inventory-report-table" id="admin-inventoryReport-table">
+                            <thead>
+                                <tr>
+                                    <th>Item Name</th>
+                                    <th>Quantity</th>
+                                    <th>Used</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-inventoryReport-body">
+                                <tr>
+                                    <td>Oral Care</td>
+                                    <td>50</td>
+                                    <td>12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="appointment-report-wrapper">
+                    <div class="appointment-report-title">
+                        <h3>Appointment</h3>
+                    </div>
+
+                    <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1">
+                        <div class="col-xxl-4 col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="percentage-wrapper">
+                                <div class="percentage-container mt-3 w-100">
+                                    <div class="percentage-color">
+                                        <i class="fa-solid fa-circle" style="color: green;"></i>
+                                        <div class="percentage-title">
+                                            <p><span id="appointment-name">Completed</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="percentage-num">
+                                        <p><span id="appointment-completed">33%</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="percentage-container">
+                                    <div class="percentage-color">
+                                        <i class="fa-solid fa-circle" style="color: red;"></i>
+                                        <div class="percentage-title">
+                                            <p><span id="appointment-cancelled-name">Cancelled</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="percentage-num">
+                                        <p><span id="appointment-cancelled">33%</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="percentage-container">
+                                    <div class="percentage-color">
+                                        <i class="fa-solid fa-circle" style="color: gray;"></i>
+                                        <div class="percentage-title">
+                                            <p><span id="appointment-no-show-name">No show</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="percentage-num">
+                                        <p><span id="appointment-no-show">33%</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xxl-8 col-xl-8 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="appointment-report-container d-flex mt-3">
+                                <canvas id="appointment-donut-id"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+<hr>
+        <div class="row row-cols-xl-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-1 mt-5 d-flex h-100 w-100">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="revenue-graph-wrapper">
+                    <div class="revenue-graph-title">
+                        <h3> Revenue Graph</h3>
+                        <div class="revenue-graph-p">
+                            <p>here's a quick overview for your revenue</p>
+                        </div>
+
+                        <div class="revenue-graph-container">
+                            <canvas id="revenue-graph-id"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

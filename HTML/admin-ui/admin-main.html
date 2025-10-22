@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../../CSS/admin-ui/admin-subfolder/admin-patient-management.css">
+  <link rel="stylesheet" href="../../CSS/admin-ui/admin-subfolder/admin-inventory-management.css">
+  <link rel="stylesheet" href="../../CSS/admin-ui/admin-subfolder/admin-reports.css">
+  <link rel="stylesheet" href="../../CSS/admin-ui/admin-subfolder/admin-appointment-reports.css">
+
+  <link rel="stylesheet" href="../../CSS/shared-ui/shared.css">
+  <link rel="stylesheet" href="../../CSS/admin-ui/backup-css/admin-dashboard.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <!-- Add this to your <head> section -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <title>Admin Portal</title>
+</head>
+
+<body>
+
+  <!-- ============================Main Container============================ -->
+  <div class="main-container container-fluid d-flex px-0">
+
+    <!-- ============================Sidebar Container============================ -->
+
+    <aside class="sidebar-container" id="sidebar-container">
+      <!-- Logo -->
+      <div class="sidebar-top-logo mx-3">
+        <div class="toggle-sidebar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <img src="../../Pictures/user-interface/banners-images-logo/logo.png" alt="Clinic Logo" class="logo-img">
+        <div class="logo-text ms-2">
+          <h3 class="mb-0">Mapru</h3>
+          <h5 class="mb-0">Dental Clinic</h5>
+        </div>
+      </div>
+
+      <div class="sidebar-content ps-2 pt-2">
+
+
+        <!-- ============================ Navigation ============================ -->
+        <nav class="sidebar-navigation w-100">
+          <ul class="sidebar-nav-list">
+
+            <li class="sidebar-section-title">Overview</li>
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-dashboard.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-dashboard.html" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="Dashboard">
+                <i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+
+            </li>
+            <!-- ========== Navigation Section ========== -->
+            <li class="sidebar-section-title">Navigation</li>
+
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-appointments.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-appointments.html">
+                <i class="fas fa-calendar"></i> <span>Appointments</span></a>
+            </li>
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-messages.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-messages.html">
+                <i class="fa-solid fa-message"></i><span>Messages</span></a>
+            </li>
+
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-patient-management.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-patient-management.html">
+                <i class="fa-solid fa-id-card-clip"></i> <span>Patient Management</span></a>
+            </li>
+
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-dentist-management.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-dentist-management.html" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="My Record">
+                <i class="fa-solid fa-user-doctor"></i><span>Dentist Management</span></a>
+            </li>
+
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-staff-management.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-staff-management.html" data-bs-toggle="tooltip"
+                data-bs-placement="right" title="My Record">
+                <i class="fa-solid fa-user-nurse"></i><span>Staff Management</span></a>
+            </li>
+
+
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-inventory-management.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-inventory-management.html">
+                <i class="fa-solid fa-toolbox"></i><span>Inventory Management</span></a>
+            </li>
+
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-reports.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-reports.html">
+                <i class="fas fa-book"></i> <span>Reports</span></a>
+            </li>
+
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-services.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-services.html">
+                <i class="fa-solid fa-screwdriver-wrench"></i> <span>Services</span></a>
+            </li>
+
+
+
+            <!-- ========== Components Section ========== -->
+            <li class="sidebar-section-title">Components</li>
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-help.html"
+                class="btn-sidebar d-flex align-items-center"
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-help.html">
+                <i class="fa-solid fa-circle-question"></i> <span>Help</span></a>
+              </li>
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-security.html"
+                class="btn-sidebar d-flex align-items-center" 
+                data-page="../../HTML/admin-ui/admin-subfolder/admin-security.html">
+                <i class="fa-solid fa-lock"></i><span>Security</span></a>
+              </li>
+            <li><a href="../../HTML/admin-ui/admin-subfolder/admin-settings.html" 
+              class="btn-sidebar d-flex align-items-center" 
+              data-page="../../HTML/admin-ui/admin-subfolder/admin-settings.html">
+                <i class="fa-solid fa-gear"></i><span>Settings</span></a>
+              </li>
+
+
+
+          </ul>
+        </nav>
+        <!-- Logout -->
+        <div class="sidebar-logout pe-2">
+          <a href="../../HTML/user-interface/index.html" class="btn-sidebar sidebar-logout-btn d-flex align-items-center" 
+          id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+
+    <!-- ============================Content Area Container============================ -->
+
+    <main class="main-content-area-container" id="user-patient-content-area">
+      <!-- ==============================Tobar============================= -->
+      <div class="topbar" id="user-patient-topbar">
+        <div class="topbar-left">
+          <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <h3>Today's Date:</h3>
+          <div class="today-date" id="today-date">
+          </div>
+        </div>
+
+
+
+        <div class="contentarea-topbar-profile">
+          <div class="notification">
+            <a href="" class="icon-wrapper me-3 position-relative" data-page="Messages" title="Messages">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="badge message-badge">1</span>
+            </a>
+
+            <a href="" class="icon-wrapper icon-bell-notif me-5 position-relative" data-page="Notification"
+              title="Notifications">
+              <i class="fas fa-bell"></i>
+              <span class="badge system-notif-badge">1</span>
+            </a>
+
+          </div>
+          <h4 class="topbar-profile-name" id="user-patient-profilename">Malibu, Dracy</h4>
+          <div class="contentarea-topbar-user">
+            <img src="assets/imgs/customer01.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="content-container">
+        <div class="content-area" id="content-area">
+          <script src="../../Javascript/admin-ui/admin-main.js"></script>
+        </div>
+      </div>
+
+      <footer class="footer w-100 d-flex justify-content-end align-items-center mt-5 p-3">
+        <p class="m-0">&copy; 2025 Mapru</p>
+      </footer>
+    </main>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../Javascript/shared-ui/shared.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+
+/* Footer */
+.footer {
+  background-color: #4D4A47;
+  color: rgb(0, 0, 0);
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* no wrapping */
+  gap: 30px;
+}
+
+.footer-section.left, .footer-section.right {
+  flex: 0 0 auto;
+  max-width: 300px;
+  text-align: left;
+}
+
+.footer-section.center {
+  flex: 1 1 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.footer-section.left h3,
+.footer-section.right h3 {
+  font-weight: 600;
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #FEF3E7;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-top: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  transition: color 0.3s ease;
+  padding: 5px 0; /* reduced padding */
+  display: inline-block; /* so padding works */
+}
+
+.footer-section ul li a:hover {
+  color: #d7a13a; /* gold-ish hover */
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;       /* keep them in a row */
+  gap: 10px;           /* control spacing between icons */
+  justify-content: center;
+}
+.social-icons a {
+  text-decoration: none;
+  background: transparent;
+  gap: 10px;
+  
+}
+
+.social-icons i{
+  font-size: 40px;
+  color:#FEF3E7;
+  font-weight: lighter;
+  margin-bottom: 10px;
+
+}
+.social-icons i:hover {
+  color: #d7a13a;
+}
+
+footer p {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  color: #aaa;
+}
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    margin-bottom: 25px;
+  }
+}

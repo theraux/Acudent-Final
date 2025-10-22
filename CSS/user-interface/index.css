@@ -1,0 +1,555 @@
+
+:root {
+  --color-primary: #F5E3CD;   /* light beige */
+  --color-secondary: #FEF3E7; /* softer background */
+  --color-tertiary: #9E5B08;  /* accent brown */
+  --color-text: #703803;      /* main text */
+}
+
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent sideways scroll */
+}
+
+.hero-banner-container {
+  height: 97vh;
+  overflow: hidden;
+}
+
+/* Background image */
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transition: opacity 1s ease;
+}
+
+.banner.active {
+  opacity: 1;              /* show only active */
+  z-index: 1;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
+
+
+/* ===== Bottom Left Text and Button ===== */
+.banner-text-container {
+  position: absolute;
+  bottom: 20%;          /* adjust vertical position */
+  left: 23%;            /* center horizontally */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 2;            /* above overlay */
+  width: 600px;
+}
+
+.banner-text-container .banner-text h2 {
+  color: var(--color-text)!important; /* light beige text */
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.2;
+  padding: 0;
+
+}
+.banner-text-container .banner-text p {
+  color: var(--color-text)!important; /* light beige text */
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.8rem;
+  width: 450px;
+}
+
+
+@media (max-width:1034px) {
+  .banner-text-container {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;                    /* truly center horizontally */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 2;
+  width: 90%;                   /* responsive width */
+  max-width: 600px;             /* keeps it from growing too wide on big screens */
+  padding: 0 1rem;              /* breathing room on small screens */
+  text-align: left;
+}
+
+.banner-text-container .banner-text h2 {
+  color: var(--color-text);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);   /* scales with screen size */
+  line-height: 1.3;
+  margin: 0;
+}
+
+.banner-text-container .banner-text p {
+  color: var(--color-text);
+  font-size: clamp(1rem, 2vw, 1.2rem);     /* scales responsively */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;                             /* allow wrapping */
+  max-width: 450px;                        /* but keep it readable */
+}
+
+}
+
+/* ===== Appointment Button ===== */
+#Appointment {
+  font-size: 1rem;
+  border: 1px solid var(--color-tertiary); /* accent brown border */
+  border-radius: 2rem;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);  /* FIXED: 'Color' was capitalized; should be 'color' */
+  padding: 15px 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 0;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#Appointment:hover {
+  background-color: var(--color-primary); /* light beige on hover */
+  color: var(--color-text)!important;
+}
+
+/* ===== Rest of Your CSS (Unchanged) ===== */
+/* (Include all your other sections like .about-section, .why-choose, etc., as they are fine and unrelated to the banner issue) */
+
+
+
+
+/* About Section */
+.about-section {
+  max-width: 100%; /* instead of 1200px */
+  padding: 4rem 2rem;
+  margin: 0 auto;
+}
+
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  
+}
+
+.about-img img {
+  width: 100%;       /* fill its column */
+  max-width: 600px;  /* prevent it from shrinking too small */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  flex: 1;
+  padding: 1rem;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.about-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 1024px) {
+  .about-row {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+  }
+.col{
+  width: 600px;
+  
+}
+  .about-text {
+    margin-top: 1.5rem;
+    text-align: justify;
+  }
+
+  .about-text h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+/* Why Choose Us Section */
+
+/* Why Choose Us Section */
+.why-choose {
+    padding: 60px 10%;
+    background-color: #ffffff; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid #F5E3CD;
+    border-bottom: 2px solid #F5E3CD;
+
+}
+
+.why-choose img{
+    max-width: 150px;
+    height: auto;
+    margin-left: 80px;
+}
+
+.why-choose h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #502C00;
+    font-weight: bold;
+    
+}
+
+/* Grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.grid-item {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.grid-item:hover {
+    background-color: #FEF3E7;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: background 0.5s;
+}
+
+.grid-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #502C00;
+    font-weight: bold;
+    text-align: center;
+}
+
+.grid-item p {
+    font-size: 15px;
+    color: #502C00;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Retained paragraph styling */
+.why-choose-text {
+    max-width: 1350px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #502C00;
+    line-height: 1.8;
+    text-align: center;
+}
+/*end of Why choose us Section*/
+/*end of Why choose us Section*/
+
+/* Doctors Section */
+.doctors {
+  padding: 70px 10%;
+  max-width: 100%;
+  background: #fff;
+  text-align: center;
+  color: #502C00;
+}
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+.doctor-card {
+  background: #F5E3CD;
+  height: 120%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+.doctor-card img {
+  width: 100%;
+  height: 80%;
+  border: 1px solid #9E5B08;
+}
+
+.doctor-card img:hover{
+    background-color: #FEF3E7;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: background 0.5s;
+}
+.doctor-card p {
+  margin-top: 20px;
+  color: #502C00;
+  font-weight: bold;
+}
+
+/*end of doctor's section*/
+
+/* Services Section */
+.services {
+  padding: 120px 10%;
+  background: #fff;
+  text-align: center;
+  color: #502C00;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80px;
+  margin-top: 30px;
+}
+.service-card {
+  position: relative;
+}
+
+.service-card img {
+  width: 90%;
+  height: 100%;
+}
+
+.service-card .overlay {
+  position: absolute;
+  top: 30%;
+  left: 73%;
+  font-size: 24px;
+  line-height: 2;
+  color: #fff;
+  text-align: left;
+  opacity: 1; /* Keep text visible */
+  transform: translateY(0); /* Keep text in its final position */
+  transition:  transform 0.3s ease; /* Smooth transition for text */
+}
+
+.service-card .overlay-right{
+  position: absolute;
+  top: 30%;
+  right:73%;
+  font-size: 24px;
+  line-height: 2;
+  color: #fff;
+  opacity: 1; /* Keep text visible */
+  transform: translateY(0); /* Keep text in its final position */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-card .overlay h3{
+    font-size: 30px;
+    transform: translateX(-20%);  
+}
+
+.service-card .overlay-right h3{
+    font-size: 30px;
+    transform: translateX(20%);
+}
+
+.service-card li {
+  transform: translateY(0); 
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for individual items */
+}
+
+.service-card li a {
+  color: #fff; 
+  text-decoration: none; 
+  display: block; /* Make link occupy full width of li */
+ 
+  transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transition for the hover effect */
+}
+
+/* Hover effect for individual list items */
+.service-card li:hover {
+  color: #FEF3E7; /* Change text color on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+/*end of services section*/
+
+/*Pictures of Clinic Section*/
+.Clinic-Images {
+  padding: 16px 10%;
+  background: #F5E3CD;
+  text-align: center;
+  color: #502C00;
+}
+
+.Clinic-Images h2, .Clinic-Images h3 {
+  color: #502C00;
+}
+
+.Clinic-Slideshow {
+  padding: 50px;
+  position: relative;
+  max-width: 2000px;
+  margin: auto;
+}
+
+.Clinic-Slide {
+  display: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation buttons */
+.display-left, .display-right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  user-select: none;
+  transform: translateY(-50%);
+  
+}
+.display-left {
+  left: 0;
+}
+
+.display-right {
+  right: 0;
+}
+
+/*end of Clinic Picture Section*/
+
+/* Start of Reviews*/
+.Reviews{
+    padding: 50px 0px;
+    text-align: center;
+    color: #502C00;
+}
+
+.Reviews-of-Patient h2{
+    padding: 24px 0px;
+    color:#502C00;
+    text-align: center;
+}
+
+.Reviews-of-Patient{
+ 
+  height: 200px;
+  overflow: hidden;
+}
+.Reviews-of-Patient img{
+  width: 80px;
+  border-radius: 50%;
+}
+/*end of Reviews*/
+
+/*Map of Dental Clinic*/
+.Mapru {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  gap: 20px; 
+  padding: 16px;
+  color: #502C00;
+
+}
+
+.Map{
+  padding: 24px 0px;
+  align-items: center;
+  text-align: center;
+  background-color: #F5E3CD;
+  color: #502C00;
+}
+.Mapru iframe {
+  padding:24px 0px;
+  width: 50%;
+  height: 500px;
+  border: none;
+  margin-left: 120px;
+  margin-right: 50px;
+}
+
+.details .info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  margin-bottom: 12px;
+}
+
+.details .info-row img {
+  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.details .info-row p {
+  margin: 0;
+  font-size: 20px;
+  text-align: left;
+}
+
+.details h2{
+  margin-bottom: 5%;
+  text-align: left;
+}
+/*end of map*/
+
+

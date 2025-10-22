@@ -1,0 +1,72 @@
+<!---------------------Report Page--------------------------------->
+
+<section class="appointment-report-section-wrapper" id="appointment-report-section-id">
+    <div class="appointment-report-section-container">
+
+        <div class="appointment-report-back-btn">
+            <button id="appointment-report-back" data-target="../../HTML/admin-ui/admin-subfolder/admin-appointment-reports.html"><i class="fas fa-arrow-left" title="back to report"></i></button>
+            <div class="appointment-report-title-section">
+                <h3>Appointment Report</h3>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="appointment-report-wrapper">
+                    <div class="appointment-report-title">
+                        <h3>Appointment</h3>
+                    </div>
+
+                    <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1">
+                        <div class="col-xxl-4 col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="percentage-wrapper">
+                                <div class="percentage-container mt-3 w-100">
+                                    <div class="percentage-color">
+                                        <i class="fa-solid fa-circle" style="color: green;"></i>
+                                        <div class="percentage-title">
+                                            <p><span id="appointment-name-page2">Completed</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="percentage-num">
+                                        <p><span id="appointment-completed-page2">33%</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="percentage-container">
+                                    <div class="percentage-color">
+                                        <i class="fa-solid fa-circle" style="color: red;"></i>
+                                        <div class="percentage-title">
+                                            <p><span id="appointment-cancelled-name-page-2">Cancelled</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="percentage-num">
+                                        <p><span id="appointment-cancelled-page2">33%</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="percentage-container">
+                                    <div class="percentage-color">
+                                        <i class="fa-solid fa-circle" style="color: gray;"></i>
+                                        <div class="percentage-title">
+                                            <p><span id="appointment-no-show-name-page-2">No show</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="percentage-num">
+                                        <p><span id="appointment-no-show-page2">33%</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xxl-8 col-xl-9 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div class="appointment-report-container d-flex ps-0 mt-3">
+                                <canvas id="appointment-donut-id-page2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>

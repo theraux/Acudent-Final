@@ -1,0 +1,302 @@
+        :root {
+            --color-primary: #F5E3CD;
+            --color-secondary: #FEF3E7;
+            --color-secondary2: #fcf7f2;
+            --color-tertiary: #9E5B08;
+            --color-text: #703803;
+            --color-text2: #502803;
+
+        }
+
+        /* ===========My Account Container============= */
+        /* --------Main Container-------------- */
+        .my-account-main-container {
+            min-height: 90vh;
+            padding: 10px 30px 0 30px;
+
+            flex-direction: column;
+            margin-right: -10px;
+            margin-bottom: -100px;
+        }
+
+        .my-account-main-container h1 {
+            color: var(--color-text2);
+            font-size: 2rem;
+        }
+
+        .my-account-main-container p {
+            color: var(--color-text2);
+            font-size: .85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .my-account-row {
+            background-color: var(--color-secondary2);
+            padding: 2rem 1rem 0 1rem;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ---------------Column Container-------------- */
+        .my-account-col-nested-container {
+            background-color: white;
+            border-radius: 10px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        /* -----------Left Column-------------- */
+        .my-account-profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .my-account-profile-img-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+            border: 1px solid #5028031a;
+        }
+
+        .my-account-profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .my-account-profile-name-ID h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 0.25rem;
+            text-align: center;
+        }
+
+        .my-account-profile-name-ID h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text2);
+            text-align: center;
+        }
+
+        .my-account-profile-name-ID span {
+            font-weight: 400;
+            color: var(--color-text2);
+        }
+
+        hr {
+            color: var(--color-text2);
+        }
+
+        .my-account-change-photo {
+            margin-top: -15px;
+            color: var(--color-text2);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+            background-color: var(--color-primary);
+            border: none;
+            width: 90%;
+            padding: .5rem;
+            border-radius: 30px;
+        }
+
+
+        /* -------------Right Column---------------- */
+        .my-account-field {
+            margin-bottom: 20px;
+        }
+        
+        .my-account-btns {
+            border-bottom: 1px solid #9e5b0870;
+            padding-right: 2.25rem !important;
+        }
+        
+        /* ---------- TOP SWITCH BUTTONS ---------- */
+        .my-account-personal-info-btn,
+        .my-account-security-btn {
+            font-size: 1rem;
+            color: var(--color-text2);
+            border: none;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .my-account-personal-info-btn {
+            width: 200px;
+        }
+        
+        .my-account-security-btn {
+            width: 100px;
+        }
+        
+        /* Hover effect: text highlight + underline */
+        .my-account-personal-info-btn:hover,
+        .my-account-security-btn:hover {
+            color: var(--color-tertiary);
+            border-bottom: 2px solid var(--color-tertiary);
+            background-color: rgba(158, 91, 8, 0.05);
+        }
+        
+        /* ---------- EDIT BUTTON ---------- */
+        .my-account-edit-btn {
+            width: 70px;
+            color: var(--color-tertiary);
+            border: 1px solid #9e5b0870;
+            font-size: .9rem;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .my-account-edit-btn:hover {
+            background-color: var(--color-tertiary);
+            color: white;
+        }
+        
+        /* ---------- SAVE BUTTON ---------- */
+        .my-account-btn-save {
+            width: 150px;
+            height: auto;
+            font-size: .75rem;
+            padding: .5rem;
+            border-radius: 20px;
+            border: none;
+            color: var(--color-text2);
+            background-color: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .my-account-btn-save:hover {
+            background-color: var(--color-tertiary);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* ---------- OTHER STYLES (unchanged) ---------- */
+        .my-account-btn-switch {
+            height: auto;
+            background-color: transparent;
+        }
+        
+        .my-account-info-details-wrapper {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .my-account-col-nested-container .my-account-profile-basic-info-wrapper {
+            align-items: flex-start;
+            text-align: left;
+            width: 100%;
+            padding-left: 1rem;
+            color: var(--color-text2);
+        }
+        
+        .my-account-col-nested-container .my-account-profile-basic-info-wrapper h4 {
+            font-size: 1rem;
+            width: 100%;
+            text-align: left;
+            font-weight: 350;
+        }
+        
+        .my-account-col-nested-container .my-account-profile-basic-info-wrapper span {
+            margin-left: .5rem;
+        }
+        
+        .my-account-field label {
+            color: var(--color-text2);
+            font-size: .85rem;
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        
+        .my-account-field input {
+            margin-top: 0;
+            border: 1px solid #9e5b0870;
+        }
+        
+        .form-control {
+            color: var(--color-text2);
+            font-size: 1rem;
+            padding: .75rem;
+        }
+        
+        .my-account-btn-bottom-right {
+            padding: .5rem 2.25rem 1.5rem 0;
+        }
+
+        .my-accoount-security-container {
+            margin-bottom: 4rem!important;
+        }
+        
+        .hidden {
+            display: none !important;
+
+        }
+        
+        
+
+
+        .active-tab {
+            color: var(--color-tertiary);
+            border-bottom: 2px solid var(--color-tertiary);
+            background-color: rgba(158, 91, 8, 0.05);
+            font-weight: 600;
+        }
+
+
+
+        
+        /* ========== Security Info Section ========== */
+        .my-account-security-wrapper {
+            width: 100%;
+            border-radius: 10px;
+            padding: 0 0 2rem 0;
+            color: var(--color-text2);
+            margin-bottom: 1rem;
+        }
+
+
+        .my-account-security-container .my-account-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .my-account-security-container .my-account-field label {
+            color: var(--color-text2);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .my-account-security-container .my-account-field input {
+            border: 1px solid #9e5b0870;
+            border-radius: 8px;
+            padding: .75rem 0.9rem;
+            font-size: 0.95rem;
+            color: var(--color-text2);
+            background-color: white;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .my-account-security-container .my-account-field input:focus {
+            border-color: var(--color-tertiary);
+            box-shadow: 0 0 0 3px rgba(158, 91, 8, 0.15);
+            outline: none;
+        }
+
+
+          

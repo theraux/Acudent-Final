@@ -1,0 +1,254 @@
+/* ===== Root Colors ===== */
+:root {
+  --color-primary: #F5E3CD;   /* light beige */
+  --color-secondary: #FEF3E7; /* softer background */
+  --color-tertiary: #9E5B08;  /* accent brown */
+  --color-text: #3a1d02;      /* main text */
+}
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent sideways scroll */
+}
+
+/*start of first banner */
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 27px;
+}
+
+.bottom-left-container {
+  background-color: rgba(255, 255, 255, 0.70); 
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  height: 200px;
+  margin: 0 auto; 
+  position: absolute; 
+  top: 44%;
+  left: 12%;
+
+  display: flex;
+  flex-direction: column;   /* text above button */
+  justify-content: center;
+  align-items: flex-start;  /* align text & button left */
+  gap: 15px;                /* spacing between text & button */
+}
+
+.bottom-left {
+  color: #9E5B08;
+  font-size: 28px;
+  padding: 10px 20px;
+ border-radius: 5px;
+}
+
+#Appointment {
+  font-size: 1vw;
+  border: 1px solid #866442;
+  border-radius: 10px;
+  background-color: #9D724C;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  width: 100%; /* Make the button full width inside the container */
+}
+
+
+#Appointment:hover {
+  background-color: #F5E3CD;
+  color: white;
+}
+
+
+
+/*end of first banner*/
+/* Start of design */
+
+.after-banner{
+    background-color: #F5E3CD; /* beige background */
+    color: #502C00;           /* dark brown text */
+    padding: 70px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 2;
+    
+}
+.after-banner h2{
+    color: #502C00;
+    text-align: center;
+}
+/* For services */
+.service-section {
+  background-color: #fff;
+  color: #502C00;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Row Wrapper */
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;        /* consistent spacing */
+  background-color: #FEF3E7;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Each Service Item */
+.service {
+  position: relative;
+  flex: 1 1 250px;   /* flexible cards */
+  max-width: 300px;
+  margin: 10px;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Overlay Title */
+.service .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* for footer */
+.footer {
+  background-color: #4D4A47;
+  color: white;
+  padding: 60px 20px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* no wrapping */
+  gap: 30px;
+}
+
+.footer-section.left {
+  flex: 0 0 auto;
+  max-width: 300px;
+  text-align: left;
+}
+
+.footer-section.center {
+  flex: 1 1 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-section.right {
+  flex: 0 0 auto;
+  max-width: 300px;
+  text-align: left;
+}
+
+.footer-section.left h3,
+.footer-section.right h3 {
+  font-weight: 600;
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-top: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  transition: color 0.3s ease;
+  padding: 5px 0; /* reduced padding */
+  display: inline-block; /* so padding works */
+}
+
+.footer-section ul li a:hover {
+  color: #d7a13a; /* gold-ish hover */
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1); /* white icons */
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(0.6) sepia(1) saturate(5) hue-rotate(20deg); /* gold-ish tint */
+}
+
+footer p {
+  font-size: 12px;
+  margin-top: 15px;
+  letter-spacing: 1.5px;
+  color: #aaa;
+}
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    margin-bottom: 25px;
+  }
+}

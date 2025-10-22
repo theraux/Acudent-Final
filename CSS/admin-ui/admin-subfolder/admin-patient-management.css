@@ -1,0 +1,708 @@
+    :root {
+      --color-primary: #F5E3CD;
+      --color-secondary: #FEF3E7;
+      --color-secondary2: #fcf7f2;
+      --color-tertiary: #9E5B08;
+      --color-text: #703803;
+      --color-text2: #502803;
+
+    }
+
+    .patient-profiles-container {
+      width: 100%;
+    }
+
+    .patient-profiles {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 5px 20px 30px;
+    }
+
+    .patient-profile {
+      margin-bottom: 1rem;
+      color: #502C00;
+    }
+
+
+    /* Search Wrapper */
+    .search-wrapper-patient {
+      position: relative;
+      /* Removed: width: 200px; */
+      /* This was constraining the container; let it auto-size */
+      display: flex;
+      /* Ensure it's a flex container (already set via Bootstrap d-flex) */
+      align-items: center;
+      /* Vertically align items if needed */
+    }
+
+    .search-wrapper-patient input {
+      border: 1px solid var(--color-text);
+      border-radius: 20px;
+      padding: 8px 35px 8px 12px;
+      /* Space for the search icon */
+      flex: 1;
+      /* Allow the input to grow and take available space */
+    }
+
+    .search-wrapper-patient i {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text);
+      pointer-events: none;
+    }
+
+    .filter-search-container-wrapper {
+      font-size: 1.8rem;
+      color: var(--color-text);
+      cursor: pointer;
+      margin-left: 10px;
+      /* Add some spacing between search and filter */
+    }
+
+    .form-control:focus {
+      border-color: var(--color-primary) !important;
+    }
+
+    /* Toggle button */
+    .toggle-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+
+    }
+
+    .toggle-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .toggle-button-menu button {
+      width: 150px;
+      padding: 0.8rem;
+      border: 1px solid var(--color-text);
+      border-radius: 5px;
+      background-color: #fff;
+      color: var(--color-text);
+    }
+
+    .toggle-button-menu button:hover {
+      background-color: var(--color-secondary);
+    }
+
+    .toggle-wrapper button.active-tab {
+      background-color: var(--color-primary);
+      color: var(--color-text);
+      /* optional, for contrast */
+      border-color: var(--color-text);
+      font-weight: 600;
+    }
+
+
+
+    /*Patient Profile box */
+    .patient-profile-box-container {
+      width: 100%;
+      padding: 20px 5px 20px 30px;
+      justify-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .patient-profile-box {
+      position: relative;
+      border: 1px solid var(--color-text);
+      width: 90%;
+      text-align: center;
+      height: 100%;
+      z-index: 1;
+      cursor: pointer;
+      justify-items: center;
+      padding: 1rem;
+    }
+
+    .patient-profile-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -20px;
+      right: 0;
+      width: 20px;
+      background-color: #F5E3CD;
+      border: 1px solid var(--color-text);
+    }
+
+    .patient-picture {
+      border: 1px solid #502C00;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .patient-picture img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .patient-info-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #502C00;
+    }
+
+    .patient-info-container h3 {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    .patient-info-container span {
+      font-size: .80rem;
+      font-weight: 400;
+    }
+
+
+    /* List View table */
+
+    .staff-list-view thead th {
+      background-color: var(--color-secondary);
+      padding: 1rem;
+      color: var(--color-text);
+    }
+
+    .staff-list-view tbody td {
+      color: var(--color-text);
+      padding: 1.2rem;
+    }
+
+    .staff-list-view tbody td button {
+      border: none;
+      color: var(--color-text);
+    }
+
+
+
+
+    /* Admin Patient Profile Info and Medical Indormation*/
+    .hidden {
+      display: none !important;
+    }
+
+    .patientprofiles-info-container {
+      width: 100%;
+      padding: 20px 5px 20px 30px;
+    }
+
+    .patientprofiles-info {
+      width: 100%;
+    }
+
+    .back-to-patient button {
+      border: none;
+    }
+
+    .back-to-patient i {
+      font-size: 1.5rem;
+      color: var(--color-text);
+    }
+
+    .patientprofile-info-wrapper {
+      color: var(--color-text);
+      gap: 2rem;
+    }
+
+    .back-to-patient {
+      padding: 5px;
+    }
+
+    .export-button button {
+      border: 1px solid var(--color-text);
+      padding: .50rem;
+      width: 100%;
+      font-size: 1rem;
+      background-color: var(--color-secondary);
+      color: var(--color-text);
+    }
+
+    .export-button button:hover {
+      background-color: var(--color-primary);
+    }
+
+    .patient-info {
+      width: 100%;
+      background-color: var(--color-secondary2);
+      padding: 1rem;
+    }
+
+    .patient-general-info-title h3,
+    .patient-medical-record-title h3 {
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    .patient-general-info,
+    .patient-medical-record {
+      padding: 1rem;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+      border: 1px solid #5028033d;
+      border-radius: 5px;
+      color: var(--color-text);
+      width: 80%;
+      cursor: pointer;
+    }
+
+
+    .patient-information {
+      margin-top: 1.5rem;
+      width: 300px;
+      overflow-x: auto;
+      /* Enable horizontal scrolling */
+      white-space: nowrap;
+      /* Prevent wrapping */
+      /* Hide scrollbar (cross-browser) */
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      border: 1px solid #50280373;
+    }
+
+    .patient-information::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+    }
+
+    .patient-information p {
+      font-size: 1rem;
+      border-radius: 5px;
+      font-weight: 400;
+      padding: .70rem;
+      background-color: #fff;
+      margin-top: 0.5rem;
+      margin: 0;
+    }
+
+    .patient-information span {
+      font-size: 1rem;
+      font-weight: 400;
+      overflow-x: auto;
+      /* Enable horizontal scrolling */
+      white-space: nowrap;
+      /* Prevent wrapping */
+      /* Hide scrollbar (cross-browser) */
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+    }
+
+    .patient-information p::before {
+      content: '';
+      border-left: 3px solid #502803c2;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .patient-view-more {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .patient-view-more button {
+      border: none;
+      font-size: 1rem;
+      color: var(--color-text);
+    }
+
+    /* Search Wrapper */
+    .search-wrapper-patient-info {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .patient-dental-history-title h3 {
+      color: var(--color-text);
+      font-size: 1.2rem;
+      margin-top: 3rem;
+    }
+
+    .search-bar {
+      width: 250px;
+      margin-left: 60%;
+    }
+
+    .search-wrapper-patient-info input {
+      border: 1px solid var(--color-text);
+      border-radius: 20px;
+      padding: 8px 35px 8px 12px;
+      /* Space for the search icon */
+      flex: 1;
+      /* Allow the input to grow and take available space */
+
+    }
+
+    .search-wrapper-patient-info i {
+      position: absolute;
+      right: 130px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text);
+      pointer-events: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--color-primary) !important;
+    }
+
+
+
+    /* table */
+    /* Remove header borders */
+    .patient-history-logs-container {
+      width: 100%;
+      height: 600px;
+      background-color: var(--color-secondary2);
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    .table-wrapper {
+      max-height: 500px;
+      overflow-y: auto;
+      overflow-x: auto;
+      border-radius: 1rem;
+    }
+
+    .patient-history-logs thead th {
+      border: 1px solid var(--color-text);
+      text-align: center;
+      padding-bottom: 1.5rem;
+      font-size: 1.2rem;
+      color: var(--color-text);
+      background-color: #FEF3E7;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    /* Style only the data cells */
+    .patient-history-logs tbody td {
+      border: 1px solid var(--color-text);
+      padding: 1.2rem;
+      margin: 0;
+      gap: 0;
+      text-align: center;
+      cursor: pointer;
+      white-space: normal;
+      word-break: break-word;
+
+    }
+
+    .patient-history-logs tbody {
+      border-radius: 2rem;
+    }
+
+    .patient-history-logs {
+      table-layout: fixed;
+      margin-top: 1.5rem;
+      border-spacing: 0 10px;
+      word-wrap: break-word;
+      word-break: break-word;
+      width: 100%;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+      overflow: auto;
+      border-collapse: collapse;
+    }
+
+    .patient-history-logs thead th i {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    /* Modal overlay - covers screen but not replaces content */
+    .patient-full-info-container {
+      position: fixed;
+      /* stays in front of everything */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: none;
+      /* hidden by default */
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4);
+      /* semi-transparent background */
+      z-index: 9999;
+      /* make sure it’s above your other sections */
+      overflow: hidden;
+      /* Prevent body scroll when modal is open */
+    }
+
+    /* show modal */
+    .patient-full-info-container.active {
+      display: flex;
+    }
+
+    /* modal content box - NO LONGER SCROLLABLE (handles sizing only) */
+    .patient-full-info {
+      background: #fff;
+      /* Fixed: Removed invalid 'round' */
+      border-radius: 10px;
+      padding: 1.5rem 2.8rem;
+      /* Slightly increased top/bottom for header space */
+      width: 50%;
+      height: 84%;
+      /* Your existing fixed height */
+      max-width: 90%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      animation: modalPop 0.25s ease;
+      position: relative;
+      box-sizing: border-box;
+      /* NEW: Includes padding in height */
+    }
+
+    /* close button */
+    .close-modal-full-info {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--color-text);
+      z-index: 1;
+      /* Ensures it's above content */
+    }
+
+    .close-modal-full-info:hover {
+      transform: scale(1.2);
+      color: #8B5E34;
+    }
+
+    /* animation */
+    @keyframes modalPop {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .modal-header {
+      justify-content: center;
+    }
+
+    .modal-header h3 {
+      margin-top: 1.5rem;
+      color: #502C00;
+    }
+
+    /* NOW SCROLLABLE: Inner body handles overflow */
+    .modal-body {
+      border: 1px solid var(--color-text);
+      border-radius: 15px;
+      padding: 0.2rem 2rem;
+      color: var(--color-text);
+      background-color: var(--color-secondary);
+      max-height: calc(100% - 120px);
+      /* NEW: Limit height (subtract header/close space; adjust if needed) */
+      overflow-y: auto;
+      /* NEW: Enable vertical scrolling inside the body */
+      overflow-x: hidden;
+      /* NEW: Prevent horizontal scrolling */
+      margin-top: 1rem;
+      /* Space from header */
+      box-sizing: border-box;
+      /* NEW: Includes padding/border in height */
+
+      /* NEW: Custom scrollbar for Firefox (on .modal-body) */
+      scrollbar-width: thin;
+      scrollbar-color: #fff;
+    }
+
+    /* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) - NOW ON .modal-body */
+    .modal-body::-webkit-scrollbar {
+      width: 8px;
+      /* Thin scrollbar */
+    }
+
+    .modal-body::-webkit-scrollbar-track {
+      background: #fff;
+      /* Track color from theme */
+      border-radius: 4px;
+    }
+
+    .modal-body::-webkit-scrollbar-thumb {
+      background: #fff;
+      /* Thumb color from theme */
+      border-radius: 4px;
+    }
+
+    .modal-body::-webkit-scrollbar-thumb:hover {
+      background: var(--color-tertiary);
+      /* Hover: Use tertiary color */
+    }
+
+    .modal-body p {
+      border-radius: 5px;
+      font-weight: 500;
+      border: 1px solid var(--color-text);
+      padding: 5px 0;
+      background-color: #fff;
+      margin-bottom: 0.5rem;
+      /* Ensure spacing even when scrolling */
+    }
+
+    .modal-body p::before {
+      content: '';
+      border-left: 4px solid var(--color-text);
+      width: 100%;
+      border-radius: 5px;
+      /* Note: ::before on p might not display as expected; consider restructuring if it's not showing */
+    }
+
+    .modal-body h4 {
+      text-align: left;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #502C00;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .adminside-patientFullInfo {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allow items to wrap to the next line */
+      gap: 1rem;
+      /* MOVED: Added gap here for spacing between p items (instead of on p) */
+      width: 100%;
+      /* Ensure container takes up full width */
+      justify-content: center;
+    }
+
+    .adminside-patientFullInfo p {
+      flex: 1 1 45%;
+      /* Each paragraph takes up about 45% of the container width */
+      margin: 0.5rem 0;
+      /* Vertical spacing only (side margins removed; use gap on parent) */
+      text-align: left;
+    }
+
+
+    /* Modal for Patient History na detailed */
+    /* ===== Patient Detailed History Modal ===== */
+
+    .admin-patient-detail-history-container {
+      position: fixed;
+      inset: 0;
+      /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+      background: rgba(0, 0, 0, 0.4);
+      /* semi-transparent background */
+      display: none;
+      /* hidden by default */
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      /* ensure it stays on top */
+      transition: opacity 0.3s ease;
+      overflow-y: auto;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .admin-patient-detail-history-container.active {
+      display: flex;
+
+    }
+
+    /* Modal box itself */
+    .admin-patient-detailed-history {
+      background-color: #fff;
+      width: 50%;
+      max-width: 90%;
+      height: 50%;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      animation: modalPop 0.25s ease;
+    }
+
+    /* Header with title and close button */
+    .admin-patient-detailed-history-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f8f8;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #ddd;
+
+
+    }
+
+    .admin-patient-detailed-history-title h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .patient-detailed-history-close-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--color-text);
+      cursor: pointer;
+
+    }
+
+    .patient-detailed-history-close-btn:hover {
+      transform: scale(1.2);
+      color: #8B5E34;
+    }
+
+    /* Body content (remarks, notes, etc.) */
+    .patient-history-remarks-modal {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .patient-history-remarks-modal h3 {
+      font-size: 1.2rem;
+      color: var(--color-text);
+    }
+
+    .patient-history-remarks-wrapper,
+    .patient-history-notes-wrapper {
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #50280321;
+      height: 120px;
+    }
+
+    .patient-history-remarks,
+    .patient-history-notes {
+      color: var(--color-text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-align: justify;
+    }

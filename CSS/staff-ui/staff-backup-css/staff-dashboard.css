@@ -1,0 +1,465 @@
+:root {
+  --color-primary: #F5E3CD;
+  --color-secondary: #FEF3E7;
+  --color-secondary2: #fcf7f2;
+  --color-tertiary: #9E5B08;
+  --color-text: #703803;
+  --color-text2: #502803;
+}
+
+
+/* ========== Dashboard Container ========== */
+.user-staff-dashboard {
+  padding: 20px 5px 20px 30px;
+  min-height: calc(100vh - 60px);
+  /* minus topbar */
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text);
+}
+
+.line {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+/* ========== Greeting Section ========== */
+.staff-dashboard-greeting {
+  margin-bottom: 25px;
+}
+
+.staff-dashboard-greeting h2 {
+  font-size: 1.8rem;
+}
+
+.staff-dashboard-greeting p {
+  font-size: 0.8rem;
+}
+
+.left {
+
+  padding-right: .1rem;
+
+}
+
+/* ========== Dental Tips Section ========== */
+.dental-tips-section {
+  width: 100%;
+  margin-bottom: 2rem;
+
+}
+.dashboard-banner-row {
+  margin-right: 16px;
+}
+
+.user-staff-wisdom-tips {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 25px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.user-staff-wisdom-tips h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-tertiary);
+  margin-bottom: 10px;
+}
+
+.user-staff-wisdom-tips p {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* ========== Responsive Layout ========== */
+@media (max-width: 992px) {
+  .dental-tips-section {
+    flex-direction: column;
+  }
+
+  .img-loc,
+  .quick-actions-panel {
+    width: 100%;
+  }
+
+  .user-patient-healthy-tips {
+    padding: 15px;
+  }
+
+  .user-patient-healthy-tips h3 {
+    font-size: 1.05rem;
+  }
+
+  .user-patient-healthy-tips p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========== Dashboard Cards ========== */
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+
+.icon-container {
+  font-size: 1.25rem;
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid var;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.appointment-bottom-icon-container {
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var;
+  display: flex;
+  /* make it a flexbox */
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+  /* center vertically */
+  margin-right: 20px;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card h4 {
+  font-size: .9rem;
+  color: var(--color-tertiary);
+  margin-bottom: 10px;
+  font-weight: 700;
+
+}
+
+.dashboard-card h3 {
+  font-size: 1rem;
+  color: var(--color-tertiary);
+  font-weight: 400;
+}
+
+.dashboard-card p {
+  font-size: .75rem;
+  color: var(--color-tertiary);
+  font-weight: 400;
+  margin: 0;
+}
+
+.dashboard-p {
+  color: rgb(10, 133, 10) !important;
+}
+
+.dashboard-p1 {
+  color: rgb(28, 10, 133) !important;
+}
+.dashboard-p2{
+ color: rgb(196, 12, 12)!important;
+}
+
+.dashboard-bottom-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  margin: 0 0 20px 0;
+}
+
+
+.appointment-details h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.appointment-details p {
+  font-size: .85rem;
+}
+
+
+.header-text h3 {
+  color: var(--color-text);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.dashboard-view-all-btn {
+  text-decoration: none;
+  color: var(--color-tertiary);
+  /* or your preferred color */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.dashboard-view-all-btn:hover {
+  color: rgb(0, 164, 240)
+    /* slightly different color on hover */
+}
+
+
+
+/* ========== Quick Action Boxes (Legacy) ========== */
+.dashboard-quick-actions-button .box {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 12px;
+  text-align: center;
+  padding: 25px 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.dashboard-quick-actions-button .box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the parent column a full-height flex container */
+
+
+
+.dashboard-card-bottom-container {
+  display: flex;
+  flex-direction: column;
+  /* stack header and list vertically */
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-bottom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  /* space between header and list */
+}
+
+.appointment-overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-secondary2);
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+}
+
+.appointment-status {
+  border-radius: 12px;
+  padding: 0 10px 0 10px;
+  font-size:.85rem;
+  font-weight: 400;
+  padding: 0 10px 0 10px;
+}
+
+
+.appointment-status.confirmed {
+  color: #093a14;
+  background-color: #28a74656;
+  
+}
+
+.appointment-status.pending {
+  color: #523e02;
+  background-color: #ffc10742;
+
+}
+
+.appointment-status.cancelled {
+  color: #4d1117;
+  background-color: #dc35465b;
+}
+
+.recent-activity-list,
+.inventory-overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+.activity-item,
+.inventory-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  border-left: 4px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 12px 15px;
+  transition: background 0.2s ease;
+}
+
+.activity-item:hover {
+  background: #eef3f8;
+}
+
+.activity-details h5,
+.inventory-details h5 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.activity-details p{
+  font-size: 0.9rem;
+  color: #555;
+  margin: 3px 0 0;
+}
+.inventory-details p {
+    font-size: 0.9rem;
+    color: rgb(196, 12, 12);
+    margin: 3px 0 0;
+}
+
+.activity-status {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  text-align: right;
+}
+
+
+.img-loc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-banner {
+  width: 100%; /* make it larger than the container */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.4s ease;
+}
+
+/* 👇 Apply when screen gets smaller (for example, below 1200px) */
+
+
+/* Example: override the xxl breakpoint */
+
+
+/* Example: override the xxl breakpoint */
+@media (max-width: 1800px) {
+  .nested-row span {
+    display: none;
+
+  }
+  
+}
+
+/* E
+
+@media (max-width: 1450px) {
+
+  .quick-action-btn {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+}
+
+/* Example: override the xxl breakpoint */
+@media (max-width: 576px) {
+  .nested-row span {
+    display: none;
+
+  }
+  .dashboard-card h4 {
+    font-size: .8rem;
+    color: var(--color-tertiary);
+
+  
+  }
+
+  .dashboard-card h3 {
+    font-size: .9rem;
+    color: var(--color-tertiary);
+    font-weight: 400;
+  }
+  
+  .dashboard-card p {
+    font-size: .65rem;
+    color: var(--color-tertiary);
+    font-weight: 400;
+    margin: 0;
+  }
+  .icon-container {
+    font-size: 1rem;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .patient-dashboard-greeting h2 {
+    font-size: 1.5rem;
+  }
+  
+  .patient-dashboard-greeting p {
+    font-size: 0.7rem;
+  }
+  .user-patient-healthy-tips {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .user-patient-healthy-tips h3 {
+    background-color: red;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 10px;
+  }
+  
+  .user-patient-healthy-tips p {
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+}

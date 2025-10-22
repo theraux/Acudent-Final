@@ -1,0 +1,267 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  
+  <!-- Top nav -->
+  <div class="top-nav">
+    <div class="container-lg d-flex justify-content-end align-items-center px-3">
+      <div class="open-time-group d-flex align-items-center">
+        <div class="opentimelogo me-2">
+          <img src="../../Pictures/user-interface/icons/opentimelogo.png" alt="Logo" width="25">
+        </div>
+        <div class="open-time">
+          Opening Time: Monday to Sunday 9:00 AM - 5:00 PM
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom nav -->
+  <div class="bottom-nav-container">
+    <div class="bottom-nav-wrapper container-lg d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <div class="logo-container d-flex align-items-center">
+        <a href="#" class="d-flex align-items-center text-decoration-none">
+          <img src="../../Pictures/user-interface/banners-images-logo/logo.png" alt="Clinic Logo" class="logo-img">
+          <div class="logo-text ms-2">
+            <h3>Mapru</h3>
+            <h5>Dental Clinic</h5>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Toggler (opens offcanvas) -->
+      <button class="navbar-toggler d-lg-none border-0" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+
+
+  <!-- Offcanvas menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li><a href="../../HTML/user-interface/index.html" class="nav-link">HOME</a></li>
+        <li><a href="../../HTML/user-interface/about.html" class="nav-link">ABOUT</a></li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <li><a href="#" class="dropdown-item">Cleaning</a></li>
+            <li><a href="#" class="dropdown-item">Fillings</a></li>
+            <li><a href="#" class="dropdown-item">Tooth Extraction</a></li>
+            <li><a href="#" class="dropdown-item">Whitening</a></li>
+            <li><a href="#" class="dropdown-item">Orthodontics</a></li>
+            <li><a href="#" class="dropdown-item">Implants</a></li>
+            <li><a href="#" class="dropdown-item">Surgery</a></li>
+          </ul>
+        </li>
+        <li><a href="../../HTML/user-interface/contact.html" class="nav-link">CONTACT</a></li>
+        <li><a href="#" id="openModal" class="nav-link signin">SIGN IN</a></li>
+      </ul>
+    </div>
+  </div>
+    </div>
+
+</nav>
+
+
+
+  <div id="navbar"></div>
+<script src="../../Javascript/user-interface/navbar.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Top nav -->
+  <div class="top-nav">
+    <div class="container-lg d-flex justify-content-end align-items-center px-3">
+      <div class="open-time-group d-flex align-items-center">
+        <div class="opentimelogo me-2">
+          <img src="../../Pictures/user-interface/icons/opentimelogo.png" alt="Logo" width="25">
+        </div>
+        <div class="open-time">
+          Opening Time: Monday to Sunday 9:00 AM - 5:00 PM
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav-container align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-lg bottom-nav-wrapper d-flex align-items-center justify-content-between">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center text-decoration-none me-auto" href="#">
+          <img src="../../Pictures/user-interface/banners-images-logo/logo.png" alt="Clinic Logo" class="logo-img">
+          <div class="logo-text ms-2">
+            <h3 class="mb-0">Mapru</h3>
+            <h5 class="mb-0">Dental Clinic</h5>
+          </div>
+        </a>
+
+        <!-- Desktop menu (visible on lg and up) -->
+        <ul class="navbar-nav d-none d-lg-flex align-items-center ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/about.html">ABOUT</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdownDesktop" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdownDesktop">
+              <li><a class="dropdown-item" href="#">Cleaning</a></li>
+              <li><a class="dropdown-item" href="#">Fillings</a></li>
+              <li><a class="dropdown-item" href="#">Tooth Extraction</a></li>
+              <li><a class="dropdown-item" href="#">Whitening</a></li>
+              <li><a class="dropdown-item" href="#">Orthodontics</a></li>
+              <li><a class="dropdown-item" href="#">Implants</a></li>
+              <li><a class="dropdown-item" href="#">Surgery</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/contact.html">CONTACT</a></li>
+        </ul>
+        <a id="openModal" class="nav-link signin" href="#">SIGN IN</a></li>
+
+        <!-- Mobile toggler (visible on < lg) -->
+        <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Offcanvas (mobile) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- mobile menu (duplicate of desktop items) -->
+      <ul class="navbar-nav  ">
+        <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/about.html">ABOUT</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="../../HTML/user-interface/about.html" id="servicesDropdownMobile"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdownMobile">
+            <li><a class="dropdown-item" href="../../HTML/user-interface/services.html">All Services</a></li>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="#">Cleaning</a></li>
+            <li><a class="dropdown-item" href="#">Fillings</a></li>
+            <li><a class="dropdown-item" href="#">Tooth Extraction</a></li>
+            <li><a class="dropdown-item" href="#">Whitening</a></li>
+            <li><a class="dropdown-item" href="#">Orthodontics</a></li>
+            <li><a class="dropdown-item" href="#">Implants</a></li>
+            <li><a class="dropdown-item" href="#">Surgery</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav- link" href="../../HTML/user-interface/contact.html">CONTACT</a></li>      </ul>
+    </div>
+  </div>
+
+
+
+
+  /* ===== Top bar ===== */
+.top-nav {
+  height: 2.5rem;               
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  padding-inline: clamp(0.5rem, 2vw, 1rem);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s ease;
+  z-index: 1031;
+}
+/* TopNav nar */
+
+/* Bottom Nav Bar */
+.bottom-nav-container {
+  background-color: var(--color-secondary); /* spans full width */
+  width: 100%;
+}
+.bottom-nav-wrapper {
+  margin: 0 auto;    /* center it */
+   padding: 0.75rem 0;
+  
+}
+.bottom-nav-container .navbar {
+  height: 5rem !important;        /* target height of bar */
+  min-height: 4rem !important;
+  padding-top: 0 !important;      /* remove bootstrap top/bottom padding */
+  padding-bottom: 0 !important;
+  display: flex;
+  align-items: center;            /* vertical center */
+}
+
+
+
+/* Logo */
+.logo-img {
+  max-width: 5rem;           
+  display: block;
+}
+
+.logo-text h3, h5 {
+  color: var(--color-tertiary);
+  margin: 0;
+}
+
+.logo-text h3 {
+    font-size: clamp(1.2rem, 1.35vw, 1.8rem);
+    
+}
+.logo-text h5{
+    font-size: clamp(0.60rem, .70vw, 0.9rem);
+    white-space: nowrap;
+}
+/* Logo */
+
+/* Menu */
+.menu-container{
+  display: flex;
+}
+
+.nav-link {
+  margin-left: clamp(1rem, 2.5vw, 2rem);
+  color: var(--color-text);
+}
+
+.signin {
+  padding: 0.3rem 0.75rem;        /* button size */
+  font-size: 0.9rem;              /* text size */
+  background-color: var(--color-tertiary);
+  color: #fff;
+  border-radius: 2rem!important;
+  width: auto !important;         /* override Bootstrap block width */
+}
+
+.signin:hover {
+  background-color: #7a4506;      /* darker on hover */
+}
+

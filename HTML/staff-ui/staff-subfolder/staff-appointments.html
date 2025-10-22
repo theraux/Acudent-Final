@@ -1,0 +1,375 @@
+<section id="staff-appointment-scheduler" class="staff-appointment-container">
+    <div class="staff-appointment">
+
+        <div class="calendar-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div class="today-appointment">
+                <h3>Today's Appointment</h3>
+            </div>
+        </div>
+
+
+        <div class="row staff-appointment-wrapper row-cols-2">
+            <div class="col-4">
+                <div class="staff-title-status-container">
+                    <div class="staff-appointment-overview-wrapper d-flex align-items-center">
+                        <span><i class="fa-solid fa-square-check"></i></span>
+                        <div class="staff-appointment-overview">
+                            <p>Completed</p>
+                            <p><span id="staff-patients-completed" class="staff-patient-overview-p">24</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="staff-title-status-container">
+                    <div class="staff-appointment-overview-wrapper d-flex align-items-center">
+                        <span><i class="fa-solid fa-clock"></i></span>
+                        <div class="staff-appointment-overview">
+                            <p>This Month</p>
+                            <p><span id="staff-patient-thismonth" class="staff-patient-overview-p">24</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="staff-title-status-container">
+                    <div class="staff-appointment-overview-wrapper d-flex align-items-center">
+                        <span><i class="fa-solid fa-circle-xmark"></i></span>
+                        <div class="staff-appointment-overview">
+                            <p>Cancelled</p>
+                            <p><span id="staff-patient-cancelled" class="staff-patient-overview-p">24</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-8 for-table">
+                <div class="staff-table">
+                    <table class="table staff-appointment-type" id="staff-appointmentType-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Time</th>
+                                <th>Dentist</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="staff-appointmentType-body">
+                            <tr>
+                                <td>John Doedahdjabjsbdjsabajdd</td>
+                                <td>Cleaningdasndkanskdans</td>
+                                <td>10:00 AMflmalwfmalsdlslmlm</td>
+                                <td>Dr. Smith</td>
+                                <td><span id="staff-status-confirmed">Confirmed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>John Doedahdjabjsbdjsabajdd</td>
+                                <td>Cleaningdasndkanskdans</td>
+                                <td>10:00 AMflmalwfmalsdlslmlm</td>
+                                <td>Dr. Smith</td>
+                                <td><span id="staff-status-confirmed">Confirmed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>John Doedahdjabjsbdjsabajdd</td>
+                                <td>Cleaningdasndkanskdans</td>
+                                <td>10:00 AMflmalwfmalsdlslmlm</td>
+                                <td>Dr. Smith</td>
+                                <td><span id="staff-status-confirmed">Confirmed</span></td>
+                            </tr>
+                        </tbody>
+                </div>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!---------Calendar-------------->
+<section class="shared-calendar-appointment-section" id="staff-calendar-appointments-section">
+    <div class="shared-calendar-appointments-wrapper">
+        <div class="shared-appointment-wrapper">
+            <div class="shared-appointment-title-wrapper">
+                <h2>Appointments</h2>
+                <div class="shared-appointment-p">
+                    <p>See what's your appointments for today</p>
+                </div>
+            </div>
+        </div>
+        <div class="shared-appointment-prev-next-month">
+            <button onclick="prevmonth()" class="btn-month" id="btn-previous-month"><i
+                    class="fa-solid fa-chevron-left"></i></button>
+            <h3 id="month-year"></h3>
+            <button onclick="nextmonth()" class="btn-month" id="btn-next-month"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+            <div class="shared-edit-scheduler">
+                <button class="shared-edit-scheduler-btn" title="edit an appointment" data-target="">Edit</button>
+                <div class="shared-appointment-edit-schedule">
+                    <button class="shared-edit-sched" id="edit-schedule" title="Add an Appointment" tabindex="0"
+                        data-target="shared-calendar-appointment-section">Add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row shared-calendar-appointments-container-row row-cols-1"
+            id="staff-calendar-appointments-container">
+            <!-- Appointment items will be dynamically added here -->
+            <div class="col name-of-the-day">
+                <div class="row row-cols-7">
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Sun</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Mon</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Tue</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Wed</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Thu</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Fri</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Sat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col number-of-days">
+                <!-- Days will be dynamically generated here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--------------BLOCK OR EDIT AN APPOINTMENT MODAL------------------>
+<section id="admin-edit-appointment-schedule" class="admin-edit-appointment-schedule-container">
+    <div class="admin-edit-appointment-schedule-modal">
+        <div class="admin-edit-appointment-schedule-close">
+            <button class="btn-close-edit-appointment-schedule">&times;</button>
+        </div>
+        <div class="edit-appointment-schedule-title">
+            <h3>Appointment Availability</h3>
+        </div>
+
+        <div class="div-appointment-wrapper">
+            <div class="row admin-edit-appointment-schedule-wrapper-row row-cols-1">
+                <div class="col">
+                    <div class="block-time-title">
+                        <h3>Block Time for <span id="admin-modal-date"></span></h3>
+                        <label>
+                            <input type="checkbox" id="admin-full-day" name="admin-full-fay">Close Whole day
+                        </label>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2">
+                        <div class="col">
+                            <div class="block-time-title">
+                                <label>Start Time</label>
+                            </div>
+                            <div class="admin-edit-appointment">
+                                <input type="time" id="admin-start-time" name="admin-start-time">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="block-time-title">
+                                <label>End Time </label>
+                            </div>
+                            <div class="admin-edit-appointment">
+                                <input type="time" id="admin-end-time" name="admin-end-time">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-block-schedule">
+                    <button id="admin-confirm-appointment-btn" class="admin-confirm-appointmentbtn">Confirm</button>
+                    <button id="admin-cancel-appointment-btn" class="admin-cancel-appointmentbtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!---------ADD AN APPOINTMENT Modal-------------->
+<section data-id="shared-edit-appointment-schedule-id" class="shared-edit-appointment-schedule-modal">
+    <div class="shared-edit-appointment-wrapper">
+        <div class="shared-appointment-close-modal">
+            <button class="shared-appointment-close-modal-btn">&times;</button>
+        </div>
+        <div class="shared-appointment-schedule-title">
+            <h3>Add an Appointment</h3>
+        </div>
+
+        <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 d-flex w-100">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="shared-appointment-schedule-container">
+                    <label>Selected Date</label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="shared-appointment-schedule-input">
+                    <input type="text" id="selected-date" name="selected-date" readonly>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="shared-appointment-schedule-container">
+                    <label>Appointment Time </label>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="shared-appointment-schedule-input">
+                    <input type="time" data-id="staff-time-id" name="time">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="shared-appointment-schedule-container">
+                    <label>Appointment Type </label>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="shared-appointment-schedule-input">
+
+                    <select data-id="service" name="service">
+                        <option value="Service" disabled>Service</option>
+                        <option value="Cleaning">Cleaning</option>
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <div class="button-appointment-container">
+            <div class="add-appointment">
+                <button class="add-appointment-btn">Add</button>
+            </div>
+            <div class="cancel-appointment">
+                <button class="cancel-appointment-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!----------View detailed appointment------------>
+<section id="shared-view-appointments-modal-id" class="shared-view-appointments-modal-container">
+    <div class="shared-view-appointments-modal">
+        <div class="shared-view-appointments-close">
+            <button class="btn-close-view-appointments">&times;</button>
+        </div>
+        <div class="shared-view-appointments-title">
+            <h3>Appointments for <span id="view-modal-date"></span></h3>
+        </div>
+
+        <div class="view-appointments-list" id="view-appointment-list-id">
+            <ul>
+                <li><i class="fa-solid fa-user"><span data-id="patient-appointment-view-id"
+                            data-target="shared-view-detailed-appointments-id"></span></i></li>
+                <li><i class="fa-solid fa-user"><span data-id="patient-appointment-view-id"
+                            data-target="shared-view-detailed-appointments-id"></span></i></li>
+                <li><i class="fa-solid fa-user"><span data-id="patient-appointment-view-id"
+                            data-target="shared-view-detailed-appointments-id"></span></i></li>
+            </ul>
+        </div>
+
+        <div class="shared-view-detailed-wrapper hidden" id="shared-view-detailed-appointments-id">
+            <div class="shared-view-detailed-appointments-modal">
+                <div class="shared-view-appointment-back">
+                    <button class="back-to-appointment-btn" data-target="view-appointment-list-id">
+                        <i class="fas fa-arrow-left" title="back to appointment"></i></button>
+                </div>
+                <div class="shared-view-detailed-close">
+                    <button class="shared-view-detailed-btn">&times;</button>
+                </div>
+
+                <div class="shared-view-detailed-name">
+                    <h3><span id="shared-view-detailed-patient"></span></h3>
+                </div>
+
+                <div class="detail-label-wrapper">
+                    <div class="row row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-calendar"></i> Date</span>
+                                <input type="date" class="detail-value" id="detail-date" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-clock"></i> Time</span>
+                                <input type="time" class="detail-value" id="detail-time" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-tooth"></i> Service</span>
+                                <select id="service" name="service" class="detail-value">
+                                    <option value="cleaning">Cleaning</option>
+                                    <option value="filling">Filling</option>
+                                    <option value="checkup">Checkup</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-user"></i> Dentist</span>
+                                <input type="text" class="detail-value" id="detail-dentist" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-credit-card"></i> Fee</span>
+                                <input type="text" class="detail-value" id="detail-fee" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-clock"></i> Duration</span>
+                                <input type="time" class="detail-value" id="detail-duration" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-phone"></i> Phone</span>
+                                <input type="tel" class="detail-value" id="detail-phone" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="detail-label-container">
+                                <span class="detail-label"><i class="fa-solid fa-envelope"></i> Email</span>
+                                <input type="email" class="detail-value" id="detail-email" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-view-detail">
+                        <button class="edit-view-detail-btn ms-auto">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

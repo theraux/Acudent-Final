@@ -1,0 +1,109 @@
+<div id="patient-profiles" class="patient-profiles-container">
+    <hr class="hr" style="color: #9E5B08;">
+
+    <div class="patient-profile">
+        <h3><i class="fas fa-user-friends"></i>Patient Profiles</h3>
+    </div>
+    <div class="row mt-5 justify-content-end search-wrapper-patient-container row-cols-md-2 row-cols-sm-1 row-cols-1">
+        <div class="col d-flex flex-row align-items-center">
+            <!-- Added d-flex and align-items-center for better alignment -->
+            <div class="search-wrapper-patient">
+                <div class="staff-search-wrapper">
+                    <input type="text" name="staff-patient-profiles-searchbar" class="patient-searchbar form-control"
+                        placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="filter-search-container-wrapper ml-2"> <!-- Added ml-2 for margin-left spacing -->
+                <span id="filter-patient"><i class="bx bx-menu-select"></i></span>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="toggle-container">
+                <div class="toggle-wrapper d-flex flex-row justify-content-end">
+                    <div class="toggle-button-menu">
+                        <button class="toggle-button active-tab" data-target="staff-patient-profile-id">Menu View</button>
+                    </div>
+                    <div class="toggle-button-menu">
+                        <button class="toggle-button" data-target="staff-list-view-id">List View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="patient-profile-box-main-container p-4" id="staff-patient-profile-id">
+        <div class="row patient-profile-box-container row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 mt-2 g-4">
+
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                <div class="patient-profile-box" tabindex="0" data-target="staff-patient-appointment-logs-modal-id">
+                    <div class="patient-picture">
+                        <img id="patient-profile-staff" src="profile.jpg" alt="Patient Profile Picture">
+                    </div>
+                    <div class="patient-info-container ">
+                        <h3 id="patient-name-for-staff">Dracy Malibu</h3>
+                        <span id="staff-patientcpnum">090502503</span>
+                        <span id="staff-patient-id-number">P123456789</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----List View Toggle------>
+    <div class="patient-profile-box-main-container hidden list-view-staff mt-5" id="staff-list-view-id">
+        <table class="table staff-list-view" id="list-view-table-id">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Patient Number</th>
+                    <th>Phone Number</th>
+                    <th>Total Appointments</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="list-view-body-id">
+                <tr>
+                    <td>Dracy Malibu</td>
+                    <td>M-12356</td>
+                    <td>09521457896</td>
+                    <td>15</td>
+                    <td><button type="button" data-target="staff-patient-appointment-logs-modal-id">View</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="staff-patient-appointment-logs-modal-id" class="staff-patient-appointment-logs-modal">
+        <div class="staff-patient-appointment-logs-container">
+            <button class="staff-logs-close">&times;</button>
+            <div class="staff-logs-title">
+                <h3>Appointment History</h3>
+            </div>
+            <table class="table staff-patient-appointment-logs" id="staff-patient-appointment-logs-id">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Services</th>
+                        <th>Dentist</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="staff-patient-appointment-logs-body">
+                    <tr>
+                        <td>06/11/25</td>
+                        <td>Cleaningadadwadsdasdasd</td>
+                        <td>Maprusdawdawdadads</td>
+                        <td><span id="status-completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

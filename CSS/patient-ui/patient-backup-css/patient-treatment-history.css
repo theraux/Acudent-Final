@@ -1,0 +1,507 @@
+
+
+    :root {
+        --color-primary: #F5E3CD;
+        --color-secondary: #FEF3E7;
+        --color-secondary2: #fcf7f2;
+        --color-tertiary: #9E5B08;
+        --color-text: #703803;
+        --color-text2: #502803;
+
+    }
+
+
+.treatment-history-container{
+    width: 100%;
+    height: 100vh;
+    padding: 0.75rem 1.5rem 1.5rem 2rem;
+}
+.treatment-history-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.treatment-history-title{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--color-text);
+}
+.treatment-history-title-wrap{
+    text-align: start;
+}
+.button-appointment-treatment button{
+    padding: 1rem;
+    border: 1px solid var(--color-text);
+    border-radius: 15px;
+    color: var(--color-text);
+    font-size: 1rem;
+    background-color: var(--color-primary);
+}
+.button-appointment-treatment button:hover{
+    background-color: var(--color-secondary);
+}
+
+.appointment-treatment-history{
+    display: inline-block;
+}
+
+/*Profile User */
+.progress-profile-wrapper{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+}
+.patient-profile-wrapper{
+    display: flex;
+}
+.img-profile-wrapper{
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    color: var(--color-tertiary);
+    width: 100px;
+    height: 100px;
+}
+.patient-profile-name{
+    align-items: center;
+    margin-left: 1rem;
+    color: var(--color-text);  
+}
+.patient-profile-name p{
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+/*Progress*/
+.progress-profile-container{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.progress{
+    width: 100%;
+    border: 1px solid var(--color-text);
+    height: 70px;
+    display: block;
+    padding: 0.75rem 1.25rem;
+}
+.progress h4{
+    font-size: 0.80rem;
+    text-align: center;
+    align-items: center;
+    color: var(--color-text);
+    white-space: nowrap;
+}
+.progress p{
+    text-align: center;
+}
+.progress span{
+    color: var(--color-text);
+}
+
+/*flex with searchbar */
+.history-treatment-caret-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+}
+.history-treatment-searchbar-wrapper{
+    position: relative;
+}
+.history-treatment-searchbar-wrapper input{
+    padding: .85rem;
+}
+
+#history-treatment-search{
+    border-radius: 15px;
+    border: 1px solid var(--color-text);
+}
+#history-treatment-search:focus{
+    border-color: var(--color-primary);
+    border: none;
+}
+.history-treatment-searchbar-wrapper i {
+    position: absolute;
+    left: 200px;  /* Adjust the position from the left */
+    top:48%;
+    font-size: 1.2rem;
+    transform: translateY(-50%); /* Centers the icon vertically */
+    pointer-events: none; /* Ensures the icon doesn’t interfere with clicking on the input */
+}
+
+.history-caret-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+}
+.history-all-carets{
+    display: flex;
+    border: 1px solid var(--color-text);
+    background-color: #fff;
+    width: 160px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.history-all-carets p{
+    font-size: 1rem;
+    margin: 0;
+    color: var(--color-text);
+}
+.history-all-carets i{
+    margin-left: 5px;
+    color: var(--color-text);
+}
+
+
+/* Treatment Timeline toggle */
+.treatment-timeline-container{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+.treatment-timeline-title{
+    color: var(--color-text);
+    font-size: 1rem;
+    justify-items: center;
+    padding: 1rem
+}
+
+.toggle-timeline-wrapper{
+    display: flex;
+    cursor: pointer;
+}
+.toggle-timeline-wrap{
+    justify-items: center;
+    padding: 0.2rem;
+}
+.toggle-timeline-wrap button{
+    width: 150px;
+    padding: 0.8rem;
+    border: 1px solid var(--color-text);
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--color-text);
+}
+.toggle-timeline-wrap button:hover{
+    background-color: var(--color-secondary);
+}
+.toggle-timeline-wrap button.active-tab {
+    background-color: var(--color-primary);
+    color: var(--color-text); /* optional, for contrast */
+    border-color: var(--color-text);
+}
+
+
+
+/* timeline-overview */
+.treatment-history-timeline-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+
+}
+.treatment-history-timeline-overview-container{
+    background-color: var(--color-secondary2);
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.2);
+}
+
+.treatment-history-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.treatment-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* spacing between icon and text */
+    color: var(--color-text);
+}
+
+.treatment-title-wrap i {
+    font-size: 1.5rem; /* adjust icon size as needed */
+    color: var(--color-text);
+}
+.treatment-history-wrap h3{
+    color: var(--color-text);
+}
+.treatment-history-overview-timeline{
+  padding: 2rem;
+  margin-top: 1rem;
+}
+.treatment-history-overview-timeline p{
+    color: var(--color-text);
+    font-weight: 700;
+}
+.treatment-history-overview-timeline span{
+    color: var(--color-text);
+    font-weight: 400!important;
+}
+.treatment-view-details-btn{
+    padding: 1.4rem;
+    font-size: .85rem;
+}
+.treatment-view-details-btn button{
+    border: none;
+    color: var(--color-text);
+}
+
+
+
+/*For List View */
+.hidden{
+    display: none;
+}
+.treatment-history-table thead th{
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    color: var(--color-text);
+}
+.treatment-history-table tbody td{
+    color: var(--color-text);
+    padding: 1.2rem;
+}
+.treatment-history-table tbody td button{
+    border: none;
+    color: var(--color-text);
+}
+
+/* Modal for treatment-details */
+.treatment-history-view-details-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* full viewport */
+    background: rgba(0, 0, 0, 0.4); /* semi-transparent background */
+    display: none; /* hidden by default */
+    justify-content: center;
+    align-items: center; /* centers vertically */
+    z-index: 10001;
+}
+.treatment-history-view-details-container.active{
+    display: flex;
+}
+.treatment-history-view-details-modal{
+    background: #fff;
+    padding: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    width: 40%;
+    height: auto;
+    max-width: 90%;
+    position: relative;
+    justify-items:center; 
+}
+.treatment-history-view-details-modal button{
+    position: absolute;
+    left: 700px;
+    top: 1rem;
+    font-size: 2rem;
+    color: var(--color-text);
+}
+.treatment-history-view-details-modal button:hover{
+    color: var(--color-tertiary);
+}
+.view-detail-title{
+    color: var(--color-text);
+}
+.treatment-details-title-wrapper{
+    padding: 1.5rem;
+}
+.treatment-details-title-wrapper h3{
+    margin-top: 1rem;
+    color: var(--color-text);
+    font-size:clamp(0.95rem, 10vw, 1.2rem);
+    font-weight: 600;
+}
+.treatment-history-information-title {
+    color: var(--color-text);
+    padding: 0.60rem 2rem 0rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    height: 80%;
+    margin-bottom: 1rem;
+}
+.treatment-history-information-title p {
+    padding-left: 12px;
+    margin: 0;
+    color: var(--color-text);
+    white-space: normal;
+   overflow-wrap: break-word;   
+   text-align: justify;
+   font-weight: 500;
+   font-size: 0.95rem;
+}
+
+.treatment-history-information-title span{
+    color: var(--color-text);
+    white-space: normal;
+   overflow-wrap: break-word;  
+   font-weight: 450;
+    text-align: justify;
+}
+
+.treatment-history-information-title li{
+    white-space: normal;
+    overflow-wrap: break-word; 
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+.col{
+    padding-left: 1.5rem;
+    padding-bottom: -200px;
+}
+
+
+
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* 📱 Large Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .progress-profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .patient-profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .patient-profile-name {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .history-treatment-caret-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .history-caret-container {
+        justify-content: center;
+    }
+
+    .treatment-timeline-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .toggle-timeline-wrap button {
+        width: 100%;
+    }
+
+}
+
+/* 📱 Tablets and Medium Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .treatment-history-container {
+        padding: 1rem;
+    }
+
+    .treatment-history-title {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .progress-profile-wrapper {
+        padding: 1rem;
+    }
+
+    .progress-profile-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .progress {
+        width: 45%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .history-treatment-searchbar-wrapper i {
+        left: auto;
+        right: 1rem;
+    }
+
+    .history-caret-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .history-all-carets {
+        width: 45%;
+        height: 45px;
+    }
+
+    .treatment-timeline-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* 📱 Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .img-profile-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .patient-profile-name p {
+        font-size: 0.9rem;
+    }
+
+    .progress {
+        width: 100%;
+    }
+
+    .history-treatment-caret-wrapper {
+        padding: 0.5rem;
+    }
+
+    .history-treatment-searchbar-wrapper input {
+        width: 100%;
+    }
+
+    .history-all-carets {
+        width: 100%;
+    }
+
+    .toggle-timeline-wrap button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .treatment-history-overview-timeline {
+        padding: 0.5rem;
+    }
+
+    .treatment-history-wrap h3 {
+        font-size: 1rem;
+    }
+
+    .treatment-history-table tbody td {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}

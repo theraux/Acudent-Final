@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../CSS/user-interface/services.css">
+    <link rel="stylesheet" href="../../CSS/user-interface/auth.css">
+    <link rel="stylesheet" href="../../CSS/user-interface/footer.css">
+    <link rel="stylesheet" href="../../CSS/user-interface/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+    <title>MAPRU - Services</title>
+</head>
+<body>
+
+<!-- ======================================================================================================================================= -->
+
+  <!--Navigation Bar-->
+  <!-- Top nav -->
+  <div class="top-nav">
+    <div class="container-lg d-flex justify-content-end align-items-center px-3">
+      <div class="open-time-group d-flex align-items-center">
+        <div class="opentimelogo me-2">
+          <img src="../../Pictures/user-interface/icons/opentimelogo.png" alt="Logo" width="25">
+        </div>
+        <div class="open-time">
+          Opening Time: Monday to Sunday 9:00 AM - 5:00 PM
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav-container align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-lg bottom-nav-wrapper d-flex align-items-center">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center text-decoration-none me-auto" href="#">
+          <img src="../../Pictures/user-interface/banners-images-logo/logo.png" alt="Clinic Logo" class="logo-img">
+          <div class="logo-text ms-2">
+            <h3 class="mb-0">Mapru</h3>
+            <h5 class="mb-0">Dental Clinic</h5>
+          </div>
+        </a>
+
+        <!-- Desktop menu (visible on lg and up) -->
+        <ul class="navbar-nav d-none d-lg-flex align-items-center ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="../../HTML/user-interface/index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/about.html">ABOUT</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="../../HTML/user-interface/services.html"
+              id="servicesDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdownDesktop">
+              <li><a class="dropdown-item" href="#">Cleaning</a></li>
+              <li><a class="dropdown-item" href="#">Fillings</a></li>
+              <li><a class="dropdown-item" href="#">Tooth Extraction</a></li>
+              <li><a class="dropdown-item" href="#">Whitening</a></li>
+              <li><a class="dropdown-item" href="#">Orthodontics</a></li>
+              <li><a class="dropdown-item" href="#">Implants</a></li>
+              <li><a class="dropdown-item" href="#">Surgery</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/contact.html">CONTACT</a></li>
+        </ul>
+      <div class="signin-toggler-container d-flex align-items-center gap-2">
+  <a id="openModal" class="nav-link signin" href="#">SIGN IN</a>
+
+  <!-- Mobile toggler -->
+  <button class="navbar-toggler d-lg-none border-0" type="button"
+    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- Offcanvas (mobile) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mapru</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- mobile menu (duplicate of desktop items) -->
+      <ul class="navbar-nav  ">
+        <li class="nav-item"><a class="nav-link active" href="../../HTML/user-interface/index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/about.html">ABOUT</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="../../HTML/user-interface/services.html" id="servicesDropdownMobile"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdownMobile">
+            <li><a class="dropdown-item" href="../../HTML/user-interface/services.html">All Services</a></li>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="#">Cleaning</a></li>
+            <li><a class="dropdown-item" href="#">Fillings</a></li>
+            <li><a class="dropdown-item" href="#">Tooth Extraction</a></li>
+            <li><a class="dropdown-item" href="#">Whitening</a></li>
+            <li><a class="dropdown-item" href="#">Orthodontics</a></li>
+            <li><a class="dropdown-item" href="#">Implants</a></li>
+            <li><a class="dropdown-item" href="#">Surgery</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../../Javascript/user-interface/navbar.js"></script>
+
+  <!-- ======================================================================================================================================= -->
+
+
+    <!--Sign In Popup Modal-->
+    <div id="popupModal"></div>
+    <script src="../../Javascript/user-interface/auth.js"></script>
+    <!--Sign In Popup Modal-->
+
+
+
+
+    <div class="banner">
+        <img src="../../Pictures/user-interface/banners-images-logo/mapru_servicescopy.jpg" alt="Banner 3">
+        <div class="bottom-left-container">
+        <div class ="bottom-left">Expert dental services <br> for a healthier smile</div>
+        <button id="Appointment">Schedule an Appointment</button>
+        </div>
+    </div>
+
+
+    <!---->
+ <div class="after-banner">
+    <h2>Our Expertise</h2>
+    <p>We provide expert dental care to keep your smile healthy and bright</p>
+ </div>
+
+   <section class="service-section" id="periodontics">
+  <p>Periodontics</p>
+  <div class="service-row">
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/prophylaxis.png" alt="Oral Prophylaxis">
+      <div class="title">Oral Prophylaxis</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/scaling.png" alt="Deep Scaling">
+      <div class="title">Deep Scaling</div>
+    </div>
+  </div>
+</section>
+
+<section class="service-section" id="cosmetic-care">
+  <p>Cosmetic Care</p>
+  <div class="service-row">
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/esthetic.png" alt="Tooth Filling">
+      <div class="title">Tooth Filling</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/Orthodontics.png" alt="Teeth Whitening">
+      <div class="title">Teeth Whitening</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/bond.png" alt="Cosmetic Bonding">
+      <div class="title">Cosmetic Bonding</div>
+    </div>
+  </div>
+</section>
+
+<section class="service-section" id="orthodontics">
+  <p>Orthodontics</p>
+  <div class="service-row">
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/metal.png" alt="Metal Braces">
+      <div class="title">Metal Braces</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/ceramic.png" alt="Ceramic Braces">
+      <div class="title">Ceramic Braces</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/self-ligating.png" alt="Self-Ligating Braces">
+      <div class="title">Self-Ligating Braces</div>
+    </div>
+  </div>
+</section>
+
+<section class="service-section" id="prosthodontics">
+  <p>Prosthodontics</p>
+  <div class="service-row">
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/fixed.png" alt="Fixed Denture">
+      <div class="title">Fixed Denture</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/partial.png" alt="Partial Denture">
+      <div class="title">Partial Denture</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/completed.png" alt="Complete Dentures">
+      <div class="title">Complete Dentures</div>
+    </div>
+  </div>
+</section>
+
+<section class="service-section" id="surgical-treatment">
+  <p>Surgical Treatment</p>
+  <div class="service-row">
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/Implant.png" alt="Implant">
+      <div class="title">Implant</div>
+    </div>
+    <div class="service">
+      <img src="../../Pictures/user-interface/services/Surgery.png" alt="Surgery">
+      <div class="title">Surgery</div>
+    </div>
+  </div>
+</section>
+
+
+    <!--Footer Section-->
+    <div id="footer"></div>
+    <script src="../../Javascript/user-interface/footer.js"></script>
+    <!--Footer Section-->
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

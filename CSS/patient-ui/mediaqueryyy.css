@@ -1,0 +1,222 @@
+/* Extra Large Desktops */
+@media screen and (max-width: 1400px) {
+
+    /* ============Patient Information Record============== */
+    .patient-user-information-record-main {
+        background-color: white;
+        padding: 10px 20px 20px 30px;
+    }
+
+    .patient-information-section-row {
+        --bs-gutter-x: 24px !important;
+    }
+
+    .patient-information-header {
+        padding: 0 8px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .patient-information-section-row {
+        --bs-gutter-x: 16px !important;
+    }
+}
+
+/* Desktops */
+@media screen and (max-width: 1200px) {
+    /* ============Patient Information Record============== */
+
+
+
+}
+
+/* Small Laptops */
+@media screen and (max-width: 992px) {
+
+    /* ============Patient Information Record============== */
+    .patient-user-information-record-main {
+        background-color: white;
+        padding: 10px 10px 20px 30px;
+    }
+
+    .patient-user-information-record-main h1 {
+        font-size: 1.25rem;
+    }
+
+    .patient-profile-overview {
+        background-color: var(--color-primary);
+        padding: 0 1.5rem;
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+
+    .patient-information-profile-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .patient-information-profile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .patient-information-profile-id {
+        color: var(--color-text2);
+        font-size: 1.25;
+    }
+
+    .patient-information-profile-name {
+        color: var(--color-text2);
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+}
+
+@media (max-width: 820px) {
+    /* ==========Topbar============== */
+
+}
+
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    /* ============Patient Information Record============== */
+
+
+    .personal-information-record {
+        margin-bottom: 20px;
+    }
+
+    .patient-information-header h2 {
+        color: var(--color-text2);
+        margin-bottom: -8px;
+        font-size: 1.2rem;
+
+    }
+
+    .head {
+        margin-bottom: 1.5rem;
+        flex-direction: column-reverse !important;
+        align-items: flex-start;
+    }
+
+    .head-btn-container {
+        display: none !important;
+    }
+
+
+    .patient-profile-overview {
+        padding: 0 1rem;
+    }
+
+    
+    .patient-information-profile-img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+
+
+
+    /* ---------------Save Edit Button-------------- */
+
+    .patient-information-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 30px;
+    }
+
+    .patient-information-btn {
+        width: 80px;
+        padding: 2px;
+        font-size: .8rem;
+        border-radius: 10px;
+        border: 1px solid var(--color-text2);
+    }
+
+
+    /* ---------Consent & Agreement--------- */
+    .patient-consent-statement {
+        margin: 0 1.5rem;
+        color: var(--color-text2);
+    }
+
+    .patient-consent-statement h3 {
+        margin: 0;
+        font-size: .8rem;
+    }
+
+    .patient-consent-statement p {
+        text-align: justify;
+        font-size: .8rem;
+    }
+
+    .patient-consent-statement span {
+        text-align: justify;
+        font-size: .8rem;
+    }
+
+}
+
+
+/* Mobile (Landscape) */
+@media screen and (max-width: 576px) {
+
+    /* ============Patient Information Record============== */
+    .patient-user-information-record-main {
+        background-color: white;
+        padding: 0 5px 20px 20px;
+    }
+
+    .patient-information-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 30px;
+    }
+
+    .patient-information-profile-id {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .patient-information-profile-name {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .patient-information-profile-text h1 {
+        font-size: 1.25rem !important;
+        font-weight: 500;
+    }
+
+    .head .pt-2 {
+        display: none !important;
+    }
+    .patient-profile-overview {
+        padding: 0 .5rem;
+    }
+}
+
+
+/* Portrait phones */
+@media screen and (max-width: 440px) {
+    .patient-information-profile-id {
+        font-size: .95rem;
+    }
+
+    .patient-information-profile-name {
+        font-size: .85rem;
+    }
+
+    .patient-information-profile-text h1 {
+        font-size: .95rem !important;
+    }
+
+}

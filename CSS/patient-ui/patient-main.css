@@ -1,0 +1,536 @@
+    :root {
+        --color-primary: #F5E3CD;
+        --color-secondary: #FEF3E7;
+        --color-secondary2: #fcf7f2;
+        --color-tertiary: #9E5B08;
+        --color-text: #703803;
+        --color-text2: #502803;
+
+    }
+
+
+    /* ==================Patient Information Record======================= */
+    /* ---------Patient Information Main-------------- */
+    .patient-user-information-record-main {
+        background-color: white;
+        padding: 10px 30px 0 50px;
+    }
+
+    .patient-user-information-record-main h1 {
+        color: var(--color-text2);
+        font-size: 1.5rem;
+
+    }
+
+    /* ------------Header------------- */
+    .head {
+        margin-bottom: 1.5rem;
+        justify-content: space-between;
+    }
+
+    .head-btn {
+        width: 100px;
+        font-size: .8rem;
+        border: 1px solid #5028037a;
+        background-color: var(--color-secondary);
+        color: var(--color-text2);
+        font-weight: 400;
+        padding: 5px 0;
+    }
+
+    .patient-information-header h2 {
+        color: var(--color-text2);
+        font-size: 1.5rem;
+    }
+
+    .patient-information-header-hmo h2 {
+        color: var(--color-text2);
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    /* ------------------Patient Information Record Container------------------ */
+    .patient-information-container {
+        background-color: var(--color-secondary2);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, .15);
+    }
+
+    .patient-information-container h6 {
+        margin-left: 1rem;
+        color: var(--color-text2);
+    }
+
+    .patient-information-container .hr1 {
+        margin: .5rem 1rem;
+        color: var(--color-text2);
+    }
+
+    .patient-profile-container {
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .patient-profile-overview {
+        background-color: var(--color-primary);
+        padding: 0 1.5rem;
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+
+    .patient-information-profile-img {
+        width: 90px;
+        height: 90px;
+        background-color: var(--color-secondary);
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
+    }
+
+    .patient-information-profile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .patient-information-profile-id {
+        color: var(--color-text2);
+        font-size: 1.5;
+    }
+
+    .patient-information-profile-name {
+        color: var(--color-text2);
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+
+    /* -------------Personal Details-------------- */
+    .patient-information-personal-details-container {
+        padding: 10px;
+
+    }
+
+    /* --------------Medical History------------- */
+    .patient-information-medical-history-container {
+        padding: 10px;
+    }
+
+
+    .patient-information-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 30px;
+    }
+
+    .patient-information-btn {
+        padding: 2px;
+        border-radius: 10px;
+        border: 1px solid var(--color-text2);
+    }
+
+    .btn-save {
+        width: 100px;
+        background-color: var(--color-secondary);
+    }
+
+    .btn-cancel {
+        width: 100px;
+        background-color: var(--color-primary);
+    }
+
+    /* -------------Insurance Information-------------- */
+    .patient-information-hmo-information-container {
+        padding: 10px;
+
+    }
+
+    .hmo-ask {
+        color: var(--color-text2);
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 1rem;
+
+    }
+
+    /* -------------Minor Patient-------------- */
+    .patient-information-minor-patient-container {
+        padding: 10px;
+    }
+
+
+    /* -------------Consent Agreement-------------- */
+    .patient-information-consent-agreement-container {
+        padding: 10px;
+    }
+
+    /* -------------Input Field--------------- */
+    .form-floating {
+        position: relative;
+        width: 100%;
+    }
+
+    .form-column {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-floating input,
+    .form-floating select,
+    .form-floating label .form-floating :placeholder-shown {
+        width: 100%;
+        padding: 0.5rem;
+        color: var(--color-text);
+        border: 1px solid #502c0049;
+        border-radius: 5px !important;
+
+    }
+
+    .form-floating label {
+        color: #502c00;
+        font-size: clamp(1rem, 2vw, 1rem);
+    }
+
+    .form-control:focus {
+        border-color: #8B4513;
+        box-shadow: 0 0 4px rgba(139, 69, 19, 0.5);
+        outline: none;
+    }
+
+    .form-group {
+        color: var(--color-text2);
+    }
+
+    .form-check-input {
+        border: 1px solid var(--color-text);
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* ------------Other Style-------------- */
+    .personal-information-record {
+        margin-bottom: 30px;
+    }
+
+    .patient-information-header hr {
+        color: var(--color-text2);
+    }
+
+    /* -----------Consent & Agreement------------ */
+    .patient-consent-statement {
+        margin: 0 1.5rem;
+        color: var(--color-text2);
+    }
+
+    .patient-consent-statement h3 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .patient-consent-statement p {
+        text-align: justify;
+    }
+
+    .patient-consent-statement span {
+        text-align: justify;
+    }
+
+
+
+
+
+
+    /* ===========My Account Container============= */
+    /* --------Main Container-------------- */
+    .my-account-main-container {
+        min-height: 90vh;
+        padding: 10px 30px 0 30px;
+
+        flex-direction: column;
+        margin-right: -10px;
+        margin-bottom: -100px;
+    }
+
+    .my-account-main-container h1 {
+        color: var(--color-text2);
+        font-size: 2rem;
+    }
+
+    .my-account-main-container p {
+        color: var(--color-text2);
+        font-size: .85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .my-account-row {
+        background-color: var(--color-secondary2);
+        padding: 2rem 1rem 0 1rem;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ---------------Column Container-------------- */
+    .my-account-col-nested-container {
+        background-color: white;
+        border-radius: 10px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    /* -----------Left Column-------------- */
+    .my-account-profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .my-account-profile-img-container {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+        border: 1px solid #5028031a;
+    }
+
+    .my-account-profile-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .my-account-profile-name-ID h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #222;
+        margin-bottom: 0.25rem;
+        text-align: center;
+    }
+
+    .my-account-profile-name-ID h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--color-text2);
+        text-align: center;
+    }
+
+    .my-account-profile-name-ID span {
+        font-weight: 400;
+        color: var(--color-text2);
+    }
+
+    hr {
+        color: var(--color-text2);
+    }
+
+    .my-account-change-photo {
+        margin-top: -15px;
+        color: var(--color-text2);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        background-color: var(--color-primary);
+        border: none;
+        width: 90%;
+        padding: .5rem;
+        border-radius: 30px;
+    }
+
+
+    /* -------------Right Column---------------- */
+    .my-account-col-nested-container .my-account-profile-basic-info-wrapper {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        padding-left: 1rem;
+        color: var(--color-text2);
+    }
+
+    .my-account-col-nested-container .my-account-profile-basic-info-wrapper h4 {
+        font-size: 1rem;
+        width: 100%;
+        text-align: left;
+        font-weight: 350;
+    }
+
+    .my-account-col-nested-container .my-account-profile-basic-info-wrapper span {
+        margin-left: .5rem;
+    }
+
+    .my-account-field {
+        margin-bottom: 20px;
+    }
+
+    .my-account-btns {
+        border-bottom: 1px solid #9e5b0870;
+        padding-right: 2.25rem !important;
+    }
+
+    /* ---------- TOP SWITCH BUTTONS ---------- */
+    .my-account-btn-switch {
+        height: auto;
+        background-color: transparent;
+    }
+
+    .my-account-personal-info-btn,
+    .my-account-security-btn {
+        font-size: 1rem;
+        color: var(--color-text2);
+        border: none;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .my-account-personal-info-btn {
+        width: 200px;
+    }
+
+    .my-account-security-btn {
+        width: 100px;
+    }
+
+    .my-account-personal-info-btn:hover,
+    .my-account-security-btn:hover {
+        color: var(--color-tertiary);
+        border-bottom: 2px solid var(--color-tertiary);
+        background-color: rgba(158, 91, 8, 0.05);
+    }
+
+    /* ---------- EDIT BUTTON ---------- */
+    .my-account-edit-btn {
+        width: 70px;
+        color: var(--color-tertiary);
+        border: 1px solid #9e5b0870;
+        font-size: .9rem;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .my-account-edit-btn:hover {
+        background-color: var(--color-tertiary);
+        color: white;
+    }
+
+    /* ---------- SAVE BUTTON ---------- */
+    .my-account-btn-save {
+        width: 150px;
+        height: auto;
+        font-size: .75rem;
+        padding: .5rem;
+        border-radius: 20px;
+        border: none;
+        color: var(--color-text2);
+        background-color: var(--color-primary);
+        transition: all 0.3s ease;
+    }
+
+    .my-account-btn-save:hover {
+        background-color: var(--color-tertiary);
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .my-account-info-details-wrapper {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .my-account-field label {
+        color: var(--color-text2);
+        font-size: .85rem;
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .my-account-field input {
+        margin-top: 0;
+        border: 1px solid #9e5b0870;
+    }
+
+    .form-control {
+        color: var(--color-text2);
+        font-size: 1rem;
+        padding: .75rem;
+    }
+
+    .my-account-btn-bottom-right {
+        padding: .5rem 2.25rem 1.5rem 0;
+    }
+
+    .active-tab {
+        color: var(--color-tertiary);
+        border-bottom: 2px solid var(--color-tertiary);
+        background-color: rgba(158, 91, 8, 0.05);
+        font-weight: 600;
+    }
+
+    /* ========== Security Info Section ========== */
+
+    .hidden {
+        display: none !important;
+    }
+
+    .my-accoount-security-container {
+        margin-bottom: 4rem !important;
+    }
+
+    .my-account-security-wrapper {
+        width: 100%;
+        border-radius: 10px;
+        padding: 0 0 2rem 0;
+        color: var(--color-text2);
+        margin-bottom: 1rem;
+    }
+
+    .my-account-security-container .my-account-field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-account-security-container .my-account-field label {
+        color: var(--color-text2);
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+
+    .my-account-security-container .my-account-field input {
+        border: 1px solid #9e5b0870;
+        border-radius: 8px;
+        padding: .75rem 0.9rem;
+        font-size: 0.95rem;
+        color: var(--color-text2);
+        background-color: white;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .my-account-security-container .my-account-field input:focus {
+        border-color: var(--color-tertiary);
+        box-shadow: 0 0 0 3px rgba(158, 91, 8, 0.15);
+        outline: none;
+    }
+
+
+
+    /* ==================Responsive Desgin========================= */

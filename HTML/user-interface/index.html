@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAPRU - Homepage</title>
+  <!-- In <head> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Your custom CSS after Bootstrap -->
+  <link rel="stylesheet" href="../../CSS/user-interface/index.css">
+  <link rel="stylesheet" href="../../CSS/user-interface/auth.css">
+  <link rel="stylesheet" href="../../CSS/user-interface/footer.css">
+  <link rel="stylesheet" href="../../CSS/user-interface/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- ======================================================================================================================================= -->
+
+  <!--Navigation Bar-->
+  <!-- Top nav -->
+  <div class="top-nav">
+    <div class="container-lg d-flex justify-content-end align-items-center px-3">
+      <div class="open-time-group d-flex align-items-center">
+        <div class="opentimelogo me-2">
+          <img src="../../Pictures/user-interface/icons/opentimelogo.png" alt="Logo" width="25">
+        </div>
+        <div class="open-time">
+          Opening Time: Monday to Sunday 9:00 AM - 5:00 PM
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-nav-container align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-lg bottom-nav-wrapper d-flex align-items-center">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center text-decoration-none me-auto" href="#">
+          <img src="../../Pictures/user-interface/banners-images-logo/logo.png" alt="Clinic Logo" class="logo-img">
+          <div class="logo-text ms-2">
+            <h3 class="mb-0">Mapru</h3>
+            <h5 class="mb-0">Dental Clinic</h5>
+          </div>
+        </a>
+
+        <!-- Desktop menu (visible on lg and up) -->
+        <ul class="navbar-nav d-none d-lg-flex align-items-center ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="../../HTML/user-interface/index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/about.html">ABOUT</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="../../HTML/user-interface/services.html"
+              id="servicesDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdownDesktop">
+              <li><a class="dropdown-item" href="#">Cleaning</a></li>
+              <li><a class="dropdown-item" href="#">Fillings</a></li>
+              <li><a class="dropdown-item" href="#">Tooth Extraction</a></li>
+              <li><a class="dropdown-item" href="#">Whitening</a></li>
+              <li><a class="dropdown-item" href="#">Orthodontics</a></li>
+              <li><a class="dropdown-item" href="#">Implants</a></li>
+              <li><a class="dropdown-item" href="#">Surgery</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/contact.html">CONTACT</a></li>
+        </ul>
+      <div class="signin-toggler-container d-flex align-items-center gap-2">
+  <a id="openModal" class="nav-link signin" href="">SIGN IN</a>
+
+  <!-- Mobile toggler -->
+  <button class="navbar-toggler d-lg-none border-0" type="button"
+    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- Offcanvas (mobile) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mapru <p>Dental Clinic</p> </h5>
+      
+
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- mobile menu (duplicate of desktop items) -->
+      <ul class="navbar-nav  ">
+        <li class="nav-item"><a class="nav-link active" href="../../HTML/user-interface/index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/about.html">ABOUT</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="../../HTML/user-interface/services.html" id="servicesDropdownMobile"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdownMobile">
+            <li><a class="dropdown-item" href="../../HTML/user-interface/services.html">All Services</a></li>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="#">Cleaning</a></li>
+            <li><a class="dropdown-item" href="#">Fillings</a></li>
+            <li><a class="dropdown-item" href="#">Tooth Extraction</a></li>
+            <li><a class="dropdown-item" href="#">Whitening</a></li>
+            <li><a class="dropdown-item" href="#">Orthodontics</a></li>
+            <li><a class="dropdown-item" href="#">Implants</a></li>
+            <li><a class="dropdown-item" href="#">Surgery</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../../HTML/user-interface/contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../../Javascript/user-interface/navbar.js"></script>
+
+  <!-- ======================================================================================================================================= -->
+
+
+  <!--Sign In Popup Modal-->
+  <div id="popupModal"></div>
+  <script src="../../Javascript/user-interface/auth.js"></script>
+  <!--Sign In Popup Modal-->
+
+  <!-- ======================================================================================================================================= -->
+
+
+  <div class="hero-banner-container position-relative">
+
+    <div class="banner fade active">
+      <img src="../../Pictures/user-interface/banners-images-logo/header3.png" alt="Banner 1">
+      <div class="banner-text-container">
+        <div class="banner-text">
+          <h2>Creating Confident Smiles Every Day</h2>
+          <p>At MAPRU Dental Clinic, we combine modern dentistry with a personal touch, tailoring every treatment to
+            your unique needs.</p>
+        </div>
+        <button id="Appointment">Schedule an Appointment</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ======================================================================================================================================= -->
+
+
+ <section class="about-section container-fluid py-5">
+    <div class="row about-row">
+      
+      <!-- Image -->
+  <div class="col-lg-6 col-md-6 about-img">
+    <img src="../../Pictures/user-interface/banners-images-logo/second banner.jpg" 
+         alt="Clinic Image" 
+         class="img-fluid">
+  </div>
+
+  <!-- Text -->
+  <div class="col-lg-6 col-md-6 about-text">
+        <h2>Mapru Dental Clinic</h2>
+        <p>
+          Welcome to Mapru Dental Clinic, where your smile is our top priority. 
+          Our clinic offers a wide range of dental services designed to meet the needs 
+          of every patient, from routine checkups to advanced treatments. 
+        </p>
+        <p>
+          We are committed to providing compassionate, personalized care in a modern 
+          and comfortable environment. Our team of professionals uses the latest technology 
+          to ensure the best results for your oral health.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================================================================================= -->
+
+
+  <!-- why choose us-->
+  <section class="why-choose">
+    <h2>Why Choose MAPRU Dental Clinic?</h2>
+
+    <!-- 4 Grids -->
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="../../Pictures/user-interface/icons/Personalized.png" alt="Perosnalized Image">
+        <h3>Personalized Dental Care</h3>
+        <p>Your smile is personal, and your dental care should be too.</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../Pictures/user-interface/icons/team.png" alt="Team Image">
+        <h3>Expert & Compassionate Team</h3>
+        <p>Led by Dra. Maja Prudente, our team is dedicated to providing high-quality dental services with honesty,
+          professionalism, and genuine compassion.</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../Pictures/user-interface/icons/patient.png" alt="Patient Image">
+        <h3>Patient-Focused Approach</h3>
+        <p>We take the time to listen to your concerns, explain your treatment options clearly, and ensure you feel
+          supported every step of the way.</p>
+      </div>
+      <div class="grid-item">
+        <img src="../../Pictures/user-interface/icons/services.png" alt="Services Image">
+        <h3>Comprehensive Dental Services</h3>
+        <p>Whether it's a routine checkup or a more advanced procedure, you can always expect personalized care in a
+          friendly, respectful environment.</p>
+      </div>
+    </div>
+
+    <!--end-->
+
+    <!-- Retained Paragraph -->
+    <div class="why-choose-text">
+      <p>
+        Our clinic combines modern dental technology with a clean, welcoming space designed to put you at ease.
+        We believe that exceptional care should be both accessible and affordable, and we’re proud to serve
+        individuals and families who value a thoughtful, patient-centered approach. At MAPRU Dental Clinic,
+        we don’t just treat teeth—we care for people, and we’re here to help you achieve a healthy, confident
+        smile that lasts.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================================================================================================= -->
+
+  <!-- Doctors Section -->
+  <section class="doctors">
+    <h2>Our Doctors</h2>
+    <div class="doctor-grid">
+
+      <a href="../../HTML/user-interface/about_doctors.html" class="doctor-card">
+        <img src="../../Pictures/user-interface/doctors/Dr.Maja.jpg" alt="Dr. Maja">
+        <p>Dr. Maja Prudente</p>
+      </a>
+
+      <a href="../../HTML/user-interface/about_doctors.html" class="doctor-card">
+        <img src="../../Pictures/user-interface/doctors/dr.Renz.jpg" alt="Dr. Renz">
+        <p>Dr. Renz</p>
+      </a>
+
+      <a href="../../HTML/user-interface/about_doctors.html" class="doctor-card">
+        <img src="../../Pictures/user-interface/doctors/Dr.Ruth.jpg" alt="Dr. Irish">
+        <p>Dr. Irish</p>
+      </a>
+
+      <a href="../../HTML/user-interface/about_doctors.html" class="doctor-card">
+        <img src="doctor4.jpg" alt="Dr. Jano">
+        <p>Dr. Jano</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================================================================================= -->
+
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="../../Pictures/user-interface/services/general dentistry.png" alt="Periodontics">
+        <div class="overlay">
+          <h3>Periodontics</h3>
+          <ul>
+            <li><a href="../../HTML/user-interface/services.html#periodontics">Oral Phrophylaxis</a></li>
+            <li><a href="../../HTML/user-interface/services.html#periodontics">Deep Scaling</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="../../Pictures/user-interface/services/cosmetic care.png" alt="Cosmetic Care">
+        <div class="overlay-right">
+          <h3>Cosmetic Care</h3>
+          <ul>
+            <li><a href="../../HTML/user-interface/services.html#cosmetic-care">Tooth Filling</a></li>
+            <li><a href="../../HTML/user-interface/services.html#cosmetic-care">Teeth Whitening</a></li>
+            <li><a href="../../HTML/user-interface/services.html#cosmetic-care">Cosmetic Bonding</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="../../Pictures/user-interface/services/orthodontics_services.png" alt="Orthodontics">
+        <div class="overlay">
+          <h3>Orthodontics</h3>
+          <ul>
+            <li><a href="../../HTML/user-interface/services.html#orthodontics">Metal Braces</a></li>
+            <li><a href="../../HTML/user-interface/services.html#orthodontics">Ceramic Braces</a></li>
+            <li><a href="../../HTML/user-interface/services.html#orthodontics">Self Ligating Braces</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="../../Pictures/user-interface/services/prosthodontics.png" alt="Prosthodontics">
+        <div class="overlay-right">
+          <h3>Prosthodontics</h3>
+          <ul>
+            <li><a href="../../HTML/user-interface/services.html#prosthodontics">Fixed Denture</a></li>
+            <li><a href="../../HTML/user-interface/services.html#prosthodontics">Partial Denture</a></li>
+            <li><a href="../../HTML/user-interface/services.html#prosthodontics">Complete Dentures</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="../../Pictures/user-interface/services/surgical treatment.png" alt="Surgical Treatment">
+        <div class="overlay">
+          <h3>Surgical Treatment</h3>
+          <ul>
+            <li><a href="../../HTML/user-interface/services.html#surgical-treatment">Tooth Extraction</a></li>
+            <li><a href="../../HTML/user-interface/services.html#surgical-treatment">Odontectomy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="Clinic-Images">
+    <h2>Your trusted Partner in Dental Health</h2>
+    <h3>From routine checkups to advanced treatments, we’re here to keep your smile healthy and confident.</h3>
+    <div class="Clinic-Slideshow">
+      <img class="Clinic-Slide" src="../../Pictures/user-interface/dental-look/Clinic1.png" alt="Pictures of Clinic">
+      <img class="Clinic-Slide" src="../../Pictures/user-interface/dental-look/Clinic1.png" alt="Pictures of Clinic">
+      <img src="Pictures/" alt="">
+      <img src="Pictures/" alt="">
+
+      <button class="display-left" onclick="plusDivs(-1)">&#10094</button>
+      <button class="display-right" onclick="plusDivs(1)">&#10095</button>
+
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("Clinic-Slide");
+          if (n > x.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = x.length }
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          x[slideIndex - 1].style.display = "block";
+        }
+      </script>
+    </div>
+  </section>
+
+  <section class="Reviews">
+    <h2>Real Smiles, Real Stories</h2>
+    <h3>Hear directly from the patients who make our work so rewarding.</h3>
+    <div class="Reviews-of-Patient" id="Reviewscontainer">
+      <h2>What People Are Saying</h2>
+      <img src="acudent_logo.png" alt="">
+      <p>"This clinic changed my life"</p>
+      <img src="acudent_logo.png" alt="">
+    </div>
+  </section>
+
+  <!-- ======================================================================================================================================= -->
+
+  <!--Map of Mapru Dental Clinic-->
+  <div class="Map">
+    <h2>Where you can find us</h2>
+    <h3>Visit us at our clinic—we’re closer than you think!</h3>
+    <div class="Mapru Map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.0730482535437!2d120.94744627590231!3d14.422952481399673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d25b9c7a8d79%3A0xf33a33d44be4864!2sMAPRU%20Dental%20Clinic!5e0!3m2!1sen!2sph!4v1757143887642!5m2!1sen!2sph"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="details">
+        <h2>The smile that you deserve!</h2>
+        <div class="info-row">
+          <img src="../../Pictures/user-interface/icons/location.png" alt="Location Pic">
+          <p>9067 DSM Subdivision Mambog 1, Bacoor City, Cavite</p>
+        </div>
+
+        <div class="info-row">
+          <img src="../../Pictures/user-interface/icons/cellphone.png" alt="Cellphone Pic">
+          <p>0915 748 5132</p>
+        </div>
+
+        <div class="info-row">
+          <img src="../../Pictures/user-interface/icons/email.png" alt="Email Pic">
+          <p>maprudentalclinic@gmail.com</p>
+        </div>
+
+        <div class="info-row">
+          <img src="../../Pictures/user-interface/icons/clock.png" alt="Clock Pic">
+          <p>Office hours: Monday - Sunday <br> 8:00 - 5:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ======================================================================================================================================= -->
+
+  <!--Footer Section-->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-section left">
+        <h3>About Mapru</h3>
+        <ul>
+          <li><a href="../../HTML/user-interface/about.html">Who we are</a></li>
+          <li><a href="../../HTML/user-interface/contact.html">Contact Us</a></li>
+          <li><a href="../../HTML/user-interface/about_doctors.html">Our Doctors</a></li>
+          <li><a href="#">Customer Reviews</a></li>
+        </ul>
+      </div>
+      <!-- Center Section -->
+      <div class="footer-section center">
+        <img src="../../Pictures/user-interface/banners-images-logo/logo.png" alt="MAPRU Logo" class="footer-logo">
+        <div class="social-icons">
+          <a href="https://instagram.com/maprudentalclinic" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://facebook.com/MAPRUDentalClinic" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+        <p class="copyright">&copy; MAPRU DENTAL CLINIC</p>
+      </div>
+      <!-- Right Section -->
+      <div class="footer-section right">
+
+        <h3>Services</h3>
+        <ul>
+          <li><a href="../../HTML/user-interface/services.html#periodontics">Periodontics</a></li>
+          <li><a href="../../HTML/user-interface/services.html#cosmetic-care">Cosmetic Care</a></li>
+          <li><a href="../../HTML/user-interface/services.html#orthodontics">Orthodontics</a></li>
+          <li><a href="../../HTML/user-interface/services.html#prosthodontics">Prosthodontics</a></li>
+          <li><a href="../../HTML/user-interface/services.html#surgical-treatment">Surgical Treatment</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!--Footer Section-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

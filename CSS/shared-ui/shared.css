@@ -1,0 +1,934 @@
+:root {
+  --color-primary: #F5E3CD;
+  --color-secondary: #FEF3E7;
+  --color-secondary2: #fcf7f2;
+  --color-tertiary: #9E5B08;
+  --color-text: #703803;
+  --color-text2: #502803;
+
+}
+
+/* ========== Global Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* ==========User Patient Main ========== */
+
+.main-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+/* ==========User Patient Sidebar ========== */
+
+/* ----------- Sidebar Container -----------  */
+.sidebar-container {
+  width: 270px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  transition: width 0.3s ease;
+  box-sizing: border-box;
+  z-index: 1001;
+  background-color: var(--color-secondary);
+}
+
+.sidebar-container.active {
+  width: 80px;
+  transition: width 0.3s ease;
+}
+
+/* -----------  Sidebar/Logo Header -----------  */
+.sidebar-top-logo {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  border-bottom: 3px solid var(--color-primary);
+  padding: 0;
+}
+.toggle-sidebar {
+  opacity: 0;
+}
+
+.sidebar-top-logo .logo-img {
+  max-width: 60px;
+  margin-right: 8px;
+}
+
+.sidebar-top-logo .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  max-height: 100px;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.sidebar-top-logo .logo-text h3,
+.sidebar-top-logo .logo-text h5 {
+  color: var(--color-tertiary);
+  margin: 0;
+  text-align: center;
+}
+
+.sidebar-top-logo .logo-text h3 {
+  font-size: 1.4rem;
+}
+
+.sidebar-top-logo .logo-text h5 { 
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.sidebar-container.active .sidebar-top-logo .logo-text {
+  opacity: 0;
+  max-height: 0;
+}
+
+/* -----------  User Profile Name -----------  */
+
+.sidebar-user-profile-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  margin: 1.5rem .5rem 1rem 0;
+  gap: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  width: 90%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  
+}
+
+.sidebar-profile-info-container {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 5px;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-userprofile-img {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+  border: 1px solid #50280348;
+}
+
+.sidebar-userprofile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar-container.active .sidebar-userprofile-img {
+  width: 45px;
+  height: 45px;
+  margin-left: 7px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.sidebar-userprofile-name-container {
+  max-width: 120px;
+  opacity: 1;
+  transition: max-width 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar-userprofile-name-container h3,
+.sidebar-userprofile-name-container p {
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  color: var(--color-text2);
+}
+
+.sidebar-userprofile-name-container p {
+  font-size: 0.7rem;
+}
+
+.sidebar-userprofile-name-container h3 {
+  font-size: 0.9rem;
+}
+
+.sidebar-container:not(.active) .sidebar-userprofile-img {
+  width: 55px;
+  height: 55px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.sidebar-container.active .sidebar-userprofile-name-container {
+  max-width: 0;
+  opacity: 0;
+}
+
+/* -----------  Sidebar Content -----------  */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-secondary);
+}
+
+/* -----------  Sidebar Navigation -----------  */
+.sidebar-navigation {
+  width: 100%;
+}
+
+.sidebar-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav-list li {
+  width: 100%;
+}
+
+.sidebar-section-title:first-of-type {
+  margin-top: 0.5rem;
+}
+
+/* -----------  Sidebar Titles -----------  */
+.sidebar-section-title {
+  font-size: 0.55rem;
+  font-weight: 500;
+  color: var(--color-tertiary);
+  text-transform: uppercase;
+  margin: 1.5rem 0 0.5rem 1.2rem;
+  opacity: 1;
+  height: auto;
+  width: auto;
+  margin-left: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition:
+      opacity 0.3s ease,
+      height 0.3s ease,
+      margin-top 0.3s ease,
+      margin-bottom 0.3s ease,
+      margin-left 0.3s ease;
+  display: block;
+  will-change: opacity, height;
+
+  line-height: 1;
+
+}
+
+.sidebar-container.active .sidebar-section-title {
+  opacity: 0;
+  height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  transition:
+      opacity 0.3s ease,
+      height 0.3s ease,
+      margin-top 0.3s ease,
+      margin-bottom 0.3s ease,
+      margin-left 0.3s ease;
+
+}
+
+/* -----------  Sidebar Button Styling -----------  */
+.btn-my-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: var(--color-text2);
+  background-color: var(--color-secondary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 80%;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+
+}
+
+.btn-my-account i {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--color-text);
+}
+
+.btn-my-account span {
+  color: var(--color-text2);
+  font-size: .8rem;
+}
+
+.btn-sidebar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  margin-bottom: 0.5rem;
+  color: var(--color-text2);
+  opacity: 1;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+  box-sizing: border-box;
+}
+
+.btn-sidebar span,
+.btn-my-account span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 8px;
+  opacity: 1;
+  width: auto;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-sidebar i {
+  min-width: 20px;
+  text-align: center;
+  margin-right: 0.5rem;
+  color: var(--color-text);
+}
+
+/* -----------  Sidebar Behavior -----------  */
+.sidebar-container.active .btn-sidebar span {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.sidebar-container.active .btn-my-account span {
+  opacity: 0;
+  width: 0;
+  margin-left: 0;
+  pointer-events: none;
+}
+
+/* -----------  Hover & Active Effects -----------  */
+.btn-sidebar:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 550;
+}
+
+.btn-sidebar.active {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 550;
+}
+
+/* -----------  Other Buttons -----------  */
+.btn-backtohome {
+  margin-bottom: 1rem !important;
+}
+
+/* -----------  Scrollbar Styling -----------  */
+.sidebar-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background-color: var(--color-secondary);
+}
+
+/* -----------  Logout Button -----------  */
+.sidebar-logout {
+  margin-top: auto;
+  width: 100%;
+  margin-bottom: .5rem !important;
+}
+
+.sidebar-logout-btn {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.sidebar-logout-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 550;
+}
+
+
+
+
+/* =============Patient Main Content Container==================== */
+
+/* ---------------Main Content Containeer Topbar----------------- */
+.topbar {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 10px;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  color: var(--color-text);
+  position: sticky;
+  transition: left 0.3s ease, width 0.3s ease;
+  z-index: 1000;
+  background-color: var(--color-secondary);
+}
+
+.topbar.active {
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* --------------TopBar Left Side------------------- */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.topbar-left h3 {
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 450;
+}
+
+.toggle {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.today-date {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.contentarea-topbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-profile-name {
+  font-size: .8rem;
+  color: var(--color-text);
+  margin: 0;
+  font-weight: 500;
+}
+
+.contentarea-topbar-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #50280348;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.contentarea-topbar-user img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.icon-wrapper {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper i {
+  color: #333;
+  font-size: 1rem;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.icon-wrapper .badge {
+  position: absolute;
+  background-color: var(--color-tertiary);
+  color: white;
+  font-size: 0.65rem;
+  padding: 5px 5px;
+  border-radius: 50%;
+  font-weight: bold;
+  top: -8px;
+  right: -10px;
+  min-width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.icon-wrapper:focus {
+  outline: 1.5px solid var(--color-tertiary);
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+
+
+/*========== Patient Content Area ========== */
+
+.main-content-area-container {
+  margin-left: 270px;
+  width: calc(100% - 270px);
+  min-height: 100vh;
+  overflow-x: clip;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  background-color: white;
+  overflow-y: scroll; /* always show scrollbar, even if no overflow */
+}
+
+.main-content-area-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.main-content-area-container::-webkit-scrollbar-track {
+  background: #d3cec9;
+}
+
+.main-content-area-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-tertiary);
+  border-radius: 7px;
+  border: 1px solid var(--color-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.main-content-area-container::-webkit-scrollbar-thumb:hover {
+  background-color: #9e5b08;
+}
+
+.main-content-area-container.active {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+
+}
+
+.content-container {
+  padding: 10px 20px 10px 10px;
+  min-height: calc(100vh - 60px);
+  transition: margin-left 0.3s ease;
+}
+
+
+  .footer {
+      border-top: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+      color: var(--color-text2);
+      padding: 1rem 0 .5rem 0;
+    }
+
+
+
+    /* ==================Responsive Desgin========================= */
+
+
+    /* =========================Extra Large Desktops =========================*/
+    @media screen and (max-width: 1400px) {
+        /* ============Topbar============ */
+        .icon-bell-notif {
+            margin-right: 1rem !important;
+        }
+        
+        /* =============Sidebar============ */
+        .sidebar-container {
+            width: 80px;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar-container.active {
+            width: 270px;
+            height: 100vh;
+        }
+        /* -------Toggle Logo----------- */
+        .toggle-sidebar {
+            position: absolute;
+            left: 1px;
+            top: 15px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            color: var(--color-text);
+            cursor: pointer;
+        
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            z-index: 10;
+        
+            /* Default: fade out faster */
+            transition:
+                opacity 0.1s ease,
+                transform 0.1s ease,
+                visibility 0.1s ease;
+        }
+        
+        /* When sidebar is active → fade in slower */
+        .container.active .toggle-sidebar {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        
+            /* Override transition speed when active */
+            transition:
+                opacity 0.5s ease,
+                transform 0.5s ease,
+                visibility 0.5s ease;
+        }
+        
+
+        .sidebar-container.active .sidebar-top-logo .logo-text {
+            opacity: 1;
+            max-height: 100px;
+        }
+
+        .sidebar-container .sidebar-top-logo .logo-text {
+            opacity: 0;
+            max-height: 0;
+        }
+
+        /* ----------- User Profile -------------- */
+        .sidebar-container.active .sidebar-userprofile-img {
+            width: 55px;
+            height: 55px;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        .sidebar-container .sidebar-userprofile-img {
+            width: 45px;
+            height: 45px;
+            margin-left: 7px;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        .sidebar-container.active .sidebar-userprofile-name-container {
+            max-width: 120px;
+            opacity: 1;
+        }
+
+        .sidebar-container .sidebar-userprofile-name-container {
+            max-width: 0;
+            opacity: 0;
+        }
+
+        /* --------Sidebar Title---------- */
+
+        .sidebar-container.active .sidebar-section-title {
+            opacity: 1;
+            height: auto;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            margin-left: 1.2rem;
+            transition:
+                opacity 0.3s ease,
+                height 0.3s ease,
+                margin-top 0.3s ease,
+                margin-bottom 0.3s ease,
+                margin-left 0.3s ease;
+        }
+
+        .sidebar-container .sidebar-section-title {
+            opacity: 0;
+            height: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            transition:
+                opacity 0.3s ease,
+                height 0.3s ease,
+                margin-top 0.3s ease,
+                margin-bottom 0.3s ease,
+                margin-left 0.3s ease;
+
+        }
+
+        /* ---------Sidebar Buttons------------- */
+
+        .sidebar-container.active .btn-sidebar span {
+            width: auto;
+            opacity: 1;
+            transition: width 0.3s ease, opacity 0.3s ease;
+        }
+
+        .sidebar-container.active .btn-my-account span {
+            opacity: 1;
+            width: auto;
+            margin-left: 8px;
+            pointer-events: none;
+        }
+
+        .sidebar-container .btn-sidebar span {
+            width: 0;
+            opacity: 0;
+            transition: width 0.3s ease, opacity 0.3s ease;
+        }
+
+        .sidebar-container .btn-my-account span {
+            opacity: 0;
+            width: 0;
+            pointer-events: none;
+        }
+
+
+        /* =============Conten Container============= */
+        .main-content-area-container {
+            margin-left: 80px;
+            width: 100%;
+            transition: margin-left 0.3s ease, width 0.3s ease;
+
+        }
+
+        /* ==================Top Bar================== */
+        .topbar {
+            left: 80px;
+            width: 100%;
+        }
+    }
+
+
+
+
+
+    /* =========================Desktops =========================*/
+    @media screen and (max-width: 1200px) {
+
+
+    
+    }
+
+
+
+
+
+    /* =========================Small Laptops========================= */
+    @media screen and (max-width: 992px) {
+
+    }
+
+
+
+
+
+
+    /* =========================Below Small Laptops========================= */
+    @media (max-width: 820px) {}
+
+
+
+
+    /* =========================Tablets========================= */
+    @media screen and (max-width: 768px) {
+
+        /* =============Sidebar============ */
+        .sidebar-container {
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar-container.active {
+            width: 270px;
+            height: 100vh;
+        }
+
+        /* ----------Logo Text----------- */
+
+        .sidebar-container.active .sidebar-top-logo .logo-text {
+            opacity: 1;
+            max-height: 100px;
+        }
+
+        .sidebar-container.active .sidebar-userprofile-img {
+            width: 55px;
+            height: 55px;
+            margin-left: 5px;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        .sidebar-container.active .sidebar-userprofile-name-container {
+            max-width: 120px;
+            opacity: 1;
+        }
+
+        .sidebar-container.active .sidebar-section-title {
+            opacity: 1;
+            height: auto;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            margin-left: 1.2rem;
+            transition:
+                opacity 0.3s ease,
+                height 0.3s ease,
+                margin-top 0.3s ease,
+                margin-bottom 0.3s ease,
+                margin-left 0.3s ease;
+        }
+
+        .sidebar-container.active .btn-sidebar span {
+            width: auto;
+            opacity: 1;
+            transition: width 0.3s ease, opacity 0.3s ease;
+        }
+
+        .sidebar-container.active .btn-my-account span {
+            opacity: 1;
+            width: auto;
+            margin-left: 8px;
+            pointer-events: none;
+        }
+
+        .btn-sidebar:not(.sidebar-logout-btn):hover::before,
+        .btn-sidebar:not(.sidebar-logout-btn).active::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: var(--color-text);
+        }
+
+        /* =============Conten Container============= */
+        .main-content-area-container,
+        .main-content-area-container.active {
+            margin-left: 0 !important;
+            width: 100% !important;
+            transition: margin-left 0.3s ease, width 0.3s ease;
+        }
+
+        /* ==================Top Bar================== */
+        .topbar {
+            left: 0;
+            width: 100%;
+        }
+
+        .topbar-left h3 {
+            display: none;
+        }
+
+        .icon-bell-notif {
+            margin-right: 1.5rem !important;
+        }
+    }
+
+
+
+
+
+
+
+
+
+    /* =========================Mobile (Landscape)========================= */
+    @media screen and (max-width: 576px) {
+
+        /* ==========Topbar========== */
+        /* ==================Top Bar================== */
+        .topbar {
+            left: 0;
+            width: 100%;
+        }
+        .today-date {
+            display: none;
+        }
+
+        .icon-bell-notif {
+            margin-right: 1rem !important;
+        }
+    }
+
+
+    /* =========================Portrait phones========================= */
+    @media screen and (max-width: 430px) {
+
+        /* ==========Topbar========== */
+        .contentarea-topbar-profile h4 {
+            display: none;
+        }
+
+        /* ==========Sidebar========== */
+        .sidebar-container.active {
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        /* -------Toggle Logo----------- */
+        .sidebar-container.active .toggle-sidebar {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }

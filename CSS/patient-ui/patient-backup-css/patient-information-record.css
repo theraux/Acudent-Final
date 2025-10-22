@@ -1,0 +1,231 @@
+
+/* ---------Patient Information Main-------------- */
+.patient-user-information-record-main {
+  background-color: white;
+  padding: 10px 30px 20px 50px;
+}
+
+.patient-user-information-record-main h1 {
+  color: var(--color-text2);
+  font-size: 1.5rem;
+}
+
+/* ------------Header------------- */
+
+.head {
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+
+.head-btn {
+  width: 100px;
+  font-size: .8rem;
+  border: 1px solid #5028037a;
+  background-color: var(--color-secondary);
+  color: var(--color-text2);
+  font-weight: 400;
+}
+
+.patient-information-header h2 {
+  color: var(--color-text2);
+  font-size: 1.5rem;
+}
+
+/* ------------------Patient Information Record Container------------------ */
+.patient-information-container {
+  background-color: var(--color-secondary2);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .15);
+}
+
+.patient-profile-container {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.patient-profile-overview {
+  background-color: var(--color-primary);
+  padding: 0 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: .5rem;
+}
+
+.patient-information-container h6 {
+  margin-left: 1rem;
+  color: var(--color-text2);
+}
+
+.patient-information-container .hr1 {
+  margin: .5rem 1rem;
+  color: var(--color-text2);
+}
+
+.patient-information-profile-img {
+  width: 90px;
+  height: 90px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
+}
+
+.patient-information-profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.patient-information-profile-id {
+  color: var(--color-text2);
+  font-size: 1.5;
+}
+
+.patient-information-profile-name {
+  color: var(--color-text2);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+
+
+/* -------------Personal Details-------------- */
+.patient-information-personal-details-container {
+  padding: 10px;
+
+}
+
+
+/* --------------Medical History------------- */
+.patient-information-medical-history-container {
+  padding: 10px;
+}
+
+
+.patient-information-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 30px;
+}
+
+.patient-information-btn {
+  width: 100px;
+  padding: 2px;
+  border-radius: 10px;
+  border: 1px solid var(--color-text2);
+}
+
+.btn-save {
+
+  background-color: var(--color-secondary);
+}
+
+.btn-cancel {
+  background-color: var(--color-primary);
+}
+
+
+
+
+/* -------------Insurance Information-------------- */
+.patient-information-hmo-information-container {
+  padding: 10px;
+  
+}
+.hmo-ask {
+  color: var(--color-text2);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* -------------Minor Patient-------------- */
+.patient-information-minor-patient-container {
+  padding: 10px;
+}
+
+
+/* -------------Consent Agreement-------------- */
+.patient-information-consent-agreement-container {
+  padding: 10px;
+}
+
+
+/* -------------Input Field--------------- */
+.form-floating {
+  position: relative;
+  width: 100%;
+}
+.form-column {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-floating input,
+.form-floating select,
+.form-floating label .form-floating :placeholder-shown {
+  width: 100%;
+  padding: 0.5rem;
+  color: var(--color-text);
+  border: 1px solid #502c0049;
+  border-radius: 5px !important;
+
+}
+
+.form-floating label {
+  color: #502c00;
+  font-size: clamp(1rem, 2vw, 1rem);
+}
+
+.form-control:focus {
+  border-color: #8B4513;
+  box-shadow: 0 0 4px rgba(139, 69, 19, 0.5);
+  outline: none;
+}
+
+.form-group {
+  color: var(--color-text2);
+}
+
+.form-check-input {
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+/* ------------Other Style-------------- */
+.personal-information-record {
+  margin-bottom: 30px;
+}
+
+.patient-information-header hr {
+  color: var(--color-text2);
+}
+
+/* -----------Consent & Agreement------------ */
+.patient-consent-statement {
+  margin: 0 1.5rem;
+  color: var(--color-text2);
+}
+
+.patient-consent-statement h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.patient-consent-statement p {
+  text-align: justify;
+}
+
+.patient-consent-statement span {
+  text-align: justify;
+}
