@@ -1,0 +1,285 @@
+:root {
+    --color-primary: #F5E3CD;
+    --color-secondary: #FEF3E7;
+    --color-secondary2: #fcf7f2;
+    --color-tertiary: #9E5B08;
+    --color-text: #703803;
+    --color-text2: #502803;
+  
+  }
+.patient-information-record-main-container{
+  width: 100%;
+  padding: 15px 10px 20px 30px;
+}
+
+.patient-profile {
+    color: var(--color-text);
+}
+.patient-profile h3{
+    font-size: 1.25rem;
+    margin: 0;
+}
+.patient-profile i{
+    font-size: 1rem;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+.patient-profile p{
+    font-size: .85rem;
+    margin: 0;
+}
+
+.patient-information-record-container {
+    /* background-color: var(--color-secondary2); */
+    padding: 1px 10px 10px 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    height: 100%;
+}
+
+/* Search Wrapper */
+.search-wrapper-patient {
+  position: relative;
+  /* Removed: width: 200px; */ /* This was constraining the container; let it auto-size */
+  display: flex; /* Ensure it's a flex container (already set via Bootstrap d-flex) */
+  align-items: center; /* Vertically align items if needed */
+}
+
+.search-wrapper-patient input {
+  border: 1px solid var(--color-text);
+  border-radius: 20px;
+  padding: 8px 35px 8px 12px; /* Space for the search icon */
+  flex: 1; /* Allow the input to grow and take available space */
+}
+
+.search-wrapper-patient i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text);
+  pointer-events: none;
+}
+
+.filter-search-container-wrapper {
+  font-size: 1.8rem;
+  color: var(--color-text);
+  cursor: pointer;
+  margin-left: 10px; /* Add some spacing between search and filter */
+}
+
+.form-control:focus {
+  border-color: var(--color-primary) !important;
+}
+
+/* Toggle button */
+.toggle-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  
+}
+.toggle-wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.toggle-button-menu button{
+  width: 150px;
+    padding: 0.8rem;
+    border: 1px solid var(--color-text);
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--color-text);
+}
+.toggle-button-menu button:hover{
+  background-color: var(--color-secondary);
+}
+.toggle-wrapper button.active-tab{
+  background-color: var(--color-primary);
+    color: var(--color-text); /* optional, for contrast */
+    border-color: var(--color-text);
+    font-weight: 600;
+}
+
+
+
+/*Patient Profile box */
+
+.patient-profile-box-main-container {
+
+    background-color: white;
+    border-radius: 12px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+.patient-profile-box-container {
+    width: 100%;
+    padding: 5px 5px 20px 30px;
+    justify-items: center;
+
+}
+.patient-profile-box {
+    position: relative;
+    border: 1px solid #50280346;
+    background-color: var(--color-secondary2);
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+    justify-items: center;
+    padding: 1rem;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.patient-profile-box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -14px;      
+    right: 0;  
+    width: 15px;
+    background-color:var(--color-primary);
+    border: 1px solid #50280346;
+
+}
+.patient-record-img-container{
+    border: 1px solid #50280346; 
+     border-radius: 50%;
+  background-color: var(--color-primary);
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.patient-record-img-container img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.patient-info-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #502C00;
+}
+.patient-info-container h3{
+   font-weight: 500;
+   font-size: 1.2rem;
+}
+.patient-info-container span{
+  font-size: .80rem;
+  font-weight: 400;
+}
+
+
+/* List View table */
+.hidden{
+  display: none;
+}
+.patient-record-list-view-tb thead th{
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    color: var(--color-text);
+}
+.patient-record-list-view-tb tbody td{
+    color: var(--color-text);
+    padding: 1.2rem;
+}
+.patient-record-list-view-tb tbody td button{
+    border: none;
+    color: var(--color-text);
+}
+
+
+/* Appointment logs */
+.patient-information-record-appointment-logs-modal{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* full viewport */
+    background: rgba(0, 0, 0, 0.4); /* semi-transparent background */
+    display: none; /* hidden by default */
+    justify-content: center;
+    align-items: center; /* centers vertically */
+    z-index: 10001;
+}
+.patient-record-appointment-logs-container{
+    background: #fff;
+    padding: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    width: 40%;
+    height: auto;
+    max-width: 90%;
+    position: relative;
+    justify-items:center; 
+    padding: 1rem;
+}
+.patient-record-appointment-logs-container.active{
+  display: flex;
+}
+.patient-record-logs-close{
+    position: absolute;
+    left: 800px;
+    top: 1rem;
+    font-size: 2rem;
+    color: var(--color-text);
+    border: none;
+}
+.patient-record-logs-close:hover{
+  color: var(--color-tertiary);
+}
+.patient-record-logs-title{
+  padding: 1rem;
+}
+.patient-record-logs-title h3{
+  color: var(--color-text);
+  font-size: 1.4rem;
+
+}
+.patient-record-appointment-logs-modal-tb {
+  table-layout: fixed; /* makes cells respect width & wrapping */
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-word;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.patient-record-appointment-logs-modal-tb thead th{
+   background-color: var(--color-secondary);
+    padding: 1rem;
+    color: var(--color-text);
+}
+.patient-record-appointment-logs-modal-tb tbody td{
+   color: var(--color-text);
+  padding: 1.2rem;
+  white-space: normal; /* allow wrapping */
+  word-break: break-word; /* break long words */
+}
+.patient-record-appointment-logs-modal-tb-body td span {
+    color: #093a14;
+    background-color: #28a74656;
+    padding: .40rem;
+    border-radius: 15px;
+}
+
+.patient-record-list-view-tb th, 
+  .patient-record-list-view-tb td {
+    border: 1px solid #000; /* black border */
+    padding: 8px; /* adds some space inside cells */
+    text-align: left;
+  }
+
+  .patient-record-list-view-tb {
+    border-collapse: collapse; /* ensures borders don't double up */
+    width: 100%; /* optional, makes table fill the container */
+  }
+
+.patient-record-appointment-logs-modal-tb th:nth-child(1),
+.patient-record-appointment-logs-modal-tb td:nth-child(1){
+  width: 15%;
+}

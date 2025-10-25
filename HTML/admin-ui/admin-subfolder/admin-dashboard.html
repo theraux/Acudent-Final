@@ -1,209 +1,290 @@
-<div class="container-fluid user-patient-dashboard">
+<div class="container-fluid dashboard-main-container">
 
-    <div class="line mb-3"></div>
-  
-    <div class="patient-dashboard-greeting">
-      <h2>Welcome back, <span id="patient-dashboard-greeting-name">Dracy!</span></h2>
-      <p>Here's a quick overview of your dental health and upcoming appointments.</p>
+  <div class="line mb-3"></div>
+
+  <div class="dashboard-greeting">
+    <h2>Dashboard</h2>
+    <p>Here’s a quick overview of the clinic’s activities and upcoming appointments.</p>
+  </div>
+
+  <div class="dashboard-banner-container mb-4">
+    <div class="img-loc "> <img class="dashboard-banner" src="../../Pictures/patient-ui/dashboard-banner2.png" alt="">
+      <div class="healthy-tips-wrapper ">
+        <div class="div-header-wrapper d-flex flex-row gap-2 align-items-center">
+          <div class="tips-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div class="tips-header-text text-align-center pt-2">
+            <h3> Workday Wisdom:</h3>
+          </div>
+        </div>
+        <div class="div-tips-wrapper d-flex flex-row gap-2 ms-2">
+          <div class="tips-icon-sub"></div>
+          <div class="tips-subheader-text text-align-center pt-2">
+            <p id="daily-dental-tip-1"></p>
+          </div>
+        </div>
+
+      </div>
     </div>
-  
-    <!-- Dental Tips Section -->
-    <!-- Dental Tips Section -->
-    <section class="dental-tips-section">
-      <div class="row dashboard-banner-row g-4 "> <!-- Left: Banner -->
-        <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12  left">
-          <div class="img-loc "> <img class="dashboard-banner" src="../../Pictures/patient-ui/dashboard-banner.png" alt="">
-            <div class="user-patient-healthy-tips">
-              <h3>🦷 Dental Health Tip of the Day:</h3>
-              <p id="daily-dental-tip">qwer1qqasdffgggggggggggggwerq</p>
+  </div>
+
+  <div class="dashboard-banner-container-2 mb-4">
+    <div class="img-loc-2 ">
+      <div class="healthy-tips-wrapper-2">
+        <p id="daily-dental-tip-2"></p>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div-dashboard-card ">
+    <!-- Dashboard Cards Section -->
+    <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 row-cols-1 g-4">
+      <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="dashboard-card h-100">
+          <div class="icon-container"><i class="fa-solid fa-calendar-days"></i></div>
+          <div class="dashboard-card-text d-flex flex-column justify-content-start  pb-0 ">
+            <h4>Today's Appointments</h4>
+            <h3>Total: 8</h3>
+            <p>2:30 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="dashboard-card h-100">
+          <div class="icon-container"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <div class="dashboard-card-text d-flex flex-column justify-content-start pb-0">
+            <h4>Inventory Alert</h4>
+            <h3>3 Items</h3>
+            <p class="dashboard-p1">Low Count Stocks</p>
+          </div>
+          <button class="dashboard-card-add-button ms-auto" title="View Stocks">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="dashboard-card h-100">
+          <div class="icon-container"><i class="fa-solid fa-money-bill-1"></i></div>
+          <div class="dashboard-card-text d-flex flex-column justify-content-start  pb-0 ">
+            <h4>Revenue Summary </h4>
+            <h3>P98,000</h3>
+            <p>This Month</p>
+          </div>
+          <button class="dashboard-card-add-button ms-auto" title="View Detailed Report">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="dashboard-card h-100">
+          <div class="icon-container"><i class="fa-solid fa-user"></i></div>
+          <div class="dashboard-card-text d-flex flex-column justify-content-start  pb-0 ">
+            <h4>Registered Patients</h4>
+            <h3>Total: <span>278</span>
+              <h3>
+                <p class="dashboard-p">1 in progress</p>
+          </div>
+          <button class="dashboard-card-add-button ms-auto " title="Add Patient">
+            <i class="fa-solid fa-user-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="dashboard-card h-100">
+          <div class="icon-container"><i class="fa-solid fa-user-tie"></i></i></div>
+          <div class="dashboard-card-text d-flex flex-column justify-content-start  pb-0 ">
+            <h4>Registered Dentists</h4>
+            <h3>Total: 4</h3>
+            <p>Currently registered and available</p>
+          </div>
+          <button class="dashboard-card-add-button ms-auto" title="Add Dentist">
+            <i class="fa-solid fa-user-plus"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="dashboard-card h-100">
+          <div class="icon-container"><i class="fa-solid fa-users"></i></div>
+          <div class="dashboard-card-text d-flex flex-column justify-content-start  pb-0 ">
+            <h4>Clinic Staff Members</h4>
+            <h3>Total: 4</h3>
+            <p>Currently part of clinic operations</p>
+          </div>
+          <button class="dashboard-card-add-button ms-auto" title="Add Staff">
+            <i class="fa-solid fa-user-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="div-dashboard-card mt-4">
+
+    <!-- Dashboard Cards Section -->
+    <div class="row g-4">
+      <div class="col-lg-8 col-md-12 dashboard-overview-list d-flex flex-column justify-content-start ">
+        <div class="dashboard-card-bottom-container h-100">
+
+          <!-- Header -->
+          <div class="dashboard-bottom-header">
+            <div class="header-text">
+              <h3>Today's Appointments Overview</h3>
+            </div>
+            <div class="header-view-all-btn">
+              <a href="" class="dashboard-view-all-btn"><span>View all</span></a>
             </div>
           </div>
-        </div> <!-- Right: Quick Actions -->
-        <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 pe-0 py-0 right align-items-between">
-  
-          <div class="dashboard-quick-btn-container ps-2 h-100">
-            <h4>Quick Actions</h4>
-            <div class="row h-100 pb-3 nested-row g-3 ps-3 row-cols-3">
-              <div class="col-4 dashboard-quick-actions-button"> <button class="quick-action-btn w-100"><ion-icon
-                    name="calendar"></ion-icon> <span>Book
-                    Appointment</span></button> </div>
-              <div class="col-4 dashboard-quick-actions-button"> <button class="quick-action-btn w-100"><span>View
-                    Treatments</span></button> </div>
-              <div class="col-4 dashboard-quick-actions-button"> <button class="quick-action-btn w-100"><span>View
-                    Services</span></button> </div>
+          <hr>
+
+          <!-- List container -->
+          <div class="appointment-overview-list">
+            
+            <div class="appointment-item">
+              <div class="appointment-item-wrapper d-flex flex-row">
+                <div class="appointment-bottom-icon-container bg-primary"><i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <div class="appointment-details ">
+                  <h5>Tooth Cleaning</h5>
+                  <p>Oct 15, 2025 • 9:30 AM</p>
+                </div>
+              </div>
+              <div class="appointment-status in-progress">In Progress</div>
+            </div>
+
+            <div class="appointment-item ">
+              <div class="appointment-item-wrapper d-flex flex-row">
+                <div class="appointment-bottom-icon-container bg-success">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="appointment-details">
+                  <h5>Root Canal</h5>
+                  <p>Oct 15, 2025 • 10:00 AM</p>
+                </div>
+              </div>
+              <div class="appointment-status confirmed">Confirmed</div>
+            </div>
+            <div class="appointment-item">
+              <div class="appointment-item-wrapper d-flex flex-row">
+                <div class="appointment-bottom-icon-container bg-success"><i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="appointment-details">
+                  <h5>Root Canal</h5>
+                  <p>Oct 15, 2025 • 10:30 AM</p>
+                </div>
+              </div>
+              <div class="appointment-status confirmed">Confirmed</div>
+            </div>
+            <div class="appointment-item">
+              <div class="appointment-item-wrapper d-flex flex-row">
+                <div class="appointment-bottom-icon-container bg-success"><i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="appointment-details">
+                  <h5>Root Canal</h5>
+                  <p>Oct 15, 2025 • 11:00 AM</p>
+                </div>
+              </div>
+              <div class="appointment-status confirmed">Confirmed</div>
+            </div>
+
+
+            <div class="appointment-item">
+              <div class="appointment-item-wrapper d-flex flex-row">
+                <div class="appointment-bottom-icon-container bg-danger"><i class="fa-solid fa-calendar-days"></i></div>
+
+                <div class="appointment-details">
+                  <h5>Filling Replacement</h5>
+                  <p>Oct 15, 2025 • 11:30 AM</p>
+                </div>
+              </div>
+              <div class="appointment-status cancelled">Cancelled</div>
             </div>
           </div>
         </div>
-  
-    </section>
-  
-  
-  
-  
-  
-    <div class="div-dashboard-card pe-3">
-      <!-- Dashboard Cards Section -->
-      <div class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-1 row-cols-sm-1 row-cols-1 g-4">
-        <div class="col-lg-4 col-md-12">
-          <div class="dashboard-card h-100">
-            <div class="icon-container"><i class="fa-solid fa-calendar-days"></i></div>
-            <div class="dashboard-card-text d-flex flex-column justify-content-start  pb-0 ">
-              <h4>Upcoming Appointments</h4>
-              <h3>Next - Nov 06</h3>
-              <p>2:30 PM</p>
+      </div>
+
+      <div class="col-lg-4 col-md-12 dashboard-overview-list d-flex flex-column justify-content-start">
+
+        <div class="row right-col-row row-cols-lg-2">
+          <div class="col-xl-12 col-lg-12 col-md-6">
+            <div class="dashboard-card-bottom-container">
+
+              <!-- Header -->
+              <div class="dashboard-bottom-header">
+                <div class="header-text">
+                  <h3>Today's Inventory Overview</h3>
+                </div>
+              </div>
+
+              <!-- Activity List -->
+              <div class="recent-activity-list">
+                <div class="activity-item">
+                  <div class="activity-details">
+                    <h5>Completed Root Canal</h5>
+                    <p>Oct 15, 2025</p>
+                  </div>
+                </div>
+
+
+                <div class="activity-item">
+                  <div class="activity-details">
+                    <h5>Suggested Tooth Cleaning</h5>
+                    <p>Oct 20, 2025</p>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-details">
+                    <h5>Cancelled Filling Replacement</h5>
+                    <p>Oct 25, 2025</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="dashboard-card h-100">
-            <div class="icon-container"><i class='bx  bx-tooth'></i> </div>
-            <div class="dashboard-card-text d-flex flex-column justify-content-start  pb-0 ">
-              <h4>Treatment Record</h4>
-              <h3>5 Total<h3>
-                  <p class="dashboard-p">1 in progress</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="dashboard-card h-100">
-            <div class="icon-container"><i class="fa-solid fa-money-bill-1"></i></div>
-            <div class="dashboard-card-text d-flex flex-column justify-content-start pb-0 bg-info">
-              <h4>Total Dental Expenses</h4>
-              <h3>P12,000</h3>
-              <p class="dashboard-p1">Reflects all paid treatments to date</p>
+          <div class="col-xl-12 col-lg-12 col-md-6">
+            <div class="dashboard-card-bottom-container">
+              <!-- Header -->
+              <div class="dashboard-bottom-header">
+                <div class="header-text">
+                  <h3>Recent Activity</h3>
+                </div>
+              </div>
+              <!-- Activity List -->
+              <div class="recent-activity-list">
+                <div class="activity-item">
+                  <div class="activity-details">
+                    <h5>Completed Root Canal</h5>
+                    <p>Oct 15, 2025</p>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-details">
+                    <h5>Completed Root Canal</h5>
+                    <p>Oct 15, 2025</p>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-details">
+                    <h5>Suggested Tooth Cleaning</h5>
+                    <p>Oct 20, 2025</p>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-details">
+                    <h5>Cancelled Filling Replacement</h5>
+                    <p>Oct 25, 2025</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
-    <div class="div-dashboard-card pe-3 mt-4">
-  
-      <!-- Dashboard Cards Section -->
-      <div class="row g-4">
-        <div class="col-lg-8 col-md-6 dashboard-overview-list d-flex flex-column justify-content-start ">
-          <div class="dashboard-card-bottom-container h-100">
-  
-            <!-- Header -->
-            <div class="dashboard-bottom-header">
-              <div class="header-text">
-                <h3>Appointments Overview</h3>
-              </div>
-              <div class="header-view-all-btn">
-                <a href="" class="dashboard-view-all-btn"><span>View all</span></a>
-              </div>
-            </div>
-            <hr>
-  
-            <!-- List container -->
-            <div class="appointment-overview-list">
-  
-              <div class="appointment-item">
-                <div class="appointment-item-wrapper d-flex flex-row">
-                  <div class="appointment-bottom-icon-container bg-success">
-                    <i class="fa-solid fa-calendar-days"></i>
-                  </div>
-                  <div class="appointment-details">
-                    <h5>Root Canal</h5>
-                    <p>Oct 15, 2025 • 10:00 AM</p>
-                  </div>
-                </div>
-                <div class="appointment-status confirmed">Confirmed</div>
-              </div>
-              <div class="appointment-item">
-                <div class="appointment-item-wrapper d-flex flex-row">
-                  <div class="appointment-bottom-icon-container bg-success"><i class="fa-solid fa-calendar-days"></i>
-                  </div>
-                  <div class="appointment-details">
-                    <h5>Root Canal</h5>
-                    <p>Oct 15, 2025 • 10:00 AM</p>
-                  </div>
-                </div>
-                <div class="appointment-status confirmed">Confirmed</div>
-              </div>
-              <div class="appointment-item">
-                <div class="appointment-item-wrapper d-flex flex-row">
-                  <div class="appointment-bottom-icon-container bg-success"><i class="fa-solid fa-calendar-days"></i>
-                  </div>
-                  <div class="appointment-details">
-                    <h5>Root Canal</h5>
-                    <p>Oct 15, 2025 • 10:00 AM</p>
-                  </div>
-                </div>
-                <div class="appointment-status confirmed">Confirmed</div>
-              </div>
-  
-              <div class="appointment-item">
-                <div class="appointment-item-wrapper d-flex flex-row">
-                  <div class="appointment-bottom-icon-container bg-primary"><i class="fa-solid fa-calendar-days"></i>
-                  </div>
-  
-                  <div class="appointment-details ">
-                    <h5>Tooth Cleaning</h5>
-                    <p>Oct 20, 2025 • 2:30 PM</p>
-                  </div>
-                </div>
-                <div class="appointment-status pending">Suggested Schedule</div>
-              </div>
-  
-              <div class="appointment-item">
-                <div class="appointment-item-wrapper d-flex flex-row">
-                  <div class="appointment-bottom-icon-container bg-danger"><i class="fa-solid fa-calendar-days"></i></div>
-  
-                  <div class="appointment-details">
-                    <h5>Filling Replacement</h5>
-                    <p>Oct 25, 2025 • 11:00 AM</p>
-                  </div>
-                </div>
-                <div class="appointment-status cancelled">Cancelled</div>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-  
-  
-        <div class="col-lg-4 col-md-6 dashboard-overview-list d-flex flex-column justify-content-start">
-          <div class="dashboard-card-bottom-container h-100">
-  
-            <!-- Header -->
-            <div class="dashboard-bottom-header">
-              <div class="header-text">
-                <h3>Recent Activity</h3>
-              </div>
-            </div>
-  
-            <!-- Activity List -->
-            <div class="recent-activity-list">
-              <div class="activity-item">
-                <div class="activity-details">
-                  <h5>Completed Root Canal</h5>
-                  <p>Oct 15, 2025</p>
-                </div>
-              </div>
-  
-              <div class="activity-item">
-                <div class="activity-details">
-                  <h5>Suggested Tooth Cleaning</h5>
-                  <p>Oct 20, 2025</p>
-                </div>
-              </div>
-  
-              <div class="activity-item">
-                <div class="activity-details">
-                  <h5>Cancelled Filling Replacement</h5>
-                  <p>Oct 25, 2025</p>
-                </div>
-              </div>
-            </div>
-  
-          </div>
-        </div>
-  
-      </div>
-  
-  
-  
-  
-  
-    </div>
+  </div>

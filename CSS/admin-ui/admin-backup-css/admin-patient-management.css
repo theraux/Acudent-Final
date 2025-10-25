@@ -1,0 +1,499 @@
+  :root {
+      --color-primary: #F5E3CD;
+      --color-secondary: #FEF3E7;
+      --color-secondary2: #fcf7f2;
+      --color-tertiary: #9E5B08;
+      --color-text: #703803;
+      --color-text2: #502803;
+    
+    }
+  .information-record-main-container{
+    width: 100%;
+    padding: 15px 10px 20px 30px;
+  }
+
+  .profile-container {
+      color: var(--color-text);
+  }
+  .profile-container h3{
+      font-size: 1.25rem;
+      margin: 0;
+  }
+  .profile-container i{
+      font-size: 1rem;
+      margin-right: 5px;
+      margin-top: 4px;
+  }
+  .profile-container p{
+      font-size: .85rem;
+      margin: 0;
+  }
+  .add-user-btn-container {
+    margin-right: 20px;
+  }
+
+  .add-user-btn-container button {
+    background-color: #b88b4a;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    color:var(--color-secondary);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 32px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .information-record-container {
+      /* background-color: var(--color-secondary2); */
+      padding: 1px 10px 10px 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      height: 100%;
+  }
+
+  /* Search Wrapper */
+  .search-wrapper-patient {
+    position: relative;
+    /* Removed: width: 200px; */ /* This was constraining the container; let it auto-size */
+    display: flex; /* Ensure it's a flex container (already set via Bootstrap d-flex) */
+    align-items: center; /* Vertically align items if needed */
+  }
+  .record-search-wrapper i {
+  right: 10px; 
+  top: 50%; 
+  transform: translateY(-50%);
+
+  }
+  .record-search-wrapper input {
+    border: 1px solid var(--color-text);
+    border-radius: 20px;
+    width: 200px;
+    font-size: .75rem;
+    padding: 4px 35px 4px 12px; /* Space for the search icon */
+    flex: 1; /* Allow the input to grow and take available space */
+  }
+
+
+  .search-wrapper-patient i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text);
+    pointer-events: none;
+  }
+
+  .container-tool-wrapper button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.15rem;
+    color: var(--color-text);
+  }
+
+
+  .filter-search-container-wrapper {
+
+    color: var(--color-text);
+    cursor: pointer;
+    margin-left: 10px; 
+  }
+
+  .form-control:focus {
+    border-color: var(--color-primary) !important;
+  }
+
+  /* Toggle button */
+  .toggle-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;  
+  }
+  .toggle-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .toggle-wrapper button:hover {
+    transform: translateY(-2px);
+    transition: transform 0.5s ease;
+  }
+
+  .toggle-wrapper button.active-tab{
+      color: var(--color-text); 
+      border-color: var(--color-tertiary);
+      transform: translateY(-2px);
+
+  }
+
+  .count-show-container {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: var(--color-text2);
+  margin: 0 15px;
+  }
+
+  /* Optional small label or title */
+  .count-show-header {
+    font-weight: 500;
+    color: var(--color-text2);
+    margin-top: auto;
+  }
+
+  /* Wrapper for the Load More / Less buttons */
+  .count-show-toggle-wrapper {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  /* Button styling */
+  .count-show-toggle-wrapper button {
+    background-color: #b88b4a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .count-show-toggle-wrapper button:hover {
+    background-color: #946b36;
+    transform: translateY(-1px);
+  }
+
+  /* “Load Less” variant (lighter tone) */
+  .count-show-toggle-wrapper .load-less {
+    background-color: #e0d1b3;
+    color: #4a3200;
+  }
+
+  .count-show-toggle-wrapper .load-less:hover {
+    background-color: #d0b783;
+  }
+
+
+  /*Patient Profile box */
+
+  .profile-box-main-container {
+
+      border-radius: 12px;
+      padding-left: 24px;
+      padding-bottom: 30px;
+      min-height: 60vh;
+
+
+  }
+  .profile-box-container {
+    width: 100%;
+    padding: 5px 1px 20px 30px;
+    justify-items: center;    
+    overflow-y: auto;
+    max-height: 90vh;
+    background-color: white;
+    border: 1px solid #502c003f;
+    border-radius: 12px;
+
+    /* smooth scrolling */
+    scroll-behavior: smooth;
+  }
+
+  /* ===== Scrollbar Styling ===== */
+  .profile-box-container::-webkit-scrollbar {
+    width: 8px;              /* scrollbar width */
+  }
+
+  .profile-box-container::-webkit-scrollbar-track {
+    background: #f1f1f1;     /* track color */
+    border-radius: 8px;
+  }
+
+  .profile-box-container::-webkit-scrollbar-thumb {
+    background: #b88b4a;     /* scrollbar color */
+    border-radius: 8px;
+  }
+
+  .profile-box-container::-webkit-scrollbar-thumb:hover {
+    background: #946b36;     /* darker on hover */
+  }
+
+
+
+
+  /* For Firefox */
+  .profile-box-container {
+    scrollbar-width: thin;              /* "auto" or "thin" */
+    scrollbar-color: #b88b4a #f1f1f1;   /* thumb color | track color */
+  }
+
+
+  .col-profile-box{
+  padding: 20px 17px 10px 17px ;
+
+  }
+  .profile-box {
+      position: relative;
+      border: 1px solid #50280346;
+      background-color: var(--color-secondary2);
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      z-index: 1;
+      cursor: pointer;
+      justify-items: center;
+      padding: 1rem;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+  }
+  .profile-box::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -14px;      
+      right: 0;  
+      width: 15px;
+      background-color:var(--color-primary);
+      border: 1px solid #50280346;
+
+  }
+
+  .record-img-container{
+      border: 1px solid #50280346; 
+      border-radius: 50%;
+    background-color: var(--color-primary);
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+  }
+  .record-img-container img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .info-container{
+    margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #502C00;
+  }
+  .info-container h3{
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .info-container span{
+    font-size: .80rem;
+    font-weight: 400;
+  }
+
+
+  /* List View table */
+  .hidden{
+    display: none;
+  }
+  .record-table-wrapper {
+    width: 100%;
+    overflow-x: auto;    /* horizontal scroll if needed */
+    overflow-y: auto;    /* vertical scroll */
+    max-height: 90vh;
+    position: relative;  /* important for sticky positioning */
+    background-color: white;
+    border: 1px solid #502c006c;
+    scroll-behavior: smooth; /* smooth scrolling */
+  }
+
+  /* ===== Scrollbar Styling ===== */
+  .record-table-wrapper::-webkit-scrollbar {
+    width: 6px;   /* vertical scrollbar width */
+    height: 6px;  /* horizontal scrollbar height */
+  }
+
+  .record-table-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;    /* track color */
+    border-radius: 6px;
+    padding-top: 1px;
+  }
+
+  .record-table-wrapper::-webkit-scrollbar-thumb {
+    background: #b88b4a;    /* thumb color */
+    border-radius: 6px;
+  }
+
+  .record-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #946b36;    /* darker hover color */
+  }
+
+  /* TABLE */
+  .record-list-view-tb {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1000px;
+    font-size: .90rem; /* ensures horizontal scroll on smaller screens */
+
+  }
+
+  /* HEADER (sticky) */
+  .record-list-view-tb thead th {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    font-weight: 600;
+    padding: 1rem;
+    z-index: 2; /* keeps header above table body */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow instead of border */
+    
+  }
+
+  /* BODY CELLS */
+  .record-list-view-tb tbody td {
+    color: var(--color-text);
+    padding: 1.2rem;
+    background-color: var(--color-bg, #fff); /* ensure not transparent */
+  }
+
+  /* BASIC STYLING */
+  .record-list-view-tb th,
+  .record-list-view-tb td {
+    border: 1px solid #502c003f;
+    text-align: left;
+  }
+
+  /* Remove left border on first cell (both header and body) */
+  .record-list-view-tb th:first-child,
+  .record-list-view-tb td:first-child {
+    border-left: none;
+  }
+
+  /* Remove right border on last cell (both header and body) */
+  .record-list-view-tb th:last-child,
+  .record-list-view-tb td:last-child {
+    border-right: none;
+  }
+
+  /* Remove top border on all table headers */
+  .record-list-view-tb thead th {
+    border-top: none;
+  }
+
+  /* Remove bottom border on the very last row */
+  .record-list-view-tb tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+
+  .record-list-view-tb tbody td button {
+    border: none;
+    background: none;
+    color: var(--color-text);
+    cursor: pointer;
+  }
+
+  .record-list-view-tb tbody td button:hover {
+    color: #007bff; /* blue hover color */
+  }
+
+  .td-view-button {
+    text-decoration: underline;
+
+  }
+
+
+
+  .information-record-main-container{
+    width: 100%;
+    padding: 15px 10px 20px 30px;
+  }
+
+  @media screen and (max-width: 992px) {
+    /* ============Patient Information Record============== */
+
+    .information-record-main-container{
+      padding: 15px 5px 20px 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    /* ============Patient Information Record============== */
+
+
+
+    .information-record-main-container{
+      padding: 15px 1px 20px 10px;
+    }
+    .profile-box-container {
+      --bs-gutter-x: 1.75rem; 
+
+    }
+    .col-profile-box {
+    }
+
+    .record-list-view-tb {
+      font-size: .80rem;
+    }
+
+
+  }
+
+  @media screen and (max-width: 576px) {
+    /* ============Patient Information Record============== */
+
+    .record-search-wrapper input {
+      border: 1px solid var(--color-text);
+      border-radius: 20px;
+      width: 120px;
+      padding: 2px 35px 2px 10px; /* Space for the search icon */
+      flex: 1; /* Allow the input to grow and take available space */
+    }
+    
+    /* .container-tool-wrapper{
+      justify-content: flex-start!important;
+    } */  
+    .profile-box-main-container{
+      padding-left: 0.5!important;
+    }
+
+  }
+
+
+  @media screen and (max-width: 450px) {
+    /* ============Patient Information Record============== */
+
+    .record-img-container{
+
+    width: 90px;
+    height: 90px;
+
+  }
+  .profile-container h3{
+    font-size: 1.15rem;
+    margin: 0;
+  }
+  .profile-container i{
+    font-size: .85rem;
+    margin-right: 5px;
+    margin-top: 4px;
+  }
+  .profile-container p{
+    font-size: .75rem;
+    margin: 0;
+
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+

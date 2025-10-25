@@ -633,7 +633,7 @@ body {
         }
         
         /* When sidebar is active → fade in slower */
-        .container.active .toggle-sidebar {
+        .sidebar-container.active .toggle-sidebar {
             opacity: 1;
             visibility: visible;
             transform: translateX(0);
