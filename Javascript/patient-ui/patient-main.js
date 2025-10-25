@@ -83,7 +83,7 @@ if (pageUrl.includes('patient-appointments.html')) {
       initPatientAppointments();
     } else {
       const script = document.createElement('script');
-      script.src = '../../Javascript/patient-ui/patient-subfolder/patient-appointments.js';
+      script.src = '../../Javascript/patient-ui/patient-subfolder/patient-appointment.js';
       script.defer = true;
       script.onload = () => initPatientAppointments();
       document.body.appendChild(script);
@@ -120,6 +120,4 @@ function initPatientDashboard() {
   console.log('Dashboard initialized');
 }
 
-function initPatientAppointments() {
-  console.log('Appointments initialized');
-}
+
