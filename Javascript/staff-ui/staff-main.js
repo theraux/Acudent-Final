@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ✅ Automatically load the dashboard by default when page loads
-  loadPage('../../HTML/staff-ui/staff-subfolder/staff-appointments.html');
+  loadPage('../../HTML/staff-ui/staff-subfolder/staff-patient-records.html');
 });
 
 

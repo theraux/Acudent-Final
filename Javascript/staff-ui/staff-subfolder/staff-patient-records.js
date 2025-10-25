@@ -1,17 +1,17 @@
 function initStaffPatientRecords() {
     console.log('My Account page initialized ✅');
 
-    const stafftoggleButtons = document.querySelectorAll('.toggle-button');
-    const staffsections = document.querySelectorAll('.patient-profile-box-main-container');
-    const modals = document.querySelectorAll('.staff-patient-appointment-logs-modal');
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+    const sections = document.querySelectorAll('.patient-profile-box-main-container');
+    const modals = document.querySelectorAll('.patient-information-record-appointment-logs-modal');
 
-    if (!stafftoggleButtons.length || !staffsections.length) {
+    if (!toggleButtons.length || !sections.length) {
         console.warn('No toggle elements found.');
         return;
     }
 
     // ===================== TOGGLE MENU / LIST VIEW ===================== //
-    stafftoggleButtons.forEach(btn => {
+    toggleButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const targetId = btn.getAttribute('data-target');
             const targetSection = document.getElementById(targetId);
@@ -22,22 +22,22 @@ function initStaffPatientRecords() {
             }
 
             // Hide all sections
-            staffsections.forEach(section => section.classList.add('hidden'));
+            sections.forEach(section => section.classList.add('hidden'));
 
             // Show selected section
             targetSection.classList.remove('hidden');
 
             // Update button styles
-            stafftoggleButtons.forEach(b => b.classList.remove('active-tab'));
+            toggleButtons.forEach(b => b.classList.remove('active-tab'));
             btn.classList.add('active-tab');
         });
     });
 
     // ===================== OPEN MODAL (for profile boxes + list view buttons) ===================== //
-    const modalTriggers = document.querySelectorAll('[data-target="staff-patient-appointment-logs-modal-id"]');
+    const modalTriggers = document.querySelectorAll('[data-target="patient-information-record-appointment-logs-modal-id"]');
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', () => {
-            const modal = document.getElementById('staff-patient-appointment-logs-modal-id');
+            const modal = document.getElementById('patient-information-record-appointment-logs-modal-id');
             if (modal) {
                 modal.style.display = 'flex'; // show modal
             }
@@ -61,7 +61,7 @@ function initStaffPatientRecords() {
         }
     });
 
-    document.querySelectorAll('.staff-logs-close').forEach(btn => {
+    document.querySelectorAll('.patient-record-logs-close').forEach(btn => {
   btn.addEventListener('click', () => {
     modals.forEach(modal => modal.style.display = 'none');
   });

@@ -1,4 +1,4 @@
-function initStaffAppointments() {
+function initAdminAppointments() {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
         'September', 'October', 'November', 'December'];
     let currentDate = new Date();
@@ -15,10 +15,10 @@ function initStaffAppointments() {
         { date: `${currentYear}-${currentMonth}-20`, patient: 'Bob Wilson', time: '2:00 PM', service: 'Checkup', dentist: 'Dr. Smith', fee: '$80', duration: '20 mins', phone: '555-123-4567', email: 'bob@example.com' },
     ];
 
-    function renderCalendar() {
+    function renderAdminCalendar() {
         let year = currentDate.getFullYear();
         let month = currentDate.getMonth();
-        document.getElementById('month-year').innerText = months[month] + ' ' + year;
+        document.getElementById('admin-month-year').innerText = months[month] + ' ' + year;
 
         let firstDayOfWeek = new Date(year, month, 1).getDay();
         let daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -26,7 +26,7 @@ function initStaffAppointments() {
         let totalSlots = firstDayOfWeek + daysInMonth;
         let numRows = Math.ceil(totalSlots / 7);
 
-        let daysContainer = document.querySelector('.number-of-days');
+        let daysContainer = document.querySelector('.admin-number-of-days');
         daysContainer.innerHTML = '';
 
         let nextDayCounter = 1;
@@ -41,12 +41,12 @@ function initStaffAppointments() {
                 colDiv.className = 'col';
 
                 let box = document.createElement('div');
-                box.className = 'shared-calendar-box';
+                box.className = 'admin-shared-calendar-box';
 
                 if (cellIndex < firstDayOfWeek) {
                     let prevDay = daysInPrevMonth - (firstDayOfWeek - 1 - cellIndex);
                     box.innerHTML = `<strong>${prevDay}</strong><br><small>Prev month</small>`;
-                    box.classList.add('prev-month');
+                    box.classList.add('admin-prev-month');
                 } else if (cellIndex < firstDayOfWeek + daysInMonth) {
                     let day = cellIndex - firstDayOfWeek + 1;
                     box.dataset.day = day;
@@ -56,7 +56,7 @@ function initStaffAppointments() {
                     if (dayAppointments.length > 0) {
                         dayAppointments.forEach(app => {
                             const appDiv = document.createElement('div');
-                            appDiv.className = 'calendar-appointment-item';
+                            appDiv.className = 'admin-calendar-appointment-item';
                             appDiv.innerHTML = `<small>${app.patient} - ${app.time} (${app.service})</small>`;
                             box.appendChild(appDiv);
                         });
@@ -77,15 +77,15 @@ function initStaffAppointments() {
                         if (datePickingMode) {
                             selectedDate = new Date(year, month, day);
                             if (appointmentMode === 'add') {
-                                openAppointmentModal(selectedDate);
+                                openAdminAppointmentModal(selectedDate);
                             } else if (appointmentMode === 'edit') {
-                                openEditModal(selectedDate);
+                                openAdminEditModal(selectedDate);
                             }
                             datePickingMode = false;  // Reset after use
                             appointmentMode = null;   // Reset mode
                         } else {
                             if (dayAppointments.length > 0) {
-                                openViewModal(new Date(year, month, day), dayAppointments);
+                                openAdminViewModal(new Date(year, month, day), dayAppointments);
                             } else {
                                 alert('No appointments on this day.');
                             }
@@ -94,7 +94,7 @@ function initStaffAppointments() {
 
                 } else {
                     box.innerHTML = `<strong>${nextDayCounter}</strong><br><small>Next month</small>`;
-                    box.classList.add('next-month');
+                    box.classList.add('admin-next-month');
                     nextDayCounter++;
                 }
 
@@ -106,24 +106,24 @@ function initStaffAppointments() {
         }
     }
 
-    function prevmonth() {
+    function Adminprevmonth() {
         currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
+        renderAdminCalendar();
     }
 
-    function nextmonth() {
+    function Adminnextmonth() {
         currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
+        renderAdminCalendar();
     }
 
-    window.prevmonth = prevmonth;
-    window.nextmonth = nextmonth;
+    window.Adminprevmonth = Adminprevmonth;
+    window.Adminnextmonth = Adminnextmonth;
 
-    renderCalendar();
+    renderAdminCalendar();
 
     // Button references
-    const addBtn = document.getElementById("edit-schedule");
-    const editBtn = document.querySelector(".shared-edit-scheduler-btn");
+    const addBtn = document.getElementById("admin-edit-schedule");
+    const editBtn = document.querySelector(".admin-shared-edit-scheduler-btn");
 
     // Add button: Set mode and active state
     addBtn.addEventListener("click", () => {
@@ -142,7 +142,7 @@ function initStaffAppointments() {
     });
 
     // Function for add modal
-    function openAppointmentModal(date) {
+    function openAdminAppointmentModal(date) {
         const modal = document.querySelector('.shared-edit-appointment-schedule-modal');
         const dateInput = document.getElementById('selected-date');
         modal.style.display = 'block';
@@ -150,14 +150,14 @@ function initStaffAppointments() {
     }
 
     // Function for edit modal
-    function openEditModal(date) {
+    function openAdminEditModal(date) {
         const modal = document.getElementById('admin-edit-appointment-schedule');
         const dateSpan = document.getElementById('admin-modal-date');
         modal.style.display = 'block';
         dateSpan.innerText = date.toDateString();  // Populate the date in the edit modal
     }
 
-     function openViewModal(date, dayAppointments) {
+     function openAdminViewModal(date, dayAppointments) {
         console.log('Opening view modal for date:', date, 'with appointments:', dayAppointments); // Debug
         const modal = document.getElementById('shared-view-appointments-modal-id');
         const dateSpan = document.getElementById('view-modal-date');
@@ -256,4 +256,4 @@ function initStaffAppointments() {
     }
 }   
 
-document.addEventListener("DOMContentLoaded", initStaffAppointments)
+document.addEventListener("DOMContentLoaded", initAdminAppointments)
