@@ -1,0 +1,69 @@
+<!---------Calendar-------------->
+<section class="shared-calendar-appointment-section" id="patient-calendar-appointments-section">
+    <div class="shared-calendar-appointments-wrapper">
+        <div class="shared-appointment-wrapper">
+            <div class="shared-appointment-title-wrapper">
+                <h2>Appointments</h2>
+                <div class="shared-appointment-p">
+                    <p>See what's your appointments for today</p>
+                </div>
+            </div>
+        </div>
+        <div class="shared-appointment-prev-next-month">
+            <button onclick="Patientprevmonth()" class="btn-month" id="patient-btn-previous-month"><i
+                    class="fa-solid fa-chevron-left"></i></button> <!-- Updated onclick -->
+            <h3 id="patient-month-year"></h3>
+            <button onclick="Patientnextmonth()" class="btn-month" id="patient-btn-next-month"><i
+                    class="fa-solid fa-chevron-right"></i></button> <!-- Updated onclick -->
+        </div>
+
+
+        <div class="row shared-calendar-appointments-container-row row-cols-1"
+            id="patient-calendar-appointments-container">
+            <!-- Appointment items will be dynamically added here -->
+            <div class="col patient-name-of-the-day">
+                <div class="row row-cols-7">
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Sun</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Mon</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Tue</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Wed</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Thu</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Fri</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="shared-calendar-days">
+                            <p>Sat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col patient-number-of-days">
+                <!-- Days will be dynamically generated here -->
+            </div>
+        </div>
+    </div>
+</section>

@@ -116,11 +116,13 @@
     background: none;
     color: var(--color-text);
     cursor: pointer;
+    text-decoration: underline;
 }
+
 .services-table tbody td button:hover{
     color: #007bff; /* blue hover color */
 }
-.services-table tbody td .delete-btn button:hover{
+.services-table tbody td .delete-btn:hover{
     color: red;
 }
 .services-action-button{
