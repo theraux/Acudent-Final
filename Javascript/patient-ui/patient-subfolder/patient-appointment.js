@@ -102,7 +102,60 @@ function initPatientAppointments() {
     window.Patientnextmonth = Patientnextmonth;
 
     // Initial render
-    renderPatientCalendar(); 
+    renderPatientCalendar();
+
+
+
+    function attachDayClickEvents() {
+        const dayBoxes = document.querySelectorAll('.patient-shared-calendar-box.current-month');
+        dayBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                const selectedDay = parseInt(box.textContent.trim());
+                const month = currentDate.getMonth();
+                const year = currentDate.getFullYear();
+
+                // Format selected date (YYYY-MM-DD)
+                const formattedDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(selectedDay).padStart(2, '0')}`;
+
+                // Insert into input field
+                const dateInput = document.getElementById('selected-date');
+                if (dateInput) {
+                    dateInput.value = formattedDate;
+                }
+
+                // Show modal
+                const modal = document.getElementById('book-appointment-container-modal-id');
+                if (modal) {
+                    modal.style.display = 'flex'; // or 'block' depending on your CSS
+                }
+
+                console.log('Selected date:', formattedDate);
+            });
+        });
+
+    }
+    attachDayClickEvents();
+
+    //Close modal Button
+
+    // Close modal when clicking the "X" or Cancel button
+    document.querySelectorAll('.shared-appointment-close-modal-btn, .cancel-appointment-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = document.getElementById('book-appointment-container-modal-id');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        const modal = document.getElementById('book-appointment-container-modal-id');
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+
 }
 
 document.addEventListener("DOMContentLoaded", initPatientAppointments)

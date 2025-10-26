@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     // ✅ Automatically load the default page on initial load
-    const initialPage = location.hash ? location.hash.substring(1) : '../../HTML/admin-ui/admin-subfolder/admin-patient-management.html';
+    const initialPage = location.hash ? location.hash.substring(1) : '../../HTML/admin-ui/admin-subfolder/shared-printable-information-record.html';
     loadPage(initialPage, false); // Don't add first load to history
   
     // ✅ Handle browser Back/Forward buttons
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loadPage(event.state.pageUrl, false); // false = don’t re-push into history
       } else {
         // If no state, fallback to default page
-        loadPage('../../HTML/admin-ui/admin-subfolder/admin-patient-management.html', false);
-      }
+        loadPage('../../HTML/admin-ui/admin-subfolder/shared-printable-information-record.html', false); 
+      } 
     });
   }); 
 

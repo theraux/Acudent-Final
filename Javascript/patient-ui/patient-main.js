@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ✅ Automatically load the dashboard by default when page loads
-  loadPage('../../HTML/patient-ui/patient-subfolder/patient-dashboard.html');
+  loadPage('../../HTML/patient-ui/patient-subfolder/patient-appointments.html');
 });
 
 
