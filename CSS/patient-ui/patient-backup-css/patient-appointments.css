@@ -8,11 +8,49 @@
 
 }
 
+.appointment-wrapper-main-section {
+  width: 100%;
+  height: 100%;
+  padding: 15px 10px 20px 30px;
+}
+
+.appointment-overview-wrapper {
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid #50280357;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-secondary);
+
+}
+
+.appointment-row-header {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.appointment-row-header h3 {
+  font-size: 1rem;
+}
+
+.appointment-row-body p span {
+  font-size: .90rem;
+  color: var(--color-text);
+}
+
+#status-type-id {
+  color: #093a14;
+  background-color: #28a74656;
+  border-radius: 15px;
+  padding: 5px;
+}
+
 
 /* calendar */
 .shared-calendar-appointment-section {
   width: 100%;
-  padding: 20px 5px 20px 30px;
+  padding: 15px 10px 20px 30px;
 }
 
 .shared-appointment-title-wrapper {
@@ -32,6 +70,14 @@
   background-color: var(--color-secondary2);
 }
 
+.shared-appointment-title-wrapper h3 {
+  font-size: 1rem;
+}
+
+.shared-appointment-p p {
+  font-size: .9rem;
+}
+
 .shared-appointment-prev-next-month {
   display: flex;
   /* justify-content: space-between; */
@@ -49,34 +95,6 @@
   border: none;
   font-size: 1rem;
   color: var(--color-text);
-}
-
-.shared-edit-scheduler {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-left: auto;
-}
-
-
-.shared-appointment-edit-schedule button,
-.shared-edit-scheduler button {
-  text-align: center;
-  border: 1px solid var(--color-text);
-  border-radius: 5px;
-  padding: 0.8rem;
-  background-color: #fff;
-  width: 100%;
-}
-
-.shared-appointment-edit-schedule button:hover,
-.shared-edit-scheduler button:hover {
-  background-color: var(--color-secondary);
-}
-
-.patient-shared-edit-scheduler-btn.active,
-.patient-shared-edit-sched.active {
-  background-color: var(--color-primary);
 }
 
 .shared-calendar-appointments-container-row {
@@ -102,7 +120,17 @@
   justify-content: center;
   text-align: center;
   width: 100%;
+}
 
+.patient-number-of-days .row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+  margin: 0 !important;
+}
+
+.patient-number-of-days .col {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .patient-number-of-days p {
@@ -120,14 +148,15 @@
   background-color: var(--color-secondary);
 }
 
-  .patient-shared-calendar-box.patient-prev-month {
-    opacity: 0.5;
-    color: var(--color-text);
-  }
-  .patient-shared-calendar-box.patient-next-month {
-    opacity: 0.5;
-    color: var(--color-text);
-  }
+.patient-shared-calendar-box.patient-prev-month {
+  opacity: 0.5;
+  color: var(--color-text);
+}
+
+.patient-shared-calendar-box.patient-next-month {
+  opacity: 0.5;
+  color: var(--color-text);
+}
 
 .patient-shared-calendar-box.current-month {
   opacity: 1;
@@ -164,4 +193,180 @@
   color: var(--color-text);
   font-style: italic;
   font-size: 10px;
+}
+
+/*Modal for add an appointment */
+.book-appointment-container-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  z-index: 9000;
+}
+
+.book-appointment-wrapper.active {
+  display: flex;
+}
+
+.book-appointment-wrapper {
+  width: 40%;
+  height: auto;
+  background-color: var(--color-secondary2);
+  justify-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+.shared-appointment-schedule-title {
+  color: var(--color-text);
+  margin-top: 1rem;
+}
+
+.shared-appointment-close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.shared-appointment-close-modal button {
+  border: none;
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.shared-appointment-close-modal button:hover {
+  transform: scale(1.2);
+  color: #8B5E34;
+}
+
+
+.shared-appointment-schedule-container {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  border: 1px solid var(--color-text);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #fff;
+  color: var(--color-text);
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  appearance: none;
+  /* removes default browser style for select */
+  margin-top: 0.8rem;
+}
+
+.shared-appointment-schedule-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: var(--color-text);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.shared-appointment-schedule-input {
+  position: relative;
+  margin-top: 0.8rem;
+}
+
+.shared-appointment-schedule-input input,
+.shared-appointment-schedule-input select {
+  width: 100%;
+  height: 72px;
+  border: 1px solid var(--color-text);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #fff;
+  color: var(--color-text);
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  appearance: none;
+  /* removes default browser style for select */
+}
+
+/* Add the top accent bar like the container */
+.shared-appointment-schedule-input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: var(--color-text);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Optional: give select dropdown a clean arrow */
+.shared-appointment-schedule-input select {
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 10px;
+  padding-right: 2rem;
+}
+
+.button-appointment-container {
+  width: 100%;
+  display: flex;
+  padding: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-appointment button {
+  width: 100%;
+  color: var(--color-secondary2);
+  border: 1px solid var(--color-text);
+  padding: .5rem;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-text2);
+
+}
+
+.add-appointment button:hover,
+.cancel-appointment button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.cancel-appointment button {
+  width: 100px;
+  background-color: rgba(255, 0, 0, 0.767);
+  color: #fff;
+  border: 1px solid var(--color-text);
+  padding: .3rem;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional animation */
+@keyframes modalPop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

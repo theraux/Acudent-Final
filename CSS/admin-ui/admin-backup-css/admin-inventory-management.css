@@ -143,13 +143,10 @@
   margin-left: auto;
 }
 
-.add-user-btn-container {
-  background-color: #b88b4a;
-}
 
-.add-user-btn-container button {
-  background-color: #b88b4a;
 
+.add-inventory-btn-container {
+  background-color: #b88b4a;
   font-family: "Poppins", sans-serif;
   color: var(--color-secondary);
   border: none;
