@@ -62,16 +62,23 @@
                 <div
                     class="container-tool-wrapper d-flex justify-content-space-between align-items-center gap-3 flex-wrap">
 
+
                     <div class="monthly-wrapper-caret-down">
-                        <button type="button" class="inventory-management-caret-button" title="Weely Report"
-                            id="inventory-management-caret-btn" data-bs-toggle="dropdown" aria-expanded="false">Weekly
+                        <button type="button" class="inventory-management-caret-button"
+                            id="inventory-management-caret-btn" title="Weekly Report" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="selected-period">Select Period</span>
                             <i class="fa-solid fa-caret-down"></i>
                         </button>
+
                         <ul class="monthly-dropdown" id="inventory-dropdown-id">
+                            <li><a class="monthly-dropdown-item" href="#">Weekly</a></li>
                             <li><a class="monthly-dropdown-item" href="#">Monthly</a></li>
                             <li><a class="monthly-dropdown-item" href="#">Yearly</a></li>
                         </ul>
                     </div>
+
+
 
                     <div class="search-wrapper-inventory">
                         <input type="text" name="admin-inventory-searchbar"

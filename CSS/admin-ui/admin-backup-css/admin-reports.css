@@ -9,7 +9,7 @@
 }
 
 .admin-inventory-report-container {
- padding: 15px 10px 20px 30px;
+  padding: 15px 10px 20px 30px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -106,88 +106,130 @@
 
 
 
-.weekly-report-container{
+.weekly-report-container {
   width: 100%;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-top: 2rem;
-}
-.inventory-report-section {
 
-  width: 10%;
-  border: 1px solid var(--color-text);
-  background-color: var(--color-secondary);
+}
+
+.inventory-report-section {
+  width: 200px;
+  border: 1px solid #50280379;
+  background-color: var(--color-secondary, #eee);
   cursor: pointer;
   text-align: center;
-  padding: .6rem;
-  color: var(--color-text);
+  padding: 0.6rem;
+  color: var(--color-text, #333);
+  position: relative;
+  user-select: none;
 }
 
-.inventory-report-section h3 {
-  font-size: 1.4rem;
+.inventory-dropdown-section {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hide dropdown initially */
+.report-dropdown {
+  display: none;
+  list-style: none;
+  z-index: 1000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid var(--color-text, #333);
+  width: 100%;
+  padding: 0;
   margin: 0;
 }
 
-.inventory-report-section i {
-  margin-left: 5px;
+/* Dropdown item styling */
+.report-dropdown li a {
+  display: block;
+  padding: 8px 12px;
+  color: var(--color-text, #333);
+  text-decoration: none;
+  text-align: start;
 }
+
+.report-dropdown li a:hover {
+  background-color: var(--color-secondary, #eee);
+}
+
+/* Show dropdown when active */
+.inventory-report-section.active .report-dropdown {
+  display: block;
+}
+
+
+
+
 .most-used-item-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 60px;
-  border: 1px solid var(--color-text);
-  margin-top: 2rem;
+  width: 140px;
+  height: 40px;
+  border: 1px solid #5028034f;
+  margin-top: 1%;
   margin-bottom: 1rem;
 }
 
 .most-used-item-wrapper p {
   margin: 0;
+  font-size: .8rem;
+  white-space: nowrap;
+  color: var(--color-text);
 }
 
 
 /* Remove header borders */
 .inventory-report-wrapper {
-  
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  
 }
 
 .inventory-report-container {
-  max-height: 400px;
-  overflow-y: auto;
+  width: 100%;
   overflow-x: auto;
-  border: 1px solid #50280346;
-  padding: 0;
-  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 300px;
+  position: relative;
+  background-color: white;
+  border: 1px solid #502c006c;
   scroll-behavior: smooth;
 }
 
 .admin-inventory-report-table thead th {
-  border: 1px solid var(--color-text);
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 1.2rem;
-  color: #502C00;
-  background-color: #FEF3E7;
-  font-weight: 500;
   position: sticky;
   top: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  font-weight: 600;
+  padding: 1rem;
   z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Style only the data cells */
 .admin-inventory-report-table tbody td {
-  border: 1px solid #502C00;
-  /* brown border */
+  color: var(--color-text);
   padding: 1.2rem;
-  margin: 0;
-  gap: 0;
-  text-align: center;
-  cursor: pointer;
+  background-color: var(--color-bg, #fff);
   white-space: normal;
   word-break: break-word;
 
@@ -198,6 +240,7 @@
 }
 
 .admin-inventory-report-table {
+  table-layout: fixed;
   border-spacing: 0 10px;
   overflow: auto;
   width: 100%;
@@ -228,26 +271,28 @@
 .admin-inventory-report-table tbody tr:last-child td {
   border-bottom: none !important;
 }
-::-webkit-scrollbar{
+
+.admin-inventory-report-table::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-::-webkit-scrollbar-thumb{
+
+.admin-inventory-report-table::-webkit-scrollbar-thumb {
   background: #b88b4a;
   border-radius: 8px;
 }
-::-webkit-scrollbar-track{
- background-color: #f1f1f1;
+
+.admin-inventory-report-table::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }
 
 
 /* Donut table for appointment */
 .appointment-report-wrapper {
   width: 100%;
-  padding: 1rem;
   height: 100%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, .2);
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: var(--color-secondary);
   border: 1px solid #50280333;
 }
@@ -255,13 +300,18 @@
 .percentage-wrapper {
   width: 100%;
   border: 1px solid #5028032f;
-  padding: .5rem;
-  background-color: #fff;
+  padding: .2rem;
+
 }
 
 .appointment-report-title {
   text-align: center;
   color: var(--color-text);
+  margin-top: 2rem;
+}
+
+.appointment-report-title h3 {
+  font-size: 1rem;
 }
 
 .percentage-container {
@@ -277,22 +327,27 @@
 }
 
 .percentage-color i {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 .percentage-title {
-  font-size: 1rem;
+  font-size: .8rem;
   text-align: center;
-  padding-top: 1rem;
+
   padding-left: .5rem;
 }
 
 .percentage-num {
-  padding-top: 1rem;
+  font-size: .8rem;
 }
 
 .appointment-report-container {
   width: 100%;
+}
+
+.appointment-report-container canvas {
+  width: 200px;
+  height: 200px;
 }
 
 /* Revenue Graph */
@@ -301,6 +356,9 @@
   height: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, .2);
   color: var(--color-text);
+  border: 1px solid #5028034f;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .revenue-graph-container {
