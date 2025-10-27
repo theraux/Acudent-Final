@@ -13,19 +13,34 @@ function initAdminInventoryManagement() {
         });
     });
 
-    //For DropDown
+   const caretWrapper = document.querySelector('.monthly-wrapper-caret-down');
+const caretButton = caretWrapper.querySelector('.inventory-management-caret-button');
+const selectedPeriod = caretWrapper.querySelector('.selected-period');
+const dropdownItems = caretWrapper.querySelectorAll('.monthly-dropdown-item');
 
-    document.getElementById('inventory-management-caret-btn').addEventListener('click', function() {
-  document.querySelector('.monthly-wrapper-caret-down').classList.toggle('active');
+// Toggle dropdown visibility
+caretButton.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent click from closing dropdown immediately
+  caretWrapper.classList.toggle('active');
 });
 
-// Optional: close dropdown when clicking outside
-document.addEventListener('click', function(e) {
-  const dropdown = document.querySelector('.monthly-wrapper-caret-down');
-  if (!dropdown.contains(e.target)) {
-    dropdown.classList.remove('active');
+// Handle dropdown item clicks
+dropdownItems.forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    const newValue = item.textContent.trim();
+    selectedPeriod.textContent = newValue; // Update button text
+    caretWrapper.classList.remove('active'); // Close dropdown
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!caretWrapper.contains(e.target)) {
+    caretWrapper.classList.remove('active');
   }
 });
+
 
 }
 

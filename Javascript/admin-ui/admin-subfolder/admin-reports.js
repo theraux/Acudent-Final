@@ -1,4 +1,34 @@
 function initAdminReports() {
+
+    const dropdownSection = document.querySelector('.inventory-report-section');
+    const dropdownButton = dropdownSection.querySelector('.inventory-dropdown-section');
+    const selectedText = dropdownSection.querySelector('.selected-option');
+    const dropdownItems = dropdownSection.querySelectorAll('.report-dropdown-list');
+
+    // Toggle dropdown open/close
+    dropdownButton.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent event from bubbling
+        dropdownSection.classList.toggle('active');
+    });
+
+    // When an option is clicked
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const value = item.textContent.trim();
+            selectedText.textContent = value; // Update button text
+            dropdownSection.classList.remove('active'); // Close dropdown
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!dropdownSection.contains(e.target)) {
+            dropdownSection.classList.remove('active');
+        }
+    });
+
+
     const appointmentReport = document.querySelectorAll('.report-box-container');
 
     // ====== Click Event for Boxes ======
@@ -112,6 +142,7 @@ function initAdminReports() {
             },
             options: {
                 responsive: true,
+                 maintainAspectRatio: false,
                 cutout: '80%',
                 plugins: { legend: { display: false } }
             }
@@ -121,34 +152,73 @@ function initAdminReports() {
     }
 
     // ====== REVENUE GRAPH BAR CHART ======
-    const revenueCtx = document.getElementById('revenue-graph-id');
-    if (revenueCtx) {
-        new Chart(revenueCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-                datasets: [{
-                    label: 'Revenue',
+const revenueCtx = document.getElementById('revenue-graph-id');
+if (revenueCtx) {
+    new Chart(revenueCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [
+                {
+                    label: 'Actual Revenue',
                     data: [12000, 15000, 13000, 18000, 20000, 25000],
-                    backgroundColor: 'rgba(40, 167, 69, 0.4)',
-                    borderColor: '#28a745',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: true } },
-                scales: {
-                    y: {
-                        ticks: {
-                            callback: value => '₱' + value.toLocaleString()
+                    borderColor: '#28a745', // Green line
+                    backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: false,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#28a745',
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'Target Revenue',
+                    data: [14000, 16000, 15000, 19000, 21000, 26000],
+                    borderColor: '#007bff', // Blue line
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: false,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#007bff',
+                    pointHoverRadius: 7
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: { color: '#333' }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.dataset.label + ': ₱' + tooltipItem.raw.toLocaleString();
                         }
                     }
                 }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#333' },
+                    grid: { color: 'rgba(200, 200, 200, 0.2)' }
+                },
+                y: {
+                    ticks: {
+                        color: '#333',
+                        callback: value => '₱' + value.toLocaleString()
+                    },
+                    grid: { color: 'rgba(200, 200, 200, 0.2)' }
+                }
             }
-        });
-    }
+        }
+    });
+}
+
+
 }
 
 document.addEventListener('DOMContentLoaded', initAdminReports);

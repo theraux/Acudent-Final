@@ -152,7 +152,7 @@ function initPageScript(pageUrl) {
 
   if (pageUrl.includes('admin-reports.html')) {
     if (typeof initAdminReports === 'function') {
-      initAdminAdminReportst();
+      initAdminReports();
     } else {
       const script = document.createElement('script');
       script.src = '../../Javascript/admin-ui/admin-subfolder/admin-reports.js';
